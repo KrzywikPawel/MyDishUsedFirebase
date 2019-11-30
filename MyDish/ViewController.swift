@@ -8,30 +8,22 @@
 
 import UIKit
 
-struct Dish:Decodable{
-    let name: String
-    let time: Int
-    let level: Int
-}
 
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
-        NetworkManager.downloadPlayerProfile{ jsonData in
-            guard let jData = jsonData else { return }
-            
-            do{
-                if let json = try JSONSerialization.jsonObject(with: jData, options: []) as? [String: Any]{
-                    if let name = json["name"] as? String{
-                        print(name)
-
-                    }
-        }
-            }catch let err{
-                print("blad")
-            }
-        }
+//        do{
+//        let url = Bundle.main.url(forResource: "lista", withExtension: "json")!
+//            let data = try Data(contentsOf: url)
+//            let parseData = try JSONDecoder().decode([Dish].self, from: data)
+//            print(parseData[0])
+//        }catch{
+//            print(error)
+//        }
+        let data = TakeDataToMainView()
+        let array = data.parseData()
+        print(array[1])
     }
 }
 
