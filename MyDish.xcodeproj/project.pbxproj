@@ -13,6 +13,7 @@
 		E54D2C122392C1420084A055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54D2C102392C1420084A055 /* Main.storyboard */; };
 		E54D2C142392C1430084A055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54D2C132392C1430084A055 /* Assets.xcassets */; };
 		E54D2C172392C1430084A055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54D2C152392C1430084A055 /* LaunchScreen.storyboard */; };
+		E5AA9BD72392D85400E863C7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BD62392D85400E863C7 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E54D2C132392C1430084A055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54D2C162392C1430084A055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54D2C182392C1430084A055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5AA9BD62392D85400E863C7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		E54D2C092392C1420084A055 /* MyDish */ = {
 			isa = PBXGroup;
 			children = (
-				E54D2C0A2392C1420084A055 /* AppDelegate.swift */,
-				E54D2C0C2392C1420084A055 /* SceneDelegate.swift */,
+				E5AA9BD32392D53200E863C7 /* Support */,
 				E54D2C0E2392C1420084A055 /* ViewController.swift */,
 				E54D2C102392C1420084A055 /* Main.storyboard */,
-				E54D2C132392C1430084A055 /* Assets.xcassets */,
-				E54D2C152392C1430084A055 /* LaunchScreen.storyboard */,
+				E5AA9BD62392D85400E863C7 /* NetworkManager.swift */,
 				E54D2C182392C1430084A055 /* Info.plist */,
 			);
 			path = MyDish;
+			sourceTree = "<group>";
+		};
+		E5AA9BD32392D53200E863C7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E54D2C152392C1430084A055 /* LaunchScreen.storyboard */,
+				E54D2C132392C1430084A055 /* Assets.xcassets */,
+				E54D2C0C2392C1420084A055 /* SceneDelegate.swift */,
+				E54D2C0A2392C1420084A055 /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
 				E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */,
+				E5AA9BD72392D85400E863C7 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
