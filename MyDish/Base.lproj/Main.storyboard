@@ -34,36 +34,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ocT-S3-1PG" userLabel="ImageDish">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ocT-S3-1PG" userLabel="ImageDish">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="375" id="SFb-uk-vgy"/>
-                                                        <constraint firstAttribute="height" constant="255" id="V4M-dJ-bZe"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" id="juQ-rx-LLm">
-                                                    <rect key="frame" x="165" y="263" width="45" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tHt-A5-owS">
+                                                    <rect key="frame" x="165" y="259" width="45" height="63.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-sz-zM2" userLabel="NameLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-sz-zM2" userLabel="NameLabel">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Z5-3fp" userLabel="TimeLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Z5-3fp" userLabel="TimeLabel">
                                                             <rect key="frame" x="0.0" y="21.5" width="45" height="20.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20.5" id="9S6-H3-Qs9"/>
-                                                                <constraint firstAttribute="width" constant="45" id="cal-Wu-h3h"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-Vh-M2F" userLabel="LevelLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-Vh-M2F" userLabel="LevelLabel">
                                                             <rect key="frame" x="0.0" y="43" width="45" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -72,10 +64,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ocT-S3-1PG" firstAttribute="top" secondItem="rFq-TE-XwB" secondAttribute="top" id="B7D-PD-i75"/>
-                                                <constraint firstAttribute="bottom" secondItem="juQ-rx-LLm" secondAttribute="bottom" constant="0.5" id="Jgw-gU-F5L"/>
+                                                <constraint firstItem="tHt-A5-owS" firstAttribute="centerX" secondItem="rFq-TE-XwB" secondAttribute="centerX" id="HZa-S1-CLg"/>
                                                 <constraint firstAttribute="trailing" secondItem="ocT-S3-1PG" secondAttribute="trailing" id="MQw-d9-rUy"/>
-                                                <constraint firstItem="juQ-rx-LLm" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="8" id="OdG-KR-4dW"/>
-                                                <constraint firstItem="juQ-rx-LLm" firstAttribute="centerX" secondItem="rFq-TE-XwB" secondAttribute="centerX" id="aUM-56-m0f"/>
+                                                <constraint firstAttribute="bottom" secondItem="tHt-A5-owS" secondAttribute="bottom" constant="4.5" id="d0G-ML-J6g"/>
+                                                <constraint firstItem="tHt-A5-owS" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="4" id="dng-rL-eXZ"/>
                                                 <constraint firstItem="ocT-S3-1PG" firstAttribute="leading" secondItem="rFq-TE-XwB" secondAttribute="leading" id="qvZ-SR-91E"/>
                                             </constraints>
                                         </collectionViewCellContentView>
