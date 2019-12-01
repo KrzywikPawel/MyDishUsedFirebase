@@ -16,6 +16,8 @@
 		E5AA9BD92392E37700E863C7 /* DishList.json in Resources */ = {isa = PBXBuildFile; fileRef = E5AA9BD82392E37700E863C7 /* DishList.json */; };
 		E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */; };
 		E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */; };
+		E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */; };
+		E5AA9BE22393E42300E863C7 /* MainDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E5AA9BD82392E37700E863C7 /* DishList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DishList.json; sourceTree = "<group>"; };
 		E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeDataToMainView.swift; sourceTree = "<group>"; };
 		E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStruct.swift; sourceTree = "<group>"; };
+		E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDishCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +67,13 @@
 			isa = PBXGroup;
 			children = (
 				E5AA9BD32392D53200E863C7 /* Support */,
+				E54D2C182392C1430084A055 /* Info.plist */,
+				E54D2C102392C1420084A055 /* Main.storyboard */,
 				E54D2C0E2392C1420084A055 /* ViewController.swift */,
 				E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */,
 				E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */,
-				E54D2C102392C1420084A055 /* Main.storyboard */,
-				E54D2C182392C1430084A055 /* Info.plist */,
+				E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */,
+				E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */,
 				E5AA9BDE2392F10400E863C7 /* JsonFile */,
 			);
 			path = MyDish;
@@ -165,9 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */,
+				E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */,
 				E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */,
 				E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
+				E5AA9BE22393E42300E863C7 /* MainDishCollectionViewCell.swift in Sources */,
 				E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

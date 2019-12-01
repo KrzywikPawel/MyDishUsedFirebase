@@ -8,22 +8,31 @@
 
 import UIKit
 
-
-
-class ViewController: UIViewController {
+class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    var arrayDish: [Dish] = {
+        let data = TakeDataToMainView()
+        var arrayDish = data.parseData()
+        return arrayDish
+    }()
     
     override func viewDidLoad() {
-//        do{
-//        let url = Bundle.main.url(forResource: "lista", withExtension: "json")!
-//            let data = try Data(contentsOf: url)
-//            let parseData = try JSONDecoder().decode([Dish].self, from: data)
-//            print(parseData[0])
-//        }catch{
-//            print(error)
-//        }
-        let data = TakeDataToMainView()
-        let array = data.parseData()
-        print(array[1])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("se")
+        print(arrayDish.count)
+        return arrayDish.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainDishCollectionViewCell
+        cell.dishImage.image = UIImage(named: "\(arrayDish[indexPath.row].image)")
+        cell.nameLabel.text = arrayDish[indexPath.row].name
+        cell.timeLabel.text = arrayDish[indexPath.row].time
+        cell.levelLabel.text = arrayDish[indexPath.row].level
+        return cell
     }
 }
+
 

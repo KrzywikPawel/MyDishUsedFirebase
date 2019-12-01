@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
 struct Dish:Decodable{
+    let image: String
     let name: String
     let time: String
-    let level: Int
+    let level: String
 }
