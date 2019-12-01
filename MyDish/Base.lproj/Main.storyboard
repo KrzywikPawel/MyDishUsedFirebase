@@ -61,11 +61,17 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-OZ-AEd">
+                                                    <rect key="frame" x="321" y="275" width="30" height="30"/>
+                                                    <state key="normal" image="shopBasket"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ocT-S3-1PG" firstAttribute="top" secondItem="rFq-TE-XwB" secondAttribute="top" id="B7D-PD-i75"/>
                                                 <constraint firstItem="tHt-A5-owS" firstAttribute="centerX" secondItem="rFq-TE-XwB" secondAttribute="centerX" id="HZa-S1-CLg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zth-OZ-AEd" secondAttribute="bottom" constant="22" id="JLD-Jk-N6I"/>
                                                 <constraint firstAttribute="trailing" secondItem="ocT-S3-1PG" secondAttribute="trailing" id="MQw-d9-rUy"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zth-OZ-AEd" secondAttribute="trailing" constant="24" id="X2p-zi-4RZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="tHt-A5-owS" secondAttribute="bottom" constant="4.5" id="d0G-ML-J6g"/>
                                                 <constraint firstItem="tHt-A5-owS" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="4" id="dng-rL-eXZ"/>
                                                 <constraint firstItem="ocT-S3-1PG" firstAttribute="leading" secondItem="rFq-TE-XwB" secondAttribute="leading" id="qvZ-SR-91E"/>
@@ -101,4 +107,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="66.11694152923539"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shopBasket" width="30" height="30"/>
+    </resources>
 </document>
