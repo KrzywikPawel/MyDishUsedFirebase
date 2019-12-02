@@ -2,10 +2,11 @@ import UIKit
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("se")
-        print(arrayDish.count)
         return arrayDish.count
     }
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainDishCollectionViewCell
@@ -17,10 +18,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         attributedString.setAttributes([NSAttributedString.Key.baselineOffset: 8], range: range)
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 12), range: range)
         attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 17), range: NSRange(location: 0, length: 2))
-        
-        
         cell.timeLabel.attributedText = attributedString
-        cell.levelLabel.text = arrayDish[indexPath.row].level
+        let customLvl = CustomizeMainDescription(dish: arrayDish)
+        customLvl.levelCustomization(indexPath, cell)
         return cell
     }
     

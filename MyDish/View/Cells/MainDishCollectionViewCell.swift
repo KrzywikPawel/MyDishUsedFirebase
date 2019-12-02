@@ -12,5 +12,8 @@ class MainDishCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dishImage: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var buttonLvl1: UIButton!
+    @IBOutlet weak var buttonLvl2: UIButton!
+    @IBOutlet weak var buttonLvl3: UIButton!
+    
 }

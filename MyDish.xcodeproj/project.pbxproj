@@ -18,6 +18,7 @@
 		E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */; };
 		E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */; };
 		E5AA9BE22393E42300E863C7 /* MainDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */; };
+		E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStruct.swift; sourceTree = "<group>"; };
 		E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDishCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeMainDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +71,9 @@
 				E5AA9BD32392D53200E863C7 /* Support */,
 				E54D2C182392C1430084A055 /* Info.plist */,
 				E54D2C102392C1420084A055 /* Main.storyboard */,
-				E54D2C0E2392C1420084A055 /* ViewController.swift */,
-				E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */,
-				E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */,
-				E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */,
-				E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */,
+				E5AA9BE623943C4600E863C7 /* Model */,
+				E5AA9BE82394406800E863C7 /* View */,
+				E5AA9BE92394407D00E863C7 /* Controller */,
 				E5AA9BDE2392F10400E863C7 /* JsonFile */,
 			);
 			path = MyDish;
@@ -96,6 +96,41 @@
 				E5AA9BD82392E37700E863C7 /* DishList.json */,
 			);
 			path = JsonFile;
+			sourceTree = "<group>";
+		};
+		E5AA9BE523943C3B00E863C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E5AA9BE623943C4600E863C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */,
+				E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5AA9BE82394406800E863C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */,
+				E5AA9BE523943C3B00E863C7 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5AA9BE92394407D00E863C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E54D2C0E2392C1420084A055 /* ViewController.swift */,
+				E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +210,7 @@
 				E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */,
 				E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
+				E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */,
 				E5AA9BE22393E42300E863C7 /* MainDishCollectionViewCell.swift in Sources */,
 				E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */,
 			);

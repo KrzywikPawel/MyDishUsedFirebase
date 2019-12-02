@@ -11,5 +11,5 @@ struct Dish:Decodable{
     let image: String
     let name: String
     let time: String
-    let level: String
+    let level: Int
 }

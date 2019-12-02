@@ -3,12 +3,18 @@
     "image": "jajecznica",
     "name": "Jajecznica",
     "time": "10",
-    "level": "0"
+    "level": 1
   },
   {
     "image": "nalesnik",
     "name": "Nalesniki",
     "time": "20",
-    "level": "1"
+    "level": 2
+  },
+  {
+      "image": "musli",
+      "name": "Musli",
+      "time": "50",
+      "level": 3
   }
 ]

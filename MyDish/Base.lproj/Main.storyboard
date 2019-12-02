@@ -39,48 +39,75 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tHt-A5-owS">
-                                                    <rect key="frame" x="165" y="259" width="45" height="63.5"/>
+                                                    <rect key="frame" x="149" y="259" width="77" height="63.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-sz-zM2" userLabel="NameLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Z5-3fp" userLabel="TimeLabel">
-                                                            <rect key="frame" x="0.0" y="21.5" width="45" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="23" width="77" height="17.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-Vh-M2F" userLabel="LevelLabel">
-                                                            <rect key="frame" x="0.0" y="43" width="45" height="20.5"/>
-                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" id="V4X-pX-MCB">
+                                                            <rect key="frame" x="0.0" y="41.5" width="77" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MUm-mh-ezD">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h3r-4t-YcD">
+                                                                    <rect key="frame" x="35" y="0.0" width="32" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dn1-SI-6k6">
+                                                                    <rect key="frame" x="70" y="0.0" width="7" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="SvK-Z5-3fp" firstAttribute="centerY" secondItem="tHt-A5-owS" secondAttribute="centerY" id="99S-eR-pW4"/>
+                                                        <constraint firstItem="V4X-pX-MCB" firstAttribute="top" secondItem="SvK-Z5-3fp" secondAttribute="bottom" constant="1" id="Haw-my-YGR"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-OZ-AEd">
-                                                    <rect key="frame" x="321" y="275" width="30" height="30"/>
+                                                    <rect key="frame" x="320" y="276" width="30" height="30"/>
                                                     <state key="normal" image="shopBasket"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-wJ-kLy">
+                                                    <rect key="frame" x="25" y="276" width="84" height="30"/>
+                                                    <state key="normal" title="Button" image="clock"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ocT-S3-1PG" firstAttribute="top" secondItem="rFq-TE-XwB" secondAttribute="top" id="B7D-PD-i75"/>
                                                 <constraint firstItem="tHt-A5-owS" firstAttribute="centerX" secondItem="rFq-TE-XwB" secondAttribute="centerX" id="HZa-S1-CLg"/>
-                                                <constraint firstAttribute="bottom" secondItem="Zth-OZ-AEd" secondAttribute="bottom" constant="22" id="JLD-Jk-N6I"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zth-OZ-AEd" secondAttribute="bottom" constant="21" id="JLD-Jk-N6I"/>
                                                 <constraint firstAttribute="trailing" secondItem="ocT-S3-1PG" secondAttribute="trailing" id="MQw-d9-rUy"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zth-OZ-AEd" secondAttribute="trailing" constant="24" id="X2p-zi-4RZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zth-OZ-AEd" secondAttribute="trailing" constant="25" id="X2p-zi-4RZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="1jw-wJ-kLy" secondAttribute="bottom" constant="21" id="bKQ-gj-qcZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="tHt-A5-owS" secondAttribute="bottom" constant="4.5" id="d0G-ML-J6g"/>
                                                 <constraint firstItem="tHt-A5-owS" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="4" id="dng-rL-eXZ"/>
+                                                <constraint firstItem="1jw-wJ-kLy" firstAttribute="leading" secondItem="rFq-TE-XwB" secondAttribute="leading" constant="25" id="fnh-DQ-8BO"/>
                                                 <constraint firstItem="ocT-S3-1PG" firstAttribute="leading" secondItem="rFq-TE-XwB" secondAttribute="leading" id="qvZ-SR-91E"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="375" height="327"/>
                                         <connections>
+                                            <outlet property="buttonLvl1" destination="MUm-mh-ezD" id="eYd-SA-VOl"/>
+                                            <outlet property="buttonLvl2" destination="h3r-4t-YcD" id="8vi-em-G3u"/>
+                                            <outlet property="buttonLvl3" destination="Dn1-SI-6k6" id="DM5-so-Tka"/>
                                             <outlet property="dishImage" destination="ocT-S3-1PG" id="XaN-dG-KQd"/>
-                                            <outlet property="levelLabel" destination="dgg-Vh-M2F" id="aB5-0o-JXc"/>
                                             <outlet property="nameLabel" destination="fft-sz-zM2" id="evC-dL-I8J"/>
                                             <outlet property="timeLabel" destination="SvK-Z5-3fp" id="BQg-N4-WNS"/>
                                         </connections>
@@ -108,6 +135,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="64" height="60"/>
+        <image name="clock" width="30" height="30"/>
         <image name="shopBasket" width="30" height="30"/>
     </resources>
 </document>
