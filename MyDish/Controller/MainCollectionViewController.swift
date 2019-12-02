@@ -24,4 +24,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+           let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
+        pushVC.name = arrayDish[indexPath.row].name
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
+    
 }
