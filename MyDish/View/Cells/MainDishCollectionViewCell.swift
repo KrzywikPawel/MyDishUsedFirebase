@@ -16,4 +16,5 @@ class MainDishCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var buttonLvl2: UIButton!
     @IBOutlet weak var buttonLvl3: UIButton!
     
+    @IBOutlet weak var cookLaterButton: UIButton!
 }

@@ -21,12 +21,24 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.timeLabel.attributedText = attributedString
         let customLvl = CustomizeMainDescription(dish: arrayDish)
         customLvl.levelCustomization(indexPath, cell)
+        cell.cookLaterButton.tag = arrayDish[indexPath.row].id
+        cell.cookLaterButton.addTarget(self, action: #selector(self.cookLaterBtn(sender:)),for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func cookLaterBtn(sender:UIButton){
+        var arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
+        if arrayLaterCookDishes.contains(sender.tag){
+        }else{
+            arrayLaterCookDishes.append(sender.tag)
+        }
+        defaults.set(arrayLaterCookDishes, forKey: "arrayCookLater")
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-           let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
+        let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
         pushVC.name = arrayDish[indexPath.row].name
         pushVC.id = arrayDish[indexPath.row].id
         self.navigationController?.pushViewController(pushVC, animated: true)

@@ -81,11 +81,11 @@
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-OZ-AEd">
-                                                    <rect key="frame" x="320" y="276" width="30" height="30"/>
+                                                    <rect key="frame" x="290" y="246" width="60" height="60"/>
                                                     <state key="normal" image="shopBasket"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-wJ-kLy">
-                                                    <rect key="frame" x="25" y="276" width="84" height="30"/>
+                                                    <rect key="frame" x="25" y="246" width="114" height="60"/>
                                                     <state key="normal" title="Button" image="clock"/>
                                                 </button>
                                             </subviews>
@@ -107,6 +107,7 @@
                                             <outlet property="buttonLvl1" destination="MUm-mh-ezD" id="eYd-SA-VOl"/>
                                             <outlet property="buttonLvl2" destination="h3r-4t-YcD" id="8vi-em-G3u"/>
                                             <outlet property="buttonLvl3" destination="Dn1-SI-6k6" id="DM5-so-Tka"/>
+                                            <outlet property="cookLaterButton" destination="1jw-wJ-kLy" id="Orq-0v-SPk"/>
                                             <outlet property="dishImage" destination="ocT-S3-1PG" id="XaN-dG-KQd"/>
                                             <outlet property="nameLabel" destination="fft-sz-zM2" id="evC-dL-I8J"/>
                                             <outlet property="timeLabel" destination="SvK-Z5-3fp" id="BQg-N4-WNS"/>
@@ -164,7 +165,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="OkP-8a-tVL" customClass="DetailDishCollectionViewCell" customModule="MyDish" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="OkP-8a-tVL" customClass="DetailDishCollectionViewCell" customModule="MyDish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.5" width="375" height="269"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zwr-V9-tWq">
@@ -206,14 +207,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="8hP-D4-78u" customClass="ProductsTableViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8hP-D4-78u" id="fUb-LG-RV0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-Ky-AgM">
-                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
