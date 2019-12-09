@@ -2,13 +2,13 @@
 {
         "id": 1,
         "img":["j1","j2","j3"],
-        "products":["n","n","n"],
+        "products":["jajko x5","kielbasa 100g","sol","pieprz","margaryna"],
         "steps":["n","n","n"]
     },
     {
         "id": 2,
         "img":["n1","n2","n3"],
-        "products":["n","n","n"],
+        "products":["maka 250g","woda 250ml","jajko x1","olej 25ml"],
         "steps":["n","n","n"]
     }
 ]

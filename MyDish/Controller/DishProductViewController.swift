@@ -14,10 +14,12 @@ class DishProductViewController: UIViewController {
     var name:String = ""
     var id: Int = 0
     var imgArray: Array<String> = []
+    var productsArray: Array<String> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
         let properties = takeProperties(id: id)
         imgArray = properties.img
+        productsArray = properties.products
     }
 }

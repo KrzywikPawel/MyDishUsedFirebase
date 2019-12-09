@@ -10,6 +10,8 @@
 		E50715C4239ECC9C00F5534B /* PropertiesDish.json in Resources */ = {isa = PBXBuildFile; fileRef = E50715C3239ECC9C00F5534B /* PropertiesDish.json */; };
 		E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50715C5239ECD5A00F5534B /* DishPropertiesStruct.swift */; };
 		E50715C8239ECDB300F5534B /* TakePropertiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50715C7239ECDB300F5534B /* TakePropertiesData.swift */; };
+		E545702D239ED49D0041F4E3 /* NeedsProductsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */; };
+		E545702F239ED5AE0041F4E3 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545702E239ED5AE0041F4E3 /* ProductsTableViewCell.swift */; };
 		E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0A2392C1420084A055 /* AppDelegate.swift */; };
 		E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0C2392C1420084A055 /* SceneDelegate.swift */; };
 		E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0E2392C1420084A055 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		E50715C3239ECC9C00F5534B /* PropertiesDish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PropertiesDish.json; sourceTree = "<group>"; };
 		E50715C5239ECD5A00F5534B /* DishPropertiesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPropertiesStruct.swift; sourceTree = "<group>"; };
 		E50715C7239ECDB300F5534B /* TakePropertiesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePropertiesData.swift; sourceTree = "<group>"; };
+		E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsProductsTable.swift; sourceTree = "<group>"; };
+		E545702E239ED5AE0041F4E3 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		E54D2C072392C1420084A055 /* MyDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54D2C0A2392C1420084A055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54D2C0C2392C1420084A055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */,
 				E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */,
+				E545702E239ED5AE0041F4E3 /* ProductsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */,
 				E5F842BB2395182C00DA66BD /* DishProductViewController.swift */,
 				E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */,
+				E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,7 +234,9 @@
 				E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */,
 				E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */,
 				E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */,
+				E545702D239ED49D0041F4E3 /* NeedsProductsTable.swift in Sources */,
 				E5F842BC2395182C00DA66BD /* DishProductViewController.swift in Sources */,
+				E545702F239ED5AE0041F4E3 /* ProductsTableViewCell.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
 				E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */,
 				E5F842BE2395195600DA66BD /* DetailDishCollectionViewCell.swift in Sources */,
