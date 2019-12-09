@@ -7,3 +7,9 @@
 //
 
 import Foundation
+struct DishPropertiesStruct:Decodable {
+    let id: Int
+    let img: Array<String>
+    let products:Array<String>
+    let steps: Array<String>
+}

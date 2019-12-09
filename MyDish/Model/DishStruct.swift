@@ -8,6 +8,7 @@
 
 import Foundation
 struct Dish:Decodable{
+    let id:Int
     let image: String
     let name: String
     let time: String

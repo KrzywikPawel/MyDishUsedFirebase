@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 extension DishProductViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return imgArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DetailDishCollectionViewCell
-        cell.detailImage.image = UIImage(named: "jajecznica")
+        cell.detailImage.image = UIImage(named: "\(imgArray[indexPath.row])")
         return cell
     }
 

@@ -11,12 +11,13 @@ import UIKit
 class DishProductViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var mealLabel: UILabel!
     var name:String = ""
+    var id: Int = 0
+    var imgArray: Array<String> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
-        
-        
+        let properties = takeProperties(id: id)
+        imgArray = properties.img
     }
 }

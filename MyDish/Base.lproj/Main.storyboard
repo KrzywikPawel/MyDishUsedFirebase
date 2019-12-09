@@ -151,22 +151,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posilek" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrv-Ku-blY">
-                                <rect key="frame" x="260" y="289" width="100" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FZB-68-vzU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nsN-Ud-bs8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="s8K-GX-Vmq"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mP5-jf-Lic">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mP5-jf-Lic">
                                     <size key="itemSize" width="375" height="269"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -202,22 +193,28 @@
                                     <outlet property="delegate" destination="VTL-kY-MsF" id="0VU-jE-SSj"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-Qf-K2l">
+                                <rect key="frame" x="320" y="289" width="25" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="7dA-Aj-mds"/>
+                                    <constraint firstAttribute="height" constant="30" id="b2n-9M-L42"/>
+                                </constraints>
+                                <state key="normal" image="shopBasket"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mrv-Ku-blY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5qm-i4-e7F" secondAttribute="trailing" constant="8" symbolic="YES" id="DzX-Tp-B59"/>
+                            <constraint firstItem="cDh-Qf-K2l" firstAttribute="top" secondItem="nsN-Ud-bs8" secondAttribute="bottom" constant="19" id="5fL-MA-5Iv"/>
+                            <constraint firstItem="JDp-k6-llM" firstAttribute="trailing" secondItem="cDh-Qf-K2l" secondAttribute="trailing" constant="30" id="AW8-za-nwQ"/>
                             <constraint firstItem="nsN-Ud-bs8" firstAttribute="trailing" secondItem="JDp-k6-llM" secondAttribute="trailing" id="J7x-Ld-0D8"/>
                             <constraint firstItem="nsN-Ud-bs8" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" id="c9o-fW-DFm"/>
                             <constraint firstItem="5qm-i4-e7F" firstAttribute="top" secondItem="nsN-Ud-bs8" secondAttribute="bottom" constant="19" id="htI-9w-cfM"/>
                             <constraint firstItem="5qm-i4-e7F" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" constant="15" id="iRp-BF-6WE"/>
                             <constraint firstItem="nsN-Ud-bs8" firstAttribute="top" secondItem="JDp-k6-llM" secondAttribute="top" id="ick-Ng-b11"/>
-                            <constraint firstItem="JDp-k6-llM" firstAttribute="trailing" secondItem="mrv-Ku-blY" secondAttribute="trailing" constant="15" id="nb5-TD-dnG"/>
-                            <constraint firstItem="mrv-Ku-blY" firstAttribute="baseline" secondItem="5qm-i4-e7F" secondAttribute="baseline" id="vjo-Bv-eFe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JDp-k6-llM"/>
                     </view>
                     <connections>
-                        <outlet property="mealLabel" destination="mrv-Ku-blY" id="fxc-oC-z2b"/>
                         <outlet property="nameLabel" destination="5qm-i4-e7F" id="O47-Rb-Awf"/>
                     </connections>
                 </viewController>

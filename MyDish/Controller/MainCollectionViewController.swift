@@ -28,6 +28,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
            let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
         pushVC.name = arrayDish[indexPath.row].name
+        pushVC.id = arrayDish[indexPath.row].id
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
