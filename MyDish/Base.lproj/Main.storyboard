@@ -201,16 +201,38 @@
                                 </constraints>
                                 <state key="normal" image="shopBasket"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-k1-yRu">
+                                <rect key="frame" x="0.0" y="318" width="375" height="349"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8hP-D4-78u">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8hP-D4-78u" id="fUb-LG-RV0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VTL-kY-MsF" id="fL1-0R-ovE"/>
+                                    <outlet property="delegate" destination="VTL-kY-MsF" id="ree-xE-iHV"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cDh-Qf-K2l" firstAttribute="top" secondItem="nsN-Ud-bs8" secondAttribute="bottom" constant="19" id="5fL-MA-5Iv"/>
+                            <constraint firstItem="jhI-k1-yRu" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" id="6GK-lg-Ko1"/>
                             <constraint firstItem="JDp-k6-llM" firstAttribute="trailing" secondItem="cDh-Qf-K2l" secondAttribute="trailing" constant="30" id="AW8-za-nwQ"/>
+                            <constraint firstItem="jhI-k1-yRu" firstAttribute="trailing" secondItem="JDp-k6-llM" secondAttribute="trailing" id="FzJ-4b-usX"/>
                             <constraint firstItem="nsN-Ud-bs8" firstAttribute="trailing" secondItem="JDp-k6-llM" secondAttribute="trailing" id="J7x-Ld-0D8"/>
+                            <constraint firstItem="jhI-k1-yRu" firstAttribute="bottom" secondItem="JDp-k6-llM" secondAttribute="bottom" id="Mrz-NP-kL0"/>
                             <constraint firstItem="nsN-Ud-bs8" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" id="c9o-fW-DFm"/>
                             <constraint firstItem="5qm-i4-e7F" firstAttribute="top" secondItem="nsN-Ud-bs8" secondAttribute="bottom" constant="19" id="htI-9w-cfM"/>
                             <constraint firstItem="5qm-i4-e7F" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" constant="15" id="iRp-BF-6WE"/>
                             <constraint firstItem="nsN-Ud-bs8" firstAttribute="top" secondItem="JDp-k6-llM" secondAttribute="top" id="ick-Ng-b11"/>
+                            <constraint firstItem="jhI-k1-yRu" firstAttribute="top" secondItem="5qm-i4-e7F" secondAttribute="bottom" constant="8" id="xS6-Lf-CQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JDp-k6-llM"/>
                     </view>
