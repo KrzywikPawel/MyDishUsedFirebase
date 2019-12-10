@@ -21,4 +21,15 @@ class TakeDataToMainView{
          return dishes
     }
     
+    func takeDishFromId(id: Int) -> Dish {
+        var dish: Dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
+        let dishes: Array<Dish> = parseData()
+        for item in dishes{
+            if(item.id == id){
+                dish = item
+            }
+        }
+        return dish
+    }
+    
 }

@@ -81,11 +81,11 @@
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-OZ-AEd">
-                                                    <rect key="frame" x="290" y="246" width="60" height="60"/>
+                                                    <rect key="frame" x="320" y="276" width="30" height="30"/>
                                                     <state key="normal" image="shopBasket"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-wJ-kLy">
-                                                    <rect key="frame" x="25" y="246" width="114" height="60"/>
+                                                    <rect key="frame" x="25" y="276" width="84" height="30"/>
                                                     <state key="normal" title="Button" image="clock"/>
                                                 </button>
                                             </subviews>
@@ -125,6 +125,7 @@
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O9S-8T-B42"/>
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VQj-UK-1w7"/>
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c74-ro-dnK"/>
+                            <constraint firstItem="tHt-A5-owS" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="4" id="cuV-fp-fGy"/>
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xxh-f5-re4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -280,10 +281,120 @@
         <!--cook later-->
         <scene sceneID="6HQ-uM-BOY">
             <objects>
-                <viewController id="VHT-40-HG8" sceneMemberID="viewController">
+                <viewController id="VHT-40-HG8" customClass="CookLaterViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIT-8r-WJW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Zq-0c-FsD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qC2-V5-6L4">
+                                    <size key="itemSize" width="375" height="326"/>
+                                    <size key="estimatedItemSize" width="375" height="326"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="jD1-Sv-uBh" customClass="CookLaterCollectionViewCell" customModule="MyDish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k3q-st-Wbf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ehC-Yr-FxZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ni3-eD-jbi">
+                                                    <rect key="frame" x="149" y="262.5" width="77" height="63.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hD-2F-wvd" userLabel="NameLabel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXb-Fz-GLl" userLabel="TimeLabel">
+                                                            <rect key="frame" x="0.0" y="23" width="77" height="17.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" id="Q5X-w8-pWS">
+                                                            <rect key="frame" x="0.0" y="41.5" width="77" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iGs-BK-XAJ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lr6-5a-Uvd">
+                                                                    <rect key="frame" x="35" y="0.0" width="32" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s7d-bu-yCb">
+                                                                    <rect key="frame" x="70" y="0.0" width="7" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="zXb-Fz-GLl" firstAttribute="centerY" secondItem="Ni3-eD-jbi" secondAttribute="centerY" id="b2q-5V-BjR"/>
+                                                        <constraint firstItem="Q5X-w8-pWS" firstAttribute="top" secondItem="zXb-Fz-GLl" secondAttribute="bottom" constant="1" id="jYY-FS-8EW"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-5Q-Vie">
+                                                    <rect key="frame" x="320" y="276" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="791-aV-mNs"/>
+                                                        <constraint firstAttribute="height" constant="30" id="tkh-aH-uk0"/>
+                                                    </constraints>
+                                                    <state key="normal" image="shopBasket"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erv-ni-O3Y">
+                                                    <rect key="frame" x="25" y="276" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="cYB-zP-Lmz"/>
+                                                        <constraint firstAttribute="width" constant="30" id="hyR-58-3kM"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="delete"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Qag-5Q-Vie" secondAttribute="trailing" constant="25" id="9uE-0N-iWa"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ni3-eD-jbi" secondAttribute="bottom" constant="1" id="BPF-yl-Qgm"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qag-5Q-Vie" secondAttribute="bottom" constant="21" id="DQ7-WW-MHc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Erv-ni-O3Y" secondAttribute="bottom" constant="21" id="Qao-Jn-Yq5"/>
+                                                <constraint firstItem="Erv-ni-O3Y" firstAttribute="leading" secondItem="k3q-st-Wbf" secondAttribute="leading" constant="25" id="YeZ-1g-2rk"/>
+                                                <constraint firstItem="Ni3-eD-jbi" firstAttribute="centerX" secondItem="k3q-st-Wbf" secondAttribute="centerX" id="kA8-E8-dkK"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="375" height="327"/>
+                                        <connections>
+                                            <outlet property="btnLvl1" destination="iGs-BK-XAJ" id="fdr-li-7yw"/>
+                                            <outlet property="btnLvl2" destination="Lr6-5a-Uvd" id="xme-3d-zpT"/>
+                                            <outlet property="btnLvl3" destination="s7d-bu-yCb" id="KcG-ga-PbM"/>
+                                            <outlet property="deleteBtn" destination="Erv-ni-O3Y" id="5gJ-bQ-wXT"/>
+                                            <outlet property="dishImage" destination="ehC-Yr-FxZ" id="mYS-lw-XTY"/>
+                                            <outlet property="nameLabel" destination="3hD-2F-wvd" id="tlv-kJ-aRv"/>
+                                            <outlet property="timeLabel" destination="zXb-Fz-GLl" id="zIg-cq-T9Z"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="VHT-40-HG8" id="9qX-nH-igH"/>
+                                    <outlet property="delegate" destination="VHT-40-HG8" id="Gef-2S-uPB"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="A4A-Cf-UKi"/>
                     </view>
@@ -291,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPB-xm-hg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="822"/>
+            <point key="canvasLocation" x="948" y="821.73913043478262"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ojf-gM-WRv">
@@ -336,6 +447,7 @@
     <resources>
         <image name="circle" catalog="system" width="64" height="60"/>
         <image name="clock" width="30" height="30"/>
+        <image name="delete" width="30" height="30"/>
         <image name="dishIcon" width="30" height="30"/>
         <image name="shopBasket" width="30" height="30"/>
     </resources>

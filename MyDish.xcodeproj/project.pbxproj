@@ -24,6 +24,9 @@
 		E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */; };
 		E5AA9BE22393E42300E863C7 /* MainDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */; };
 		E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */; };
+		E5CBA6AF239EF7BE00E4722A /* CookLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */; };
+		E5CBA6B1239EF7D800E4722A /* CookLaterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */; };
+		E5CBA6B3239EFF8E00E4722A /* CookLaterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CBA6B2239EFF8E00E4722A /* CookLaterCollectionViewCell.swift */; };
 		E5F842BC2395182C00DA66BD /* DishProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BB2395182C00DA66BD /* DishProductViewController.swift */; };
 		E5F842BE2395195600DA66BD /* DetailDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */; };
 		E5F842C023951A1E00DA66BD /* DishProductCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */; };
@@ -49,6 +52,9 @@
 		E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDishCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeMainDescription.swift; sourceTree = "<group>"; };
+		E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookLaterViewController.swift; sourceTree = "<group>"; };
+		E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookLaterCollectionView.swift; sourceTree = "<group>"; };
+		E5CBA6B2239EFF8E00E4722A /* CookLaterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookLaterCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5F842BB2395182C00DA66BD /* DishProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishProductViewController.swift; sourceTree = "<group>"; };
 		E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDishCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishProductCollectionView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				E5AA9BE12393E42300E863C7 /* MainDishCollectionViewCell.swift */,
 				E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */,
 				E545702E239ED5AE0041F4E3 /* ProductsTableViewCell.swift */,
+				E5CBA6B2239EFF8E00E4722A /* CookLaterCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 				E5F842BB2395182C00DA66BD /* DishProductViewController.swift */,
 				E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */,
 				E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */,
+				E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */,
+				E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */,
+				E5CBA6B1239EF7D800E4722A /* CookLaterCollectionView.swift in Sources */,
 				E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */,
 				E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */,
 				E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */,
@@ -241,8 +251,10 @@
 				E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */,
 				E5F842BE2395195600DA66BD /* DetailDishCollectionViewCell.swift in Sources */,
 				E50715C8239ECDB300F5534B /* TakePropertiesData.swift in Sources */,
+				E5CBA6AF239EF7BE00E4722A /* CookLaterViewController.swift in Sources */,
 				E5F842C023951A1E00DA66BD /* DishProductCollectionView.swift in Sources */,
 				E5AA9BE22393E42300E863C7 /* MainDishCollectionViewCell.swift in Sources */,
+				E5CBA6B3239EFF8E00E4722A /* CookLaterCollectionViewCell.swift in Sources */,
 				E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */,
 				E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */,
 			);
