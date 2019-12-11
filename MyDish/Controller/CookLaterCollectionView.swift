@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        MARK: zabezpieczenie jak jest 0?
         return dishesInArray.count
     }
     
@@ -25,7 +24,4 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
         return cell
     }
-    
-    
-    
 }

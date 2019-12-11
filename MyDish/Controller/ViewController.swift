@@ -22,7 +22,7 @@ class ViewController: UIViewController{
     
     
     override func viewDidLoad() {
-//          defaults.removeObject(forKey: "arrayCookLater")
+          defaults.removeObject(forKey: "arrayCookLater")
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
     }

@@ -11,8 +11,9 @@ import UIKit
 
 class CustomizeMainDescription{
     private var arrayDish: [Dish] = []
-    init(dish: [Dish]) {
-        arrayDish = dish
+    
+    init(arrayDish: [Dish]) {
+        self.arrayDish = arrayDish
     }
     init(dish: Dish){
         arrayDish.append(dish)
@@ -27,7 +28,7 @@ class CustomizeMainDescription{
         cell.buttonLvl3.tintColor = .red
     }
     
-    private func levelCustomization(_ indexPath: IndexPath, _ cell: MainCollectionViewCell,_ lvl:Int) {
+    private func levelCustomization(_ indexPath: IndexPath, _ cell: MainCollectionViewCell, _ lvl:Int) {
         switch lvl {
         case 1:
             setColourLvlCircle(cell)
@@ -58,6 +59,4 @@ class CustomizeMainDescription{
         cell.timeLabel.attributedText = attributedString
         levelCustomization(indexPath, cell,lvl)
     }
-    
-    
 }
