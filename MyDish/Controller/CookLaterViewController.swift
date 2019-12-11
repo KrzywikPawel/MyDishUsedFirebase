@@ -9,11 +9,14 @@
 import UIKit
 
 class CookLaterViewController: UIViewController {
+    @IBOutlet weak var cookLaterCollectionview: UICollectionView!
     let vc:ViewController = ViewController()
     var dishesInArray: Array<Int> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         dishesInArray = vc.defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
+        let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
+        cookLaterCollectionview.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
         
     }
 }

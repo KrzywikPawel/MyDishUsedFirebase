@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="MyDish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="325"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="325"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sDv-rD-Llf">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="255"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="255" id="l3c-UW-vXq"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UeO-EK-GVp">
+                        <rect key="frame" x="25" y="274" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="KTs-AV-Xcq"/>
+                            <constraint firstAttribute="width" constant="30" id="QZd-MZ-NtW"/>
+                        </constraints>
+                        <state key="normal" image="clock"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3hT-up-VBk">
+                        <rect key="frame" x="321" y="274" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="3uF-cS-HhX"/>
+                            <constraint firstAttribute="width" constant="30" id="jk4-HK-ekG"/>
+                        </constraints>
+                        <state key="normal" image="shopBasket"/>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-M0-ckF">
+                        <rect key="frame" x="149.5" y="260.5" width="77" height="63.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-oY-74u" userLabel="NameLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iit-9u-R32" userLabel="TimeLabel">
+                                <rect key="frame" x="0.0" y="23" width="77" height="17.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" id="W0p-iD-yZk">
+                                <rect key="frame" x="0.0" y="41.5" width="77" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GwK-AD-TnW">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="B" image="circle" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5gJ-eJ-3br">
+                                        <rect key="frame" x="35" y="0.0" width="32" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="B" image="circle" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tuc-hQ-WyO">
+                                        <rect key="frame" x="70" y="0.0" width="7" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="B" image="circle" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="iit-9u-R32" firstAttribute="centerY" secondItem="tXz-M0-ckF" secondAttribute="centerY" id="Qfw-u0-5O5"/>
+                            <constraint firstItem="W0p-iD-yZk" firstAttribute="top" secondItem="iit-9u-R32" secondAttribute="bottom" constant="1" id="w5P-IF-mXL"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3hT-up-VBk" secondAttribute="bottom" constant="21" id="7Eb-hE-0jD"/>
+                <constraint firstAttribute="trailing" secondItem="3hT-up-VBk" secondAttribute="trailing" constant="25" id="9YG-gJ-R68"/>
+                <constraint firstItem="sDv-rD-Llf" firstAttribute="centerX" secondItem="tXz-M0-ckF" secondAttribute="centerX" id="Fgi-b6-T0b"/>
+                <constraint firstItem="tXz-M0-ckF" firstAttribute="top" secondItem="sDv-rD-Llf" secondAttribute="bottom" constant="5.5" id="O0a-0D-zO8"/>
+                <constraint firstItem="UeO-EK-GVp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="coj-bH-oHy"/>
+                <constraint firstAttribute="bottom" secondItem="tXz-M0-ckF" secondAttribute="bottom" constant="1" id="gm9-2P-mcg"/>
+                <constraint firstItem="tXz-M0-ckF" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="khV-eI-2Dz"/>
+                <constraint firstAttribute="bottom" secondItem="UeO-EK-GVp" secondAttribute="bottom" constant="21" id="nEH-x4-nEM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="336" height="198"/>
+            <connections>
+                <outlet property="buttonLvl1" destination="GwK-AD-TnW" id="Qwt-Ud-k2K"/>
+                <outlet property="buttonLvl2" destination="5gJ-eJ-3br" id="cwz-6o-1yV"/>
+                <outlet property="buttonLvl3" destination="Tuc-hQ-WyO" id="y2P-HH-3gB"/>
+                <outlet property="cookLaterButton" destination="UeO-EK-GVp" id="Y6e-Qq-C6c"/>
+                <outlet property="dishImage" destination="sDv-rD-Llf" id="VaW-Ht-jPn"/>
+                <outlet property="nameLabel" destination="dSD-oY-74u" id="5hM-VN-Ueb"/>
+                <outlet property="timeLabel" destination="iit-9u-R32" id="i41-Ix-Ewu"/>
+            </connections>
+            <point key="canvasLocation" x="-65.217391304347828" y="90.736607142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="64" height="60"/>
+        <image name="clock" width="30" height="30"/>
+        <image name="shopBasket" width="30" height="30"/>
+    </resources>
+</document>

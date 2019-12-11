@@ -20,100 +20,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GD9-Uz-pv0">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="112" height="99"/>
                                     <size key="estimatedItemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4Eb-VD-lzM" customClass="MainDishCollectionViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rFq-TE-XwB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ocT-S3-1PG" userLabel="ImageDish">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tHt-A5-owS">
-                                                    <rect key="frame" x="149" y="259" width="77" height="63.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-sz-zM2" userLabel="NameLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Z5-3fp" userLabel="TimeLabel">
-                                                            <rect key="frame" x="0.0" y="23" width="77" height="17.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" id="V4X-pX-MCB">
-                                                            <rect key="frame" x="0.0" y="41.5" width="77" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MUm-mh-ezD">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h3r-4t-YcD">
-                                                                    <rect key="frame" x="35" y="0.0" width="32" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dn1-SI-6k6">
-                                                                    <rect key="frame" x="70" y="0.0" width="7" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="SvK-Z5-3fp" firstAttribute="centerY" secondItem="tHt-A5-owS" secondAttribute="centerY" id="99S-eR-pW4"/>
-                                                        <constraint firstItem="V4X-pX-MCB" firstAttribute="top" secondItem="SvK-Z5-3fp" secondAttribute="bottom" constant="1" id="Haw-my-YGR"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-OZ-AEd">
-                                                    <rect key="frame" x="320" y="276" width="30" height="30"/>
-                                                    <state key="normal" image="shopBasket"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-wJ-kLy">
-                                                    <rect key="frame" x="25" y="276" width="84" height="30"/>
-                                                    <state key="normal" title="Button" image="clock"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ocT-S3-1PG" firstAttribute="top" secondItem="rFq-TE-XwB" secondAttribute="top" id="B7D-PD-i75"/>
-                                                <constraint firstItem="tHt-A5-owS" firstAttribute="centerX" secondItem="rFq-TE-XwB" secondAttribute="centerX" id="HZa-S1-CLg"/>
-                                                <constraint firstAttribute="bottom" secondItem="Zth-OZ-AEd" secondAttribute="bottom" constant="21" id="JLD-Jk-N6I"/>
-                                                <constraint firstAttribute="trailing" secondItem="ocT-S3-1PG" secondAttribute="trailing" id="MQw-d9-rUy"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zth-OZ-AEd" secondAttribute="trailing" constant="25" id="X2p-zi-4RZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="1jw-wJ-kLy" secondAttribute="bottom" constant="21" id="bKQ-gj-qcZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="tHt-A5-owS" secondAttribute="bottom" constant="4.5" id="d0G-ML-J6g"/>
-                                                <constraint firstItem="tHt-A5-owS" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="4" id="dng-rL-eXZ"/>
-                                                <constraint firstItem="1jw-wJ-kLy" firstAttribute="leading" secondItem="rFq-TE-XwB" secondAttribute="leading" constant="25" id="fnh-DQ-8BO"/>
-                                                <constraint firstItem="ocT-S3-1PG" firstAttribute="leading" secondItem="rFq-TE-XwB" secondAttribute="leading" id="qvZ-SR-91E"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="375" height="327"/>
-                                        <connections>
-                                            <outlet property="buttonLvl1" destination="MUm-mh-ezD" id="eYd-SA-VOl"/>
-                                            <outlet property="buttonLvl2" destination="h3r-4t-YcD" id="8vi-em-G3u"/>
-                                            <outlet property="buttonLvl3" destination="Dn1-SI-6k6" id="DM5-so-Tka"/>
-                                            <outlet property="cookLaterButton" destination="1jw-wJ-kLy" id="Orq-0v-SPk"/>
-                                            <outlet property="dishImage" destination="ocT-S3-1PG" id="XaN-dG-KQd"/>
-                                            <outlet property="nameLabel" destination="fft-sz-zM2" id="evC-dL-I8J"/>
-                                            <outlet property="timeLabel" destination="SvK-Z5-3fp" id="BQg-N4-WNS"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="2Rc-54-weD"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="1gf-Ai-ZE9"/>
@@ -125,12 +38,14 @@
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O9S-8T-B42"/>
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VQj-UK-1w7"/>
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c74-ro-dnK"/>
-                            <constraint firstItem="tHt-A5-owS" firstAttribute="top" secondItem="ocT-S3-1PG" secondAttribute="bottom" constant="4" id="cuV-fp-fGy"/>
                             <constraint firstItem="G3E-M2-XeS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xxh-f5-re4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rl0-aX-H5L"/>
+                    <connections>
+                        <outlet property="mainDishCollection" destination="G3E-M2-XeS" id="pGP-co-VOm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,98 +212,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="jD1-Sv-uBh" customClass="CookLaterCollectionViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k3q-st-Wbf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ehC-Yr-FxZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ni3-eD-jbi">
-                                                    <rect key="frame" x="149" y="262.5" width="77" height="63.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hD-2F-wvd" userLabel="NameLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXb-Fz-GLl" userLabel="TimeLabel">
-                                                            <rect key="frame" x="0.0" y="23" width="77" height="17.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" id="Q5X-w8-pWS">
-                                                            <rect key="frame" x="0.0" y="41.5" width="77" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iGs-BK-XAJ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lr6-5a-Uvd">
-                                                                    <rect key="frame" x="35" y="0.0" width="32" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s7d-bu-yCb">
-                                                                    <rect key="frame" x="70" y="0.0" width="7" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="B" image="circle" catalog="system"/>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="zXb-Fz-GLl" firstAttribute="centerY" secondItem="Ni3-eD-jbi" secondAttribute="centerY" id="b2q-5V-BjR"/>
-                                                        <constraint firstItem="Q5X-w8-pWS" firstAttribute="top" secondItem="zXb-Fz-GLl" secondAttribute="bottom" constant="1" id="jYY-FS-8EW"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-5Q-Vie">
-                                                    <rect key="frame" x="320" y="276" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="791-aV-mNs"/>
-                                                        <constraint firstAttribute="height" constant="30" id="tkh-aH-uk0"/>
-                                                    </constraints>
-                                                    <state key="normal" image="shopBasket"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erv-ni-O3Y">
-                                                    <rect key="frame" x="25" y="276" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="cYB-zP-Lmz"/>
-                                                        <constraint firstAttribute="width" constant="30" id="hyR-58-3kM"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="delete"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Qag-5Q-Vie" secondAttribute="trailing" constant="25" id="9uE-0N-iWa"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ni3-eD-jbi" secondAttribute="bottom" constant="1" id="BPF-yl-Qgm"/>
-                                                <constraint firstAttribute="bottom" secondItem="Qag-5Q-Vie" secondAttribute="bottom" constant="21" id="DQ7-WW-MHc"/>
-                                                <constraint firstAttribute="bottom" secondItem="Erv-ni-O3Y" secondAttribute="bottom" constant="21" id="Qao-Jn-Yq5"/>
-                                                <constraint firstItem="Erv-ni-O3Y" firstAttribute="leading" secondItem="k3q-st-Wbf" secondAttribute="leading" constant="25" id="YeZ-1g-2rk"/>
-                                                <constraint firstItem="Ni3-eD-jbi" firstAttribute="centerX" secondItem="k3q-st-Wbf" secondAttribute="centerX" id="kA8-E8-dkK"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="375" height="327"/>
-                                        <connections>
-                                            <outlet property="btnLvl1" destination="iGs-BK-XAJ" id="fdr-li-7yw"/>
-                                            <outlet property="btnLvl2" destination="Lr6-5a-Uvd" id="xme-3d-zpT"/>
-                                            <outlet property="btnLvl3" destination="s7d-bu-yCb" id="KcG-ga-PbM"/>
-                                            <outlet property="deleteBtn" destination="Erv-ni-O3Y" id="5gJ-bQ-wXT"/>
-                                            <outlet property="dishImage" destination="ehC-Yr-FxZ" id="mYS-lw-XTY"/>
-                                            <outlet property="nameLabel" destination="3hD-2F-wvd" id="tlv-kJ-aRv"/>
-                                            <outlet property="timeLabel" destination="zXb-Fz-GLl" id="zIg-cq-T9Z"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="VHT-40-HG8" id="9qX-nH-igH"/>
                                     <outlet property="delegate" destination="VHT-40-HG8" id="Gef-2S-uPB"/>
@@ -399,6 +223,9 @@
                         <viewLayoutGuide key="safeArea" id="A4A-Cf-UKi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="cook later" image="clock" id="iEe-mW-mtc"/>
+                    <connections>
+                        <outlet property="cookLaterCollectionview" destination="6Zq-0c-FsD" id="PQ3-Iq-UXa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPB-xm-hg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,9 +272,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle" catalog="system" width="64" height="60"/>
         <image name="clock" width="30" height="30"/>
-        <image name="delete" width="30" height="30"/>
         <image name="dishIcon" width="30" height="30"/>
         <image name="shopBasket" width="30" height="30"/>
     </resources>

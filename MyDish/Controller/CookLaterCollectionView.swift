@@ -15,9 +15,14 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CookLaterCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         let dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
         cell.dishImage.image = UIImage(named: dish.image)
+        cell.nameLabel.text = dish.name
+        let customizationAttribute = CustomizeMainDescription(dish: dish)
+        let min = "\(dish.time) min"
+        let lvl = dish.level
+        customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
         return cell
     }
     
