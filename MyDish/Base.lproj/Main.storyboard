@@ -123,14 +123,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="8hP-D4-78u" customClass="ProductsTableViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8hP-D4-78u" id="fUb-LG-RV0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-Ky-AgM">
-                                                    <rect key="frame" x="15" y="11" width="42" height="21.5"/>
+                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNx-Po-uzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674.4000000000001" y="-789.35532233883066"/>
+            <point key="canvasLocation" x="3105" y="64"/>
         </scene>
         <!--Shop List-->
         <scene sceneID="JTj-wX-iFJ">
@@ -193,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="950" y="65"/>
         </scene>
-        <!--cook later-->
+        <!--Cook Later View Controller-->
         <scene sceneID="6HQ-uM-BOY">
             <objects>
                 <viewController id="VHT-40-HG8" customClass="CookLaterViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,14 +222,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="A4A-Cf-UKi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="cook later" image="clock" id="iEe-mW-mtc"/>
+                    <navigationItem key="navigationItem" id="AuQ-Co-GU9"/>
                     <connections>
                         <outlet property="cookLaterCollectionview" destination="6Zq-0c-FsD" id="PQ3-Iq-UXa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPB-xm-hg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="821.73913043478262"/>
+            <point key="canvasLocation" x="1887.2" y="821.73913043478262"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ojf-gM-WRv">
@@ -243,7 +243,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="gEy-d6-QUx" kind="relationship" relationship="viewControllers" id="IO1-oi-3d7"/>
-                        <segue destination="VHT-40-HG8" kind="relationship" relationship="viewControllers" id="0CN-qQ-MUF"/>
+                        <segue destination="uwT-ii-mme" kind="relationship" relationship="viewControllers" id="0CN-qQ-MUF"/>
                         <segue destination="kBr-DF-7Yl" kind="relationship" relationship="viewControllers" id="K80-XD-ZQD"/>
                     </connections>
                 </tabBarController>
@@ -269,6 +269,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJa-dn-rYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="-790.25487256371821"/>
+        </scene>
+        <!--cook later-->
+        <scene sceneID="IZI-rI-Hpf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uwT-ii-mme" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="cook later" image="clock" id="iEe-mW-mtc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qaC-gX-d22">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VHT-40-HG8" kind="relationship" relationship="rootViewController" id="qX3-Nd-q0c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jJ-ka-RVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="821.73913043478262"/>
         </scene>
     </scenes>
     <resources>
