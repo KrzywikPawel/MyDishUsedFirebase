@@ -19,15 +19,12 @@ class ViewController: UIViewController{
         return arrayDish
     }()
     let defaults = UserDefaults.standard
-    
-    
+        
     override func viewDidLoad() {
           defaults.removeObject(forKey: "arrayCookLater")
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
     }
-    
-    
 }
 
 

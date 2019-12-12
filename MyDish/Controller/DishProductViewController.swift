@@ -18,7 +18,8 @@ class DishProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
-        let properties = takeProperties(id: id)
+        let takeData = TakePropertiesData()
+        let properties = takeData.takeProperties(id: id)
         imgArray = properties.img
         productsArray = properties.products
     }

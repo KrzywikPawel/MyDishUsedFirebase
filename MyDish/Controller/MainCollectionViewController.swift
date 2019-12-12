@@ -34,5 +34,4 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         pushVC.id = arrayDish[indexPath.row].id
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
-    
 }

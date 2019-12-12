@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dishesInArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-        let dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
+        dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
         cell.dishImage.image = UIImage(named: dish.image)
         cell.nameLabel.text = dish.name
         let customizationAttribute = CustomizeMainDescription(dish: dish)
@@ -23,5 +24,13 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         let lvl = dish.level
         customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let pushVC = mainStoryboard.instantiateViewController(identifier: "DishProductViewController") as! DishProductViewController
+        pushVC.name =  dish.name
+        pushVC.id = dish.id
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
 }
