@@ -18,10 +18,11 @@ class ViewController: UIViewController{
         var arrayDish = data.parseData()
         return arrayDish
     }()
-    let defaults = UserDefaults.standard
-        
+    var defaults = UserDefaults.standard
+    var arrayLaterCookDishes:[Int] = []
     override func viewDidLoad() {
 //          defaults.removeObject(forKey: "arrayCookLater")
+        arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
     }

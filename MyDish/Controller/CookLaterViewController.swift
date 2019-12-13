@@ -14,7 +14,7 @@ class CookLaterViewController: UIViewController {
     let vc:ViewController = ViewController()
     var dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
     var dishesInArray: Array<Int> = []
-    
+    var defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
@@ -22,7 +22,7 @@ class CookLaterViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.dishesInArray = self.vc.defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
+        self.dishesInArray = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
         self.cookLaterCollectionview.reloadData()
     }
 }

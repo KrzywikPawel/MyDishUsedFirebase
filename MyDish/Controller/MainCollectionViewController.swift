@@ -19,7 +19,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     @objc private func cookLaterBtn(sender:UIButton){
-        var arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
+         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
         if arrayLaterCookDishes.contains(sender.tag){
         }else{
             arrayLaterCookDishes.append(sender.tag)
