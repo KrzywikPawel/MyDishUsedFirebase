@@ -10,5 +10,11 @@
         "img":["n1","n2","n3"],
         "products":["maka 250g","woda 250ml","jajko x1","olej 25ml"],
         "steps":["n","n","n"]
+    },
+    {
+    "id": 3,
+    "img":["m1","m2","m3"],
+    "products":["jogurt 150g","platki owsiane 40g","mix musli 50g","ulubione owoce"],
+    "steps":["n","n","n"]
     }
 ]
