@@ -19,6 +19,4 @@ extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
-    
-    
 }
