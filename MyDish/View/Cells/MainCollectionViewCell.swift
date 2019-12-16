@@ -16,6 +16,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var buttonLvl2: UIButton!
     @IBOutlet weak var buttonLvl3: UIButton!
     @IBOutlet weak var cookLaterButton: UIButton!
+    @IBOutlet weak var addToShopListButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

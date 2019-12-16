@@ -9,17 +9,25 @@
 import UIKit
 
 class ShopListViewController: UIViewController {
+    var shopListStruct = [ShopListDataStruct]()
     var shopList = [[String]]()
     var headerName = [String]()
+    var shopListSaved = UserDefaults.standard
     @IBOutlet weak var productsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let cellNib = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
         productsTableView.register(cellNib, forCellReuseIdentifier: "NeedProductsTableViewCell")
-        shopList.append(["ser","maslo"])
-        shopList.append(["kawa","tosty,","ryba"])
-        headerName.append("jedna")
-        headerName.append("druga")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        headerName = [String]()
+        shopList = [[String]]()
+        shopListStruct = ShopListStructInCache.get()
+        for item in shopListStruct{
+            headerName.append(item.name)
+            shopList.append(item.products)
+        }
+        productsTableView.reloadData()
     }
 }

@@ -13,8 +13,8 @@ class DishProductViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var name:String = ""
     var id: Int = 0
-    var imgArray: Array<String> = []
-    var productsArray: Array<String> = []
+    var imgArray = [String]()
+    var productsArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name

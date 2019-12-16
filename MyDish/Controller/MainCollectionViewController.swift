@@ -15,11 +15,34 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
         cell.cookLaterButton.tag = arrayDish[indexPath.row].id
         cell.cookLaterButton.addTarget(self, action: #selector(self.cookLaterBtn(sender:)),for: .touchUpInside)
+        cell.addToShopListButton.tag = arrayDish[indexPath.row].id
+        cell.addToShopListButton.addTarget(self, action: #selector(self.addToShopList(sender:)), for: .touchUpInside)
         return cell
     }
     
+    @objc func addToShopList(sender: UIButton){
+        print("elooo")
+        let shopList = ShopListDataStruct()
+        let dish = TakePropertiesData().takeProperties(id: sender.tag)
+        shopList.id = dish.id
+        shopList.name = arrayDish[sender.tag-1].name
+        let id = dish.id
+        shopList.products = dish.products
+        var array = ShopListStructInCache.get()
+        if array.contains(where: {$0.id == id}){
+            print("dodaje ten co juz jest")
+        }else{
+            array.append(shopList)
+            ShopListStructInCache.save(array)
+        }
+        //        array.append(shopList)
+        for item in array{
+            print(item.products)
+        }
+    }
+    
     @objc private func cookLaterBtn(sender:UIButton){
-         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
+        arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
         if arrayLaterCookDishes.contains(sender.tag){
         }else{
             arrayLaterCookDishes.append(sender.tag)

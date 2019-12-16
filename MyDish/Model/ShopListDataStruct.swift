@@ -7,3 +7,8 @@
 //
 
 import Foundation
+class ShopListDataStruct:Codable{
+    var id = 0
+    var name = ""
+    var products = [String]()
+}

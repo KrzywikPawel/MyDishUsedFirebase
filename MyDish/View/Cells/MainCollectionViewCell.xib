@@ -98,6 +98,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="336" height="198"/>
             <connections>
+                <outlet property="addToShopListButton" destination="3hT-up-VBk" id="j4v-dh-OWm"/>
                 <outlet property="buttonLvl1" destination="GwK-AD-TnW" id="Qwt-Ud-k2K"/>
                 <outlet property="buttonLvl2" destination="5gJ-eJ-3br" id="cwz-6o-1yV"/>
                 <outlet property="buttonLvl3" destination="Tuc-hQ-WyO" id="y2P-HH-3gB"/>

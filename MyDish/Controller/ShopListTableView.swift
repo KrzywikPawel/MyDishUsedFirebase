@@ -34,20 +34,32 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     private func deleteAction(at indexPath:IndexPath,tableView: UITableView) -> UIContextualAction {
+        var sectionWithDeleteProduct = self.shopList[indexPath.section]
+        
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action,view,completion) in
-            var sectionWithDeleteProduct = self.shopList[indexPath.section]
             sectionWithDeleteProduct.remove(at: indexPath.row)
+            print(sectionWithDeleteProduct.count)
             self.shopList[indexPath.section] = sectionWithDeleteProduct
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            print(sectionWithDeleteProduct.count)
             if(sectionWithDeleteProduct.count == 0){
                 let indexSet = IndexSet(arrayLiteral: indexPath.section)
                 self.shopList.remove(at: indexPath.section)
                 self.headerName.remove(at: indexPath.section)
                 tableView.deleteSections(indexSet, with: .automatic)
+                self.shopListStruct[indexPath.section].products = sectionWithDeleteProduct
+                self.shopListStruct[indexPath.section].name = ""
+                ShopListStructInCache.save(self.shopListStruct)
+            }else{
+            self.shopListStruct[indexPath.section].products = sectionWithDeleteProduct
+            ShopListStructInCache.save(self.shopListStruct)
             }
         }
         action.image = UIImage(named: "delete")
         action.backgroundColor = .red
+        //        print(sectionWithDeleteProduct.count)
+        self.shopListStruct[indexPath.section].products = sectionWithDeleteProduct
+        ShopListStructInCache.save(shopListStruct)
         return action
     }
 }
