@@ -21,23 +21,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     @objc func addToShopList(sender: UIButton){
-        print("elooo")
         let shopList = ShopListDataStruct()
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         shopList.id = dish.id
         shopList.name = arrayDish[sender.tag-1].name
-        let id = dish.id
         shopList.products = dish.products
         var array = ShopListStructInCache.get()
+        let id = dish.id
         if array.contains(where: {$0.id == id}){
-            print("dodaje ten co juz jest")
+//            trying add product list which already is added
         }else{
             array.append(shopList)
             ShopListStructInCache.save(array)
-        }
-        //        array.append(shopList)
-        for item in array{
-            print(item.products)
         }
     }
     

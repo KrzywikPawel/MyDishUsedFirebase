@@ -12,7 +12,6 @@ class ShopListViewController: UIViewController {
     var shopListStruct = [ShopListDataStruct]()
     var shopList = [[String]]()
     var headerName = [String]()
-    var shopListSaved = UserDefaults.standard
     @IBOutlet weak var productsTableView: UITableView!
     
     override func viewDidLoad() {

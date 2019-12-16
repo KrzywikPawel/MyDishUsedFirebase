@@ -14,7 +14,7 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var mainDishCollection: UICollectionView!
     
-        var arrayDish: [Dish] = {
+    var arrayDish: [Dish] = {
         let data = TakeDataToMainView()
         var arrayDish = data.parseData()
         return arrayDish
@@ -22,8 +22,8 @@ class ViewController: UIViewController{
     var defaults = UserDefaults.standard
     var arrayLaterCookDishes:[Int] = []
     override func viewDidLoad() {
-//          defaults.removeObject(forKey: "arrayCookLater")
-        defaults.removeObject(forKey: "shopList")
+        //        defaults.removeObject(forKey: "arrayCookLater")
+        //        defaults.removeObject(forKey: "shopList")
         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
