@@ -16,10 +16,20 @@ class ShopListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cellNib = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
-        productsTableView.register(cellNib, forCellReuseIdentifier: "NeedProductsTableViewCell")
+        let idCell = "NeedProductsTableViewCell"
+        let cellNib = UINib(nibName: idCell, bundle: nil)
+        productsTableView.register(cellNib, forCellReuseIdentifier: idCell)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(addTapped))
+        
+        
+    }
+    
+    @objc func addTapped()  {
+        ShopListStructInCache.clear()
+        viewWillAppear(false)
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         headerName = [String]()
         shopList = [[String]]()
         shopListStruct = ShopListStructInCache.get()

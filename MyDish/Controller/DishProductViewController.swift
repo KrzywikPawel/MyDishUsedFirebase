@@ -10,6 +10,7 @@ import UIKit
 
 class DishProductViewController: UIViewController {
     
+    @IBOutlet weak var shopListBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     var name:String = ""
     var id: Int = 0
@@ -22,5 +23,14 @@ class DishProductViewController: UIViewController {
         let properties = takeData.takeProperties(id: id)
         imgArray = properties.img
         productsArray = properties.products
+        shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
+    
+    @objc func addToShopList(){
+        let addToShopList = ShopListDataStruct(id, name, productsArray)
+        var array = ShopListStructInCache.get()
+        array.append(addToShopList)
+        ShopListStructInCache.save(array)
+    }
+    
 }

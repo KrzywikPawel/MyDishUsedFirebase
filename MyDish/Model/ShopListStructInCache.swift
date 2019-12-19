@@ -22,5 +22,9 @@ struct  ShopListStructInCache {
         }
         return shopList
     }
+    
+    static func clear(){
+        UserDefaults.standard.removeObject(forKey: "shopList")        
+    }
 }
 
