@@ -26,7 +26,27 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
         cell.cookLaterButton.tag = dish.id
         cell.cookLaterButton.addTarget(self, action: #selector(self.deleteDishFromList(sender:)), for: .touchUpInside)
+        cell.addToShopListButton.tag = dish.id
+        cell.addToShopListButton.addTarget(self, action: #selector(self.addToShopList(sender:)), for: .touchUpInside)
         return cell
+    }
+    
+    @objc func addToShopList(sender: UIButton){
+        let shopList = ShopListDataStruct()
+        let dish = TakePropertiesData().takeProperties(id: sender.tag)
+        shopList.id = dish.id
+        let dishStruct = TakeDataToMainView().takeDishFromId(id: shopList.id)
+        shopList.name = dishStruct.name
+        shopList.products = dish.products
+        var array = ShopListStructInCache.get()
+        let id = dish.id
+        if array.contains(where: {$0.id == id}){
+            //            trying add product list which already is added
+        }else{
+            array.append(shopList)
+            ShopListStructInCache.save(array)
+        }
+        
     }
     
     @objc private func deleteDishFromList(sender:UIButton){
