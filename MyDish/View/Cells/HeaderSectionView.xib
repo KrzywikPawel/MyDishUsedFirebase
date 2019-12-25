@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HeaderSectionView" id="iVi-cP-IDL" customClass="HeaderSectionView" customModule="MyDish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seN-jy-VCO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeA-iF-F3d">
+                            <rect key="frame" x="8" y="7" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dN-BJ-Tcy">
+                            <rect key="frame" x="364" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Qxu-rc-W3r"/>
+                                <constraint firstAttribute="width" constant="35" id="Tkm-Rk-Ynd"/>
+                            </constraints>
+                            <state key="normal" image="delete"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="CeA-iF-F3d" firstAttribute="leading" secondItem="seN-jy-VCO" secondAttribute="leading" constant="8" id="M95-1p-vNx"/>
+                        <constraint firstAttribute="bottom" secondItem="CeA-iF-F3d" secondAttribute="bottom" constant="7" id="Psa-bc-4d8"/>
+                        <constraint firstAttribute="trailing" secondItem="0dN-BJ-Tcy" secondAttribute="trailing" constant="15" id="Sqb-lE-PXJ"/>
+                        <constraint firstItem="0dN-BJ-Tcy" firstAttribute="centerY" secondItem="seN-jy-VCO" secondAttribute="centerY" id="cmi-ns-Sxq"/>
+                        <constraint firstItem="CeA-iF-F3d" firstAttribute="centerY" secondItem="seN-jy-VCO" secondAttribute="centerY" id="g0Q-Iu-0mS"/>
+                        <constraint firstItem="CeA-iF-F3d" firstAttribute="top" secondItem="seN-jy-VCO" secondAttribute="top" constant="7" id="seI-ZW-f8q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="seN-jy-VCO" firstAttribute="top" secondItem="rYr-IM-wPb" secondAttribute="top" id="4d1-Mn-bAV"/>
+                <constraint firstItem="seN-jy-VCO" firstAttribute="trailing" secondItem="rYr-IM-wPb" secondAttribute="trailing" id="5Vf-dV-2Lr"/>
+                <constraint firstItem="seN-jy-VCO" firstAttribute="bottom" secondItem="rYr-IM-wPb" secondAttribute="bottom" id="VcO-dp-M3B"/>
+                <constraint firstItem="seN-jy-VCO" firstAttribute="leading" secondItem="rYr-IM-wPb" secondAttribute="leading" id="e8s-LX-WWw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="rYr-IM-wPb"/>
+            <connections>
+                <outlet property="deleteBtn" destination="0dN-BJ-Tcy" id="QHn-D7-4yb"/>
+                <outlet property="nameLabel" destination="CeA-iF-F3d" id="Vzc-rc-keI"/>
+            </connections>
+            <point key="canvasLocation" x="396.80000000000001" y="79.610194902548727"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete" width="30" height="30"/>
+    </resources>
+</document>

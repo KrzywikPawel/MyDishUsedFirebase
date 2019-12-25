@@ -18,9 +18,31 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
         return headerName.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return headerName[section]
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderSectionView") as! HeaderSectionView
+        headerView.backgroundColor = .lightGray
+        headerView.nameLabel.text = headerName[section]
+        headerView.deleteBtn.setImage(UIImage(named: "delete"), for: .normal)
+        headerView.deleteBtn.tag = section
+        headerView.deleteBtn.addTarget(self, action: #selector(deleteDishInShopList(sender:)), for: .touchUpInside)
+        return headerView;
     }
+    
+    @objc private func deleteDishInShopList(sender: UIButton){
+        let sectionId = sender.tag
+        headerName.remove(at: sectionId)
+        shopList.remove(at: sectionId)
+        let shopListStruct = ShopListStructInCache()
+        shopListStruct.delete(index: sectionId)
+        productsTableView.reloadData()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 35
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
@@ -28,7 +50,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = deleteAction(at: indexPath, tableView: tableView)
         return UISwipeActionsConfiguration(actions: [delete])
     }

@@ -12,6 +12,12 @@ struct  ShopListStructInCache {
            UserDefaults.standard.set(try? PropertyListEncoder().encode(value), forKey: "shopList")
        }
     
+     func delete( index: Int){
+        var shopList = ShopListStructInCache.get()
+        shopList.remove(at: index)
+        ShopListStructInCache.save(shopList)
+    }
+    
     static func get() -> [ShopListDataStruct]{
         var shopList: [ShopListDataStruct] = []
         do{
