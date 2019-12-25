@@ -26,7 +26,7 @@ class DishProductViewController: UIViewController {
         shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
     
-    @objc func addToShopList(){
+    @objc private func addToShopList(){
         let addToShopList = ShopListDataStruct(id, name, productsArray)
         var array = ShopListStructInCache.get()
         array.append(addToShopList)

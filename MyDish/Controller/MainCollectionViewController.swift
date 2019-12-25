@@ -20,7 +20,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
-    @objc func addToShopList(sender: UIButton){
+    @objc private func addToShopList(sender: UIButton){
         let shopList = ShopListDataStruct()
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         shopList.id = dish.id

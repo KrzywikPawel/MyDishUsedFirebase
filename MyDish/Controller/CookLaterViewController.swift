@@ -15,6 +15,7 @@ class CookLaterViewController: UIViewController {
     var dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
     var dishesInArray: Array<Int> = []
     var defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
