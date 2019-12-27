@@ -20,8 +20,9 @@ class ShopListViewController: UIViewController {
         let cellNib = UINib(nibName: idCell, bundle: nil)
         productsTableView.register(cellNib, forCellReuseIdentifier: idCell)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(addTapped))
-        let headerNIB = UINib(nibName: "HeaderSectionView", bundle: Bundle.main)
-        productsTableView.register(headerNIB, forHeaderFooterViewReuseIdentifier: "HeaderSectionView")
+        let idHeader = "HeaderSectionView"
+        let headerNIB = UINib(nibName: idHeader, bundle: Bundle.main)
+        productsTableView.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
     }
     
     @objc private func addTapped()  {
