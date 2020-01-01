@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,49 +67,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nsN-Ud-bs8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="314" id="s8K-GX-Vmq"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mP5-jf-Lic">
-                                    <size key="itemSize" width="374" height="313"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="OkP-8a-tVL" customClass="DetailDishCollectionViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.5" width="374" height="313"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zwr-V9-tWq">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="313"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="SpF-U9-4h6">
-                                                    <rect key="frame" x="0.0" y="-2" width="375" height="313"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="SpF-U9-4h6" firstAttribute="leading" secondItem="zwr-V9-tWq" secondAttribute="leading" id="CPj-Hr-kEJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="SpF-U9-4h6" secondAttribute="bottom" id="aP2-Xy-EFR"/>
-                                                <constraint firstAttribute="trailing" secondItem="SpF-U9-4h6" secondAttribute="trailing" id="kdY-s6-euk"/>
-                                                <constraint firstItem="SpF-U9-4h6" firstAttribute="top" secondItem="zwr-V9-tWq" secondAttribute="top" id="yKc-hm-UwK"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="374" height="313"/>
-                                        <connections>
-                                            <outlet property="detailImage" destination="SpF-U9-4h6" id="XwJ-Xv-9Sx"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="VTL-kY-MsF" id="mPb-x0-L4m"/>
-                                    <outlet property="delegate" destination="VTL-kY-MsF" id="0VU-jE-SSj"/>
-                                </connections>
-                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-Qf-K2l">
                                 <rect key="frame" x="320" y="333" width="30" height="30"/>
                                 <constraints>
@@ -122,6 +78,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-k1-yRu">
                                 <rect key="frame" x="0.0" y="362" width="375" height="305"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="5lH-EL-7Jb"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="8hP-D4-78u" customClass="ProductsTableViewCell" customModule="MyDish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
@@ -153,26 +112,30 @@
                                     <outlet property="delegate" destination="VTL-kY-MsF" id="ree-xE-iHV"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-bU-buN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="305"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cDh-Qf-K2l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5qm-i4-e7F" secondAttribute="trailing" constant="8" symbolic="YES" id="4DY-xe-GpY"/>
-                            <constraint firstItem="cDh-Qf-K2l" firstAttribute="top" secondItem="nsN-Ud-bs8" secondAttribute="bottom" constant="19" id="5fL-MA-5Iv"/>
+                            <constraint firstItem="cI0-bU-buN" firstAttribute="trailing" secondItem="JDp-k6-llM" secondAttribute="trailing" id="5qf-Hs-v3L"/>
                             <constraint firstItem="jhI-k1-yRu" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" id="6GK-lg-Ko1"/>
                             <constraint firstItem="JDp-k6-llM" firstAttribute="trailing" secondItem="cDh-Qf-K2l" secondAttribute="trailing" constant="25" id="AW8-za-nwQ"/>
                             <constraint firstItem="jhI-k1-yRu" firstAttribute="trailing" secondItem="JDp-k6-llM" secondAttribute="trailing" id="FzJ-4b-usX"/>
-                            <constraint firstItem="nsN-Ud-bs8" firstAttribute="trailing" secondItem="JDp-k6-llM" secondAttribute="trailing" id="J7x-Ld-0D8"/>
                             <constraint firstItem="jhI-k1-yRu" firstAttribute="bottom" secondItem="JDp-k6-llM" secondAttribute="bottom" id="Mrz-NP-kL0"/>
-                            <constraint firstItem="nsN-Ud-bs8" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" id="c9o-fW-DFm"/>
-                            <constraint firstItem="5qm-i4-e7F" firstAttribute="top" secondItem="nsN-Ud-bs8" secondAttribute="bottom" constant="19" id="htI-9w-cfM"/>
+                            <constraint firstItem="5qm-i4-e7F" firstAttribute="top" secondItem="cDh-Qf-K2l" secondAttribute="top" id="T8H-Bq-BFf"/>
+                            <constraint firstItem="cI0-bU-buN" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" id="hLK-Xd-JMU"/>
                             <constraint firstItem="5qm-i4-e7F" firstAttribute="leading" secondItem="JDp-k6-llM" secondAttribute="leading" constant="15" id="iRp-BF-6WE"/>
-                            <constraint firstItem="nsN-Ud-bs8" firstAttribute="top" secondItem="JDp-k6-llM" secondAttribute="top" constant="-44" id="ick-Ng-b11"/>
+                            <constraint firstItem="5qm-i4-e7F" firstAttribute="top" secondItem="cI0-bU-buN" secondAttribute="bottom" constant="8" id="jiR-TC-qp1"/>
+                            <constraint firstItem="cI0-bU-buN" firstAttribute="top" secondItem="bXO-Oy-LtJ" secondAttribute="top" constant="20" symbolic="YES" id="sDj-MH-3HZ"/>
                             <constraint firstItem="jhI-k1-yRu" firstAttribute="top" secondItem="5qm-i4-e7F" secondAttribute="bottom" constant="8" id="xS6-Lf-CQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JDp-k6-llM"/>
                     </view>
                     <navigationItem key="navigationItem" id="vDv-Wk-kww"/>
                     <connections>
+                        <outlet property="img" destination="cI0-bU-buN" id="ayi-wT-0xE"/>
                         <outlet property="nameLabel" destination="5qm-i4-e7F" id="O47-Rb-Awf"/>
                         <outlet property="shopListBtn" destination="cDh-Qf-K2l" id="ypV-I0-4FY"/>
                     </connections>

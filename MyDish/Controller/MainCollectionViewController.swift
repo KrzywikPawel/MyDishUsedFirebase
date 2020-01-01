@@ -50,6 +50,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
         pushVC.name = arrayDish[indexPath.row].name
         pushVC.id = arrayDish[indexPath.row].id
+        pushVC.imgName = arrayDish[indexPath.row].image
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
 }

@@ -13,16 +13,17 @@ class DishProductViewController: UIViewController {
     @IBOutlet weak var shopListBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     var name:String = ""
+    @IBOutlet weak var img: UIImageView!
+    var imgName: String = ""
     var id: Int = 0
-    var imgArray = [String]()
     var productsArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
         let takeData = TakePropertiesData()
         let properties = takeData.takeProperties(id: id)
-        imgArray = properties.img
         productsArray = properties.products
+        img.image = UIImage(named: imgName)
      self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
      self.navigationController!.navigationBar.shadowImage = UIImage()
      self.navigationController!.navigationBar.isTranslucent = true

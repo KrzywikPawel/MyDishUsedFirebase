@@ -35,8 +35,6 @@
 		E5F16B3123B380BF00D77BD8 /* HeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */; };
 		E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F16B3223B3984E00D77BD8 /* DeleteActionInShopList.swift */; };
 		E5F842BC2395182C00DA66BD /* DishProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BB2395182C00DA66BD /* DishProductViewController.swift */; };
-		E5F842BE2395195600DA66BD /* DetailDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */; };
-		E5F842C023951A1E00DA66BD /* DishProductCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */; };
 		E5FF28A923A193E60065263E /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF28A723A193E60065263E /* MainCollectionViewCell.swift */; };
 		E5FF28AA23A193E60065263E /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FF28A823A193E60065263E /* MainCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -72,8 +70,6 @@
 		E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionView.xib; sourceTree = "<group>"; };
 		E5F16B3223B3984E00D77BD8 /* DeleteActionInShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteActionInShopList.swift; sourceTree = "<group>"; };
 		E5F842BB2395182C00DA66BD /* DishProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishProductViewController.swift; sourceTree = "<group>"; };
-		E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDishCollectionViewCell.swift; sourceTree = "<group>"; };
-		E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishProductCollectionView.swift; sourceTree = "<group>"; };
 		E5FF28A723A193E60065263E /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5FF28A823A193E60065263E /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +138,6 @@
 		E5AA9BE523943C3B00E863C7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E5F842BD2395195600DA66BD /* DetailDishCollectionViewCell.swift */,
 				E545702E239ED5AE0041F4E3 /* ProductsTableViewCell.swift */,
 				E5FF28A723A193E60065263E /* MainCollectionViewCell.swift */,
 				E5FF28A823A193E60065263E /* MainCollectionViewCell.xib */,
@@ -183,7 +178,6 @@
 				E54D2C0E2392C1420084A055 /* ViewController.swift */,
 				E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */,
 				E5F842BB2395182C00DA66BD /* DishProductViewController.swift */,
-				E5F842BF23951A1E00DA66BD /* DishProductCollectionView.swift */,
 				E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */,
 				E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */,
 				E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */,
@@ -283,12 +277,10 @@
 				E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
 				E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */,
-				E5F842BE2395195600DA66BD /* DetailDishCollectionViewCell.swift in Sources */,
 				E5FF28A923A193E60065263E /* MainCollectionViewCell.swift in Sources */,
 				E50715C8239ECDB300F5534B /* TakePropertiesData.swift in Sources */,
 				E5CBA6AF239EF7BE00E4722A /* CookLaterViewController.swift in Sources */,
 				E537ED0223A6C56100BF56C7 /* ShopListDataStruct.swift in Sources */,
-				E5F842C023951A1E00DA66BD /* DishProductCollectionView.swift in Sources */,
 				E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */,
 				E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */,
 				E5F16B2F23B3809200D77BD8 /* HeaderSectionView.swift in Sources */,

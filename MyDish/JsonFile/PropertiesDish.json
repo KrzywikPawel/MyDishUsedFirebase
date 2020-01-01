@@ -1,19 +1,16 @@
 [
 {
         "id": 1,
-        "img":["j1","j2","j3"],
         "products":["jajko x5","kielbasa 100g","sol","pieprz","margaryna"],
         "steps":["n","n","n"]
     },
     {
         "id": 2,
-        "img":["n1","n2","n3"],
         "products":["maka 250g","woda 250ml","jajko x1","olej 25ml"],
         "steps":["n","n","n"]
     },
     {
     "id": 3,
-    "img":["m1","m2","m3"],
     "products":["jogurt 150g","platki owsiane 40g","mix musli 50g","ulubione owoce"],
     "steps":["n","n","n"]
     }
