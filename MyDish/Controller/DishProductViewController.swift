@@ -23,6 +23,9 @@ class DishProductViewController: UIViewController {
         let properties = takeData.takeProperties(id: id)
         imgArray = properties.img
         productsArray = properties.products
+     self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+     self.navigationController!.navigationBar.shadowImage = UIImage()
+     self.navigationController!.navigationBar.isTranslucent = true
         shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
     
