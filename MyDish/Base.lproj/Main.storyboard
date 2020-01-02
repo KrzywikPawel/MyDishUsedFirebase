@@ -58,9 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-sF-HkJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-sF-HkJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hSs-Gv-Tz8">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="1100"/>
@@ -126,12 +125,28 @@
                                                             <constraint firstAttribute="height" constant="263" id="J2w-EI-2b3"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DxI-lN-3TO">
-                                                                <rect key="frame" x="0.0" y="28" width="357" height="43.5"/>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="91" id="DxI-lN-3TO">
+                                                                <rect key="frame" x="0.0" y="28" width="357" height="91"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DxI-lN-3TO" id="yvH-IX-1Aw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="357" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="357" height="91"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qf-1e-6GK">
+                                                                            <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXc-qC-mTz">
+                                                                            <rect key="frame" x="15" y="40" width="42" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
@@ -185,6 +200,11 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hq1-sF-HkJ" secondAttribute="bottom" id="ADU-wj-yTg"/>
+                            <constraint firstItem="hq1-sF-HkJ" firstAttribute="top" secondItem="bXO-Oy-LtJ" secondAttribute="top" id="B6b-1h-lL8"/>
+                            <constraint firstItem="hq1-sF-HkJ" firstAttribute="leading" secondItem="bXO-Oy-LtJ" secondAttribute="leading" id="YPd-Sf-TcX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JDp-k6-llM"/>
                     </view>
                     <navigationItem key="navigationItem" id="vDv-Wk-kww"/>
