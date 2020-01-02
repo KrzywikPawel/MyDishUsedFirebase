@@ -17,6 +17,7 @@ class DishProductViewController: UIViewController {
     var imgName: String = ""
     var id: Int = 0
     var productsArray = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
@@ -24,12 +25,28 @@ class DishProductViewController: UIViewController {
         let properties = takeData.takeProperties(id: id)
         productsArray = properties.products
         img.image = UIImage(named: imgName)
-     self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-     self.navigationController!.navigationBar.shadowImage = UIImage()
-     self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.isTranslucent = true
+//        left swipe gestures to back previous controller (after change leftbarimage gesture       doesnt work without this)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        leftBarBtnItem()
         shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
     
+    private func leftBarBtnItem() {
+          let backbtn = UIButton(type: .custom)
+          backbtn.setImage(UIImage(named: "back"), for: .normal)
+          backbtn.addTarget(self, action: #selector(backToMainCollection(sender:)), for: .touchUpInside)
+          backbtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+          let leftItem = UIBarButtonItem(customView: backbtn)
+          self.navigationItem.leftBarButtonItem = leftItem
+      }
+    
+    @objc private func backToMainCollection(sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
+
     @objc private func addToShopList(){
         let addToShopList = ShopListDataStruct(id, name, productsArray)
         var array = ShopListStructInCache.get()
