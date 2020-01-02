@@ -14,12 +14,19 @@ extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
-        cell.quantityLabel.text = quantityProducts[indexPath.row]
-        cell.quantityLabel.textColor = .systemGray
-        cell.quantityLabel.font = cell.quantityLabel.font.withSize(14)
-        cell.productNameLabel.text = productsArray[indexPath.row]
-        cell.productNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        if tableView == ingredientsTable{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
+            cell.quantityLabel.text = quantityProducts[indexPath.row]
+            cell.quantityLabel.textColor = .systemGray
+            cell.quantityLabel.font = cell.quantityLabel.font.withSize(14)
+            cell.productNameLabel.text = productsArray[indexPath.row]
+            cell.productNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectionsTableViewCell", for: indexPath) as! DirectionsTableViewCell
+        cell.nrStepsLbl.text = "elko"
+        cell.directionLbl.text = "siema"
         return cell
     }
     

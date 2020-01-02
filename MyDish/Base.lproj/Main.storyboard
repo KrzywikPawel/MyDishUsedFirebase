@@ -135,6 +135,10 @@
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="VTL-kY-MsF" id="V2b-lI-8oJ"/>
+                                                            <outlet property="delegate" destination="VTL-kY-MsF" id="4T1-dc-y95"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -188,6 +192,7 @@
                     <connections>
                         <outlet property="cookLaterBtn" destination="8Id-7b-jnZ" id="w5V-uo-M2v"/>
                         <outlet property="directionsLbl" destination="KEs-Ht-bU3" id="iHb-lG-LVx"/>
+                        <outlet property="directonTable" destination="7C5-2b-19x" id="BgB-TO-YVV"/>
                         <outlet property="img" destination="cI0-bU-buN" id="ayi-wT-0xE"/>
                         <outlet property="ingredientsLbl" destination="ra3-hX-ocz" id="lfL-fP-SCh"/>
                         <outlet property="ingredientsTable" destination="jhI-k1-yRu" id="p0O-qE-edM"/>
