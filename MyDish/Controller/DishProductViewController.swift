@@ -12,19 +12,29 @@ class DishProductViewController: UIViewController {
     
     @IBOutlet weak var shopListBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cookLaterBtn: UIButton!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    
+    @IBOutlet weak var ingredientsTable: UITableView!
     var name:String = ""
     @IBOutlet weak var img: UIImageView!
     var imgName: String = ""
     var id: Int = 0
     var productsArray = [String]()
-
+    var quantityProducts = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 19)
+        ingredientsLabel.text = "Ingredients"
+        ingredientsLabel.font = UIFont.boldSystemFont(ofSize: 19)
         let takeData = TakePropertiesData()
         let properties = takeData.takeProperties(id: id)
         productsArray = properties.products
+        quantityProducts = properties.quantity
         img.image = UIImage(named: imgName)
+        let cellNib = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
+        ingredientsTable.register(cellNib, forCellReuseIdentifier: "NeedProductsTableViewCell")
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = true

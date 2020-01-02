@@ -1,17 +1,20 @@
 [
 {
         "id": 1,
-        "products":["jajko x5","kielbasa 100g","sol","pieprz","margaryna"],
+        "products":["jajko","kielbasa","sol","pieprz","margaryna"],
+        "quantity":["x5","100g","do smaku","do smaku","wedle uznania"],
         "steps":["n","n","n"]
     },
     {
         "id": 2,
-        "products":["maka 250g","woda 250ml","jajko x1","olej 25ml"],
+        "products":["maka","woda","jajko","olej"],
+        "quantity":["250g","250ml","x1","25ml"],
         "steps":["n","n","n"]
     },
     {
     "id": 3,
-    "products":["jogurt 150g","platki owsiane 40g","mix musli 50g","ulubione owoce"],
+    "products":["jogurt","platki owsiane","mix musli","ulubione owoce"],
+    "quantity":["150g","40g","50g","wedle uznania"],
     "steps":["n","n","n"]
     }
 ]

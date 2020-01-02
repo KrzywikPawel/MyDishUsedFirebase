@@ -23,13 +23,14 @@ class TakePropertiesData {
     }
     
     func takeProperties(id:Int) -> DishPropertiesStruct{
-        var properties: DishPropertiesStruct = DishPropertiesStruct(id: 0, products: [], steps: [])
+        var properties: DishPropertiesStruct = DishPropertiesStruct(id: 0, products: [],quantity: [], steps: [])
         let arrayProperties = parseData()
         for item in arrayProperties{
             if(item.id == id){
                 properties = item
             }
         }
+        print(properties)
         return properties
     }
 }

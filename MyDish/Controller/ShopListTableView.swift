@@ -38,7 +38,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
-        cell.productLabel.text = shopList[indexPath.section][indexPath.row]
+        cell.productNameLabel.text = shopList[indexPath.section][indexPath.row]
         return cell
     }
     

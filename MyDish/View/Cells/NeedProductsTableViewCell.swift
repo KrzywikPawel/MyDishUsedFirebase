@@ -10,6 +10,7 @@ import UIKit
 
 class NeedProductsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var productLabel: UILabel!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
     
 }

@@ -10,5 +10,6 @@ import Foundation
 struct DishPropertiesStruct:Decodable {
     let id: Int
     let products:Array<String>
+    let quantity: Array<String>
     let steps: Array<String>
 }
