@@ -13,9 +13,11 @@ class DishProductViewController: UIViewController {
     @IBOutlet weak var shopListBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cookLaterBtn: UIButton!
-    @IBOutlet weak var ingredientsLabel: UILabel!
-    
+    @IBOutlet weak var ingredientsLbl: UILabel!
     @IBOutlet weak var ingredientsTable: UITableView!
+    @IBOutlet weak var directionsLbl: UILabel!
+    
+    
     var name:String = ""
     @IBOutlet weak var img: UIImageView!
     var imgName: String = ""
@@ -26,8 +28,10 @@ class DishProductViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = name
         nameLabel.font = UIFont.boldSystemFont(ofSize: 19)
-        ingredientsLabel.text = "Ingredients"
-        ingredientsLabel.font = UIFont.boldSystemFont(ofSize: 19)
+        ingredientsLbl.text = "Ingredients"
+        ingredientsLbl.font = UIFont.boldSystemFont(ofSize: 19)
+        directionsLbl.text = "Directions"
+        directionsLbl.font = UIFont.boldSystemFont(ofSize: 19)
         let takeData = TakePropertiesData()
         let properties = takeData.takeProperties(id: id)
         productsArray = properties.products
