@@ -10,11 +10,14 @@ import Foundation
 import UIKit
 extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (tableView == ingredientsTable){
         return productsArray.count
+        }
+        return directions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == ingredientsTable{
+        if (tableView == ingredientsTable){
             let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
             cell.quantityLabel.text = quantityProducts[indexPath.row]
             cell.quantityLabel.textColor = .systemGray
@@ -24,8 +27,10 @@ extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectionsTableViewCell", for: indexPath) as! DirectionsTableViewCell
-        cell.nrStepsLbl.text = "elko"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DirectionsTableViewCell
+        cell.nrStepsLbl.text = "Step \(indexPath.row+1)"
+        cell.nrStepsLbl.font = cell.nrStepsLbl.font.withSize(13)
+        cell.nrStepsLbl.textColor = .systemGray
         cell.directionLbl.text = "siema"
         return cell
     }

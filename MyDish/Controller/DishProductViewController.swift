@@ -17,7 +17,7 @@ class DishProductViewController: UIViewController {
     @IBOutlet weak var ingredientsLbl: UILabel!
     @IBOutlet weak var directionsLbl: UILabel!
     
-    
+    var directions = [String]()
     var name:String = ""
     @IBOutlet weak var img: UIImageView!
     var imgName: String = ""
@@ -36,11 +36,12 @@ class DishProductViewController: UIViewController {
         let properties = takeData.takeProperties(id: id)
         productsArray = properties.products
         quantityProducts = properties.quantity
+        directions = properties.steps
         img.image = UIImage(named: imgName)
         let cellNibNeedsProduct = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
         ingredientsTable.register(cellNibNeedsProduct, forCellReuseIdentifier: "NeedProductsTableViewCell")
-        let cellNibDirections = UINib(nibName: "DirectionsTableViewCell", bundle: nil)
-        directonTable.register(cellNibDirections, forCellReuseIdentifier: "DirectionsTableViewCell")
+//        let cellNibDirections = UINib(nibName: "DirectionsTableViewCell", bundle: nil)
+//        directonTable.register(cellNibDirections, forCellReuseIdentifier: "DirectionsTableViewCell")
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = true

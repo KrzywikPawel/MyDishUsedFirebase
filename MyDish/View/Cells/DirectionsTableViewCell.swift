@@ -11,17 +11,8 @@ import UIKit
 class DirectionsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nrStepsLbl: UILabel!
+    
     @IBOutlet weak var directionLbl: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
     
 }
