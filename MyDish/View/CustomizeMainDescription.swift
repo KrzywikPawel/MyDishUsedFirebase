@@ -19,10 +19,13 @@ class CustomizeMainDescription{
         arrayDish.append(dish)
     }
     
-   private let circleFill = UIImage(systemName: "circle.fill")
-   private let circle = UIImage(systemName: "circle")
+    init() {
+    }
     
-   private func setColourLvlCircle(_ cell: MainCollectionViewCell) {
+    private let circleFill = UIImage(systemName: "circle.fill")
+    private let circle = UIImage(systemName: "circle")
+    
+    private func setColourLvlCircle(_ cell: MainCollectionViewCell) {
         cell.buttonLvl1.tintColor = .systemGreen
         cell.buttonLvl2.tintColor = .orange
         cell.buttonLvl3.tintColor = .red
@@ -51,12 +54,23 @@ class CustomizeMainDescription{
     }
     
     func customizeAttributedCell(_ indexPath: IndexPath, _ cell: MainCollectionViewCell, _ min:String, _ lvl:Int) {
+        cell.timeLabel.attributedText = upperTime(min)
+        levelCustomization(indexPath, cell,lvl)
+    }
+    
+    func upperTime(_ min: String) -> NSMutableAttributedString{
+        let nr  = min.indexOf(char: "m")
         let attributedString = NSMutableAttributedString(string: min)
-        let range = NSRange(location: 3, length: 3)
+        let range = NSRange(location: nr!, length: 3)
         attributedString.setAttributes([NSAttributedString.Key.baselineOffset: 8], range: range)
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 12), range: range)
-        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 17), range: NSRange(location: 0, length: 2))
-        cell.timeLabel.attributedText = attributedString
-        levelCustomization(indexPath, cell,lvl)
+        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 17), range: NSRange(location: 0, length: nr!-1))
+        return attributedString
+    }
+}
+//find index char ("m") in string
+fileprivate extension String {
+    func indexOf(char: Character) -> Int? {
+        return firstIndex(of: char)?.utf16Offset(in: self)
     }
 }

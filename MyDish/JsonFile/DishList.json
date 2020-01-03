@@ -3,7 +3,7 @@
     "id":1,
     "image": "jajecznica",
     "name": "Jajecznica",
-    "time": "10",
+    "time": "15",
     "level": 1
   },
   {
@@ -17,7 +17,7 @@
       "id":3,
       "image": "musli",
       "name": "Musli",
-      "time": "50",
+      "time": "5",
       "level": 3
   }
 ]

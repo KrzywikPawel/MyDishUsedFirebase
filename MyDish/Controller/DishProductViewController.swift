@@ -45,7 +45,8 @@ class DishProductViewController: UIViewController {
         productsArray = properties.products
         quantityProducts = properties.quantity
         directions = properties.steps
-        timeLbl.text = "\(time)min"
+        time = "\(time) MIN"
+        timeLbl.text = time
         timeLbl.font = UIFont.boldSystemFont(ofSize: 19)
         cookingTimeLbl.font = cookingTimeLbl.font.withSize(15)
         cookingTimeLbl.textColor = .systemGray

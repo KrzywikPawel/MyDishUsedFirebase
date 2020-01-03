@@ -65,31 +65,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" id="HUq-Qv-2KC" userLabel="TimeView">
-                                                <rect key="frame" x="86" y="684" width="203" height="60"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-pf-Gpm">
-                                                        <rect key="frame" x="80.5" y="5" width="42" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-7h-gC1">
-                                                        <rect key="frame" x="48.5" y="33" width="106" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="dBy-pf-Gpm" firstAttribute="centerX" secondItem="HUq-Qv-2KC" secondAttribute="centerX" id="JBu-Z8-14b"/>
-                                                    <constraint firstItem="N8W-7h-gC1" firstAttribute="top" secondItem="dBy-pf-Gpm" secondAttribute="bottom" constant="7.5" id="Zzn-py-evK"/>
-                                                    <constraint firstItem="N8W-7h-gC1" firstAttribute="centerX" secondItem="HUq-Qv-2KC" secondAttribute="centerX" id="j6J-zD-KiO"/>
-                                                    <constraint firstItem="dBy-pf-Gpm" firstAttribute="top" secondItem="HUq-Qv-2KC" secondAttribute="top" constant="5" id="wCh-wc-Dvt"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" id="fiw-DI-ZnH" userLabel="TopView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="676"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -159,7 +134,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" id="i0g-TH-sIe" userLabel="DirectionView">
-                                                <rect key="frame" x="0.0" y="752" width="375" height="448"/>
+                                                <rect key="frame" x="0.0" y="772" width="375" height="426"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEs-Ht-bU3">
@@ -169,9 +144,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-2b-19x">
-                                                        <rect key="frame" x="8" y="36" width="359" height="404"/>
+                                                        <rect key="frame" x="8" y="36" width="359" height="390"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="404" id="v1k-zT-3NB"/>
+                                                            <constraint firstAttribute="height" constant="390" id="v1k-zT-3NB"/>
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="65" id="DxI-lN-3TO" customClass="DirectionsTableViewCell" customModule="MyDish" customModuleProvider="target">
@@ -224,6 +199,31 @@
                                                     <constraint firstItem="7C5-2b-19x" firstAttribute="top" secondItem="i0g-TH-sIe" secondAttribute="top" constant="36" id="Qsg-Ms-qcf"/>
                                                     <constraint firstItem="KEs-Ht-bU3" firstAttribute="leading" secondItem="i0g-TH-sIe" secondAttribute="leading" constant="20" id="TSG-8r-TAP"/>
                                                     <constraint firstItem="7C5-2b-19x" firstAttribute="leading" secondItem="i0g-TH-sIe" secondAttribute="leading" constant="8" id="d0F-Bc-K1L"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="HUq-Qv-2KC" userLabel="TimeView">
+                                                <rect key="frame" x="86" y="684" width="203" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-pf-Gpm">
+                                                        <rect key="frame" x="80.5" y="5" width="42" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-7h-gC1">
+                                                        <rect key="frame" x="48.5" y="33" width="106" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="dBy-pf-Gpm" firstAttribute="centerX" secondItem="HUq-Qv-2KC" secondAttribute="centerX" id="JBu-Z8-14b"/>
+                                                    <constraint firstItem="N8W-7h-gC1" firstAttribute="top" secondItem="dBy-pf-Gpm" secondAttribute="bottom" constant="7.5" id="Zzn-py-evK"/>
+                                                    <constraint firstItem="N8W-7h-gC1" firstAttribute="centerX" secondItem="HUq-Qv-2KC" secondAttribute="centerX" id="j6J-zD-KiO"/>
+                                                    <constraint firstItem="dBy-pf-Gpm" firstAttribute="top" secondItem="HUq-Qv-2KC" secondAttribute="top" constant="5" id="wCh-wc-Dvt"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
