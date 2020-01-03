@@ -51,6 +51,7 @@ class DishProductViewController: UIViewController {
         cookingTimeLbl.font = cookingTimeLbl.font.withSize(15)
         cookingTimeLbl.textColor = .systemGray
         img.image = UIImage(named: imgName)
+        cookLaterBtn.addTarget(self, action: #selector(cookLater), for: .touchUpInside)
         //MARK: change this cellxib for normal cell in storyboard
         let cellNibNeedsProduct = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
         ingredientsTable.register(cellNibNeedsProduct, forCellReuseIdentifier: "NeedProductsTableViewCell")
@@ -74,6 +75,16 @@ class DishProductViewController: UIViewController {
     
     @objc private func backToMainCollection(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func cookLater(){
+        let defaults = UserDefaults.standard
+        var arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
+               if arrayLaterCookDishes.contains(id){
+               }else{
+                   arrayLaterCookDishes.append(id)
+               }
+               defaults.set(arrayLaterCookDishes, forKey: "arrayCookLater")
     }
 
     @objc private func addToShopList(){
