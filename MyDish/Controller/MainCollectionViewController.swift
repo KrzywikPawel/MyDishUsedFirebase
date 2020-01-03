@@ -51,6 +51,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         pushVC.name = arrayDish[indexPath.row].name
         pushVC.id = arrayDish[indexPath.row].id
         pushVC.imgName = arrayDish[indexPath.row].image
+        pushVC.time = arrayDish[indexPath.row].time
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
 }

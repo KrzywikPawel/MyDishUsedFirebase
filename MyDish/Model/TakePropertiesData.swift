@@ -30,7 +30,6 @@ class TakePropertiesData {
                 properties = item
             }
         }
-        print(properties)
         return properties
     }
 }

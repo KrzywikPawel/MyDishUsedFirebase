@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//MARK: refactor this view? (use container view)
 class DishProductViewController: UIViewController {
     @IBOutlet weak var directionTable: UITableView!
     @IBOutlet weak var ingredientsTable: UITableView!
@@ -16,7 +16,10 @@ class DishProductViewController: UIViewController {
     @IBOutlet weak var cookLaterBtn: UIButton!
     @IBOutlet weak var ingredientsLbl: UILabel!
     @IBOutlet weak var directionsLbl: UILabel!
-    
+    @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var cookingTimeLbl: UILabel!
+    @IBOutlet weak var timeView: UIView!
+    var time: String = ""
     var directions = [String]()
     var name:String = ""
     @IBOutlet weak var img: UIImageView!
@@ -26,6 +29,9 @@ class DishProductViewController: UIViewController {
     var quantityProducts = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        timeView.layer.borderWidth = 1
+        timeView.layer.borderColor = UIColor.systemGray.cgColor
+        timeView.layer.cornerRadius = 10
         nameLabel.text = name
         nameLabel.font = UIFont.boldSystemFont(ofSize: 19)
         ingredientsLbl.text = "Ingredients"
@@ -39,11 +45,14 @@ class DishProductViewController: UIViewController {
         productsArray = properties.products
         quantityProducts = properties.quantity
         directions = properties.steps
+        timeLbl.text = "\(time)min"
+        timeLbl.font = UIFont.boldSystemFont(ofSize: 19)
+        cookingTimeLbl.font = cookingTimeLbl.font.withSize(15)
+        cookingTimeLbl.textColor = .systemGray
         img.image = UIImage(named: imgName)
+        //MARK: change this cellxib for normal cell in storyboard
         let cellNibNeedsProduct = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
         ingredientsTable.register(cellNibNeedsProduct, forCellReuseIdentifier: "NeedProductsTableViewCell")
-//        let cellNibDirections = UINib(nibName: "DirectionsTableViewCell", bundle: nil)
-//        directonTable.register(cellNibDirections, forCellReuseIdentifier: "DirectionsTableViewCell")
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = true
