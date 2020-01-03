@@ -16,7 +16,7 @@
 		E5107E8923A65DE9007CE687 /* ShopListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8823A65DE9007CE687 /* ShopListTableView.swift */; };
 		E537ED0223A6C56100BF56C7 /* ShopListDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */; };
 		E537ED0423A6D21900BF56C7 /* ShopListStructInCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */; };
-		E545702D239ED49D0041F4E3 /* NeedsProductsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */; };
+		E545702D239ED49D0041F4E3 /* DishViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545702C239ED49D0041F4E3 /* DishViewTable.swift */; };
 		E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0A2392C1420084A055 /* AppDelegate.swift */; };
 		E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0C2392C1420084A055 /* SceneDelegate.swift */; };
 		E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0E2392C1420084A055 /* ViewController.swift */; };
@@ -49,7 +49,7 @@
 		E5107E8823A65DE9007CE687 /* ShopListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableView.swift; sourceTree = "<group>"; };
 		E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListDataStruct.swift; sourceTree = "<group>"; };
 		E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListStructInCache.swift; sourceTree = "<group>"; };
-		E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsProductsTable.swift; sourceTree = "<group>"; };
+		E545702C239ED49D0041F4E3 /* DishViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewTable.swift; sourceTree = "<group>"; };
 		E54D2C072392C1420084A055 /* MyDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54D2C0A2392C1420084A055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54D2C0C2392C1420084A055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				E54D2C0E2392C1420084A055 /* ViewController.swift */,
 				E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */,
 				E5F842BB2395182C00DA66BD /* DishProductViewController.swift */,
-				E545702C239ED49D0041F4E3 /* NeedsProductsTable.swift */,
+				E545702C239ED49D0041F4E3 /* DishViewTable.swift */,
 				E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */,
 				E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */,
 				E5107E8623A65DD1007CE687 /* ShopListViewController.swift */,
@@ -271,7 +271,7 @@
 				E5107E8423A65D38007CE687 /* NeedProductsTableViewCell.swift in Sources */,
 				E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */,
 				E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */,
-				E545702D239ED49D0041F4E3 /* NeedsProductsTable.swift in Sources */,
+				E545702D239ED49D0041F4E3 /* DishViewTable.swift in Sources */,
 				E5F842BC2395182C00DA66BD /* DishProductViewController.swift in Sources */,
 				E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,

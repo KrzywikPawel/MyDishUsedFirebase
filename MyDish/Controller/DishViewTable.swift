@@ -31,7 +31,7 @@ extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
         cell.nrStepsLbl.text = "Step \(indexPath.row+1)"
         cell.nrStepsLbl.font = cell.nrStepsLbl.font.withSize(13)
         cell.nrStepsLbl.textColor = .systemGray
-        cell.directionLbl.text = "siema"
+        cell.directionLbl.text = "\(directions[indexPath.row])"
         return cell
     }
     

@@ -68,7 +68,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="1100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-Qf-K2l">
-                                                        <rect key="frame" x="318" y="348" width="30" height="30"/>
+                                                        <rect key="frame" x="288" y="348" width="60" height="60"/>
                                                         <state key="normal" image="shopBasket"/>
                                                     </button>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-k1-yRu">
@@ -118,11 +118,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-2b-19x">
-                                                        <rect key="frame" x="8" y="764" width="357" height="263"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-2b-19x">
+                                                        <rect key="frame" x="8" y="764" width="357" height="386"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="263" id="J2w-EI-2b3"/>
+                                                            <constraint firstAttribute="height" constant="386" id="v1k-zT-3NB"/>
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="65" id="DxI-lN-3TO" customClass="DirectionsTableViewCell" customModule="MyDish" customModuleProvider="target">
@@ -170,12 +169,12 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="cI0-bU-buN" firstAttribute="top" secondItem="fiw-DI-ZnH" secondAttribute="top" constant="-68" id="1e7-xI-LUy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7C5-2b-19x" secondAttribute="bottom" constant="-50" id="59U-cX-ywu"/>
                                                     <constraint firstAttribute="width" constant="373" id="5Yz-C7-QJv"/>
                                                     <constraint firstItem="7C5-2b-19x" firstAttribute="leading" secondItem="fiw-DI-ZnH" secondAttribute="leading" constant="8" id="6ab-gN-2hM"/>
                                                     <constraint firstAttribute="trailing" secondItem="7C5-2b-19x" secondAttribute="trailing" constant="8" id="Adm-wy-pOe"/>
                                                     <constraint firstItem="cI0-bU-buN" firstAttribute="centerX" secondItem="5qm-i4-e7F" secondAttribute="centerX" constant="4" id="B7r-Lf-vPd"/>
                                                     <constraint firstItem="cI0-bU-buN" firstAttribute="leading" secondItem="fiw-DI-ZnH" secondAttribute="leading" id="BTD-sF-xgh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="7C5-2b-19x" secondAttribute="bottom" constant="73" id="CNO-HV-M0I"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ra3-hX-ocz" secondAttribute="trailing" constant="20" symbolic="YES" id="CvE-Jb-z6W"/>
                                                     <constraint firstItem="jhI-k1-yRu" firstAttribute="leading" secondItem="fiw-DI-ZnH" secondAttribute="leading" constant="8" id="KCi-VV-vkd"/>
                                                     <constraint firstAttribute="trailing" secondItem="7C5-2b-19x" secondAttribute="trailing" constant="8" id="Kdq-nf-I6i"/>
@@ -223,8 +222,8 @@
                     <size key="freeformSize" width="375" height="1100"/>
                     <connections>
                         <outlet property="cookLaterBtn" destination="8Id-7b-jnZ" id="w5V-uo-M2v"/>
+                        <outlet property="directionTable" destination="7C5-2b-19x" id="BgB-TO-YVV"/>
                         <outlet property="directionsLbl" destination="KEs-Ht-bU3" id="iHb-lG-LVx"/>
-                        <outlet property="directonTable" destination="7C5-2b-19x" id="BgB-TO-YVV"/>
                         <outlet property="img" destination="cI0-bU-buN" id="ayi-wT-0xE"/>
                         <outlet property="ingredientsLbl" destination="ra3-hX-ocz" id="lfL-fP-SCh"/>
                         <outlet property="ingredientsTable" destination="jhI-k1-yRu" id="p0O-qE-edM"/>

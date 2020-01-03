@@ -9,7 +9,7 @@
 import UIKit
 
 class DishProductViewController: UIViewController {
-    @IBOutlet weak var directonTable: UITableView!
+    @IBOutlet weak var directionTable: UITableView!
     @IBOutlet weak var ingredientsTable: UITableView!
     @IBOutlet weak var shopListBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -32,6 +32,8 @@ class DishProductViewController: UIViewController {
         ingredientsLbl.font = UIFont.boldSystemFont(ofSize: 19)
         directionsLbl.text = "Directions"
         directionsLbl.font = UIFont.boldSystemFont(ofSize: 19)
+        ingredientsTable.tableFooterView = UIView()
+        directionTable.tableFooterView = UIView()
         let takeData = TakePropertiesData()
         let properties = takeData.takeProperties(id: id)
         productsArray = properties.products
