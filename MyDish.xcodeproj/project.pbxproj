@@ -23,6 +23,9 @@
 		E54D2C122392C1420084A055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54D2C102392C1420084A055 /* Main.storyboard */; };
 		E54D2C142392C1430084A055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54D2C132392C1430084A055 /* Assets.xcassets */; };
 		E54D2C172392C1430084A055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54D2C152392C1430084A055 /* LaunchScreen.storyboard */; };
+		E55CE9B523C095CF00A5728D /* ConfirmShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CE9B423C095CF00A5728D /* ConfirmShopListViewController.swift */; };
+		E55CE9B723C095E700A5728D /* ConfirmShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CE9B623C095E700A5728D /* ConfirmShopListTableViewCell.swift */; };
+		E55CE9B923C096E900A5728D /* ConfirmShopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CE9B823C096E900A5728D /* ConfirmShopTableView.swift */; };
 		E5AA9BD92392E37700E863C7 /* DishList.json in Resources */ = {isa = PBXBuildFile; fileRef = E5AA9BD82392E37700E863C7 /* DishList.json */; };
 		E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */; };
 		E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */; };
@@ -58,6 +61,9 @@
 		E54D2C132392C1430084A055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54D2C162392C1430084A055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54D2C182392C1430084A055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E55CE9B423C095CF00A5728D /* ConfirmShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmShopListViewController.swift; sourceTree = "<group>"; };
+		E55CE9B623C095E700A5728D /* ConfirmShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmShopListTableViewCell.swift; sourceTree = "<group>"; };
+		E55CE9B823C096E900A5728D /* ConfirmShopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmShopTableView.swift; sourceTree = "<group>"; };
 		E5AA9BD82392E37700E863C7 /* DishList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DishList.json; sourceTree = "<group>"; };
 		E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeDataToMainView.swift; sourceTree = "<group>"; };
 		E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStruct.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				E5F16B2E23B3809200D77BD8 /* HeaderSectionView.swift */,
 				E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */,
 				E5FF5A0B23BE5A4500468AE2 /* DirectionsTableViewCell.swift */,
+				E55CE9B623C095E700A5728D /* ConfirmShopListTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -183,6 +190,8 @@
 				E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */,
 				E5107E8623A65DD1007CE687 /* ShopListViewController.swift */,
 				E5107E8823A65DE9007CE687 /* ShopListTableView.swift */,
+				E55CE9B423C095CF00A5728D /* ConfirmShopListViewController.swift */,
+				E55CE9B823C096E900A5728D /* ConfirmShopTableView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,14 +275,17 @@
 				E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */,
 				E5CBA6B1239EF7D800E4722A /* CookLaterCollectionView.swift in Sources */,
 				E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */,
+				E55CE9B523C095CF00A5728D /* ConfirmShopListViewController.swift in Sources */,
 				E5107E8923A65DE9007CE687 /* ShopListTableView.swift in Sources */,
 				E537ED0423A6D21900BF56C7 /* ShopListStructInCache.swift in Sources */,
+				E55CE9B923C096E900A5728D /* ConfirmShopTableView.swift in Sources */,
 				E5107E8423A65D38007CE687 /* NeedProductsTableViewCell.swift in Sources */,
 				E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */,
 				E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */,
 				E545702D239ED49D0041F4E3 /* DishViewTable.swift in Sources */,
 				E5F842BC2395182C00DA66BD /* DishProductViewController.swift in Sources */,
 				E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */,
+				E55CE9B723C095E700A5728D /* ConfirmShopListTableViewCell.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
 				E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */,
 				E5FF28A923A193E60065263E /* MainCollectionViewCell.swift in Sources */,

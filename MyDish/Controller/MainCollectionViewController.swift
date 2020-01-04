@@ -26,6 +26,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         shopList.id = dish.id
         shopList.name = arrayDish[sender.tag-1].name
         shopList.products = dish.products
+        shopList.quantity = dish.quantity
         var array = ShopListStructInCache.get()
         let id = dish.id
         if array.contains(where: {$0.id == id}){

@@ -12,6 +12,7 @@ class ShopListViewController: UIViewController {
     var shopListStruct = [ShopListDataStruct]()
     var shopList = [[String]]()
     var headerName = [String]()
+    var quantityProduct = [[String]]()
     @IBOutlet weak var productsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,6 +24,8 @@ class ShopListViewController: UIViewController {
         let idHeader = "HeaderSectionView"
         let headerNIB = UINib(nibName: idHeader, bundle: Bundle.main)
         productsTableView.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
+        productsTableView.tableFooterView = UIView()
+        productsTableView.backgroundColor = .lightGray
     }
     
     @objc private func addTapped()  {
@@ -33,10 +36,12 @@ class ShopListViewController: UIViewController {
         super.viewWillAppear(animated)
         headerName = [String]()
         shopList = [[String]]()
+        quantityProduct = [[String]]()
         shopListStruct = ShopListStructInCache.get()
         for item in shopListStruct{
             headerName.append(item.name)
             shopList.append(item.products)
+            quantityProduct.append(item.quantity)
         }
         productsTableView.reloadData()
     }

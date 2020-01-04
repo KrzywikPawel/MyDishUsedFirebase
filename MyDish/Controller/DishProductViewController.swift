@@ -104,7 +104,7 @@ class DishProductViewController: UIViewController {
     }
     
     @objc private func addToShopList(){
-        let addToShopList = ShopListDataStruct(id, name, productsArray)
+        let addToShopList = ShopListDataStruct(id, name, productsArray,quantityProducts)
         var array = ShopListStructInCache.get()
         array.append(addToShopList)
         ShopListStructInCache.save(array)
