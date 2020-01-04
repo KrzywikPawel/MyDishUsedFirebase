@@ -18,7 +18,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
         if headerName.count == 0{
             tableView.setEmptyMessage("Pusto \nKliknij ikone koszyka w daniu \ni nie zapomnij o potrzebnych produktach")
         }else{
-            
+            tableView.restore()
         }
         return headerName.count
     }
