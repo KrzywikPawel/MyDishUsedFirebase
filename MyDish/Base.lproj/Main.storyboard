@@ -313,7 +313,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-aK-BEf">
-                                <rect key="frame" x="7" y="0.0" width="360" height="573"/>
+                                <rect key="frame" x="7" y="0.0" width="360" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfirmShopListTableViewCell" id="9DO-hT-T6H" customClass="ConfirmShopListTableViewCell" customModule="MyDish" customModuleProvider="target">
@@ -371,7 +371,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkY-qx-HGe">
-                                <rect key="frame" x="164" y="593" width="46" height="30"/>
+                                <rect key="frame" x="7" y="602" width="353" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="353" id="eD0-TV-SYT"/>
+                                    <constraint firstAttribute="height" constant="45" id="iM9-is-M5v"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="confirm:" destination="TQe-PL-Egn" eventType="touchUpInside" id="hdO-Ea-Wvq"/>
@@ -382,21 +386,21 @@
                         <constraints>
                             <constraint firstItem="cU4-aK-BEf" firstAttribute="leading" secondItem="SOO-RQ-f9R" secondAttribute="leading" constant="7" id="9xG-Ev-bou"/>
                             <constraint firstItem="cU4-aK-BEf" firstAttribute="top" secondItem="SOO-RQ-f9R" secondAttribute="top" id="IxB-cs-YKM"/>
-                            <constraint firstItem="SOO-RQ-f9R" firstAttribute="trailing" secondItem="BkY-qx-HGe" secondAttribute="trailing" constant="165" id="Ugf-li-2dJ"/>
                             <constraint firstItem="SOO-RQ-f9R" firstAttribute="trailing" secondItem="cU4-aK-BEf" secondAttribute="trailing" constant="8" id="asv-rb-bTp"/>
-                            <constraint firstItem="BkY-qx-HGe" firstAttribute="leading" secondItem="SOO-RQ-f9R" secondAttribute="leading" constant="164" id="cAa-8K-tkC"/>
+                            <constraint firstItem="BkY-qx-HGe" firstAttribute="centerX" secondItem="tKO-BW-2Od" secondAttribute="centerX" constant="-4" id="cRJ-Kb-fSS"/>
                             <constraint firstItem="BkY-qx-HGe" firstAttribute="top" secondItem="cU4-aK-BEf" secondAttribute="bottom" constant="20" id="pE8-c9-zwN"/>
-                            <constraint firstItem="SOO-RQ-f9R" firstAttribute="bottom" secondItem="BkY-qx-HGe" secondAttribute="bottom" constant="44" id="pFc-5f-ZJQ"/>
+                            <constraint firstItem="SOO-RQ-f9R" firstAttribute="bottom" secondItem="BkY-qx-HGe" secondAttribute="bottom" constant="20" id="pFc-5f-ZJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOO-RQ-f9R"/>
                     </view>
                     <connections>
+                        <outlet property="confirmBtn" destination="BkY-qx-HGe" id="8Nz-gg-P3A"/>
                         <outlet property="confirmTable" destination="cU4-aK-BEf" id="xO6-hM-skU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kf4-4S-Gfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4041" y="819"/>
+            <point key="canvasLocation" x="4040.8000000000002" y="818.14092953523243"/>
         </scene>
         <!--Cook Later View Controller-->
         <scene sceneID="6HQ-uM-BOY">

@@ -17,15 +17,21 @@ class ConfirmShopListViewController: UIViewController {
     var id = Int()
     var deletePosition = String()
     @IBOutlet weak var confirmTable: UITableView!
+    @IBOutlet weak var confirmBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // na oryginale czy kopii?
         arraySavedProducts = products
         arraySavedQuantity = quantityProduct
-        
         //MARK: confirm btn
-        
+        confirmBtn.setTitle("Confirm", for: .normal)
+        confirmBtn.setTitleColor(UIColor.systemGreen, for: .normal)
+        confirmBtn.backgroundColor = .black
+//        confirmBtn.layer.borderColor = UIColor.systemGreen.cgColor
+        confirmBtn.layer.cornerRadius = 20
+        confirmBtn.layer.borderWidth = 1
+        confirmTable.tableFooterView = UIView()
     }
     
     @IBAction func confirm(_ sender: UIButton) {
