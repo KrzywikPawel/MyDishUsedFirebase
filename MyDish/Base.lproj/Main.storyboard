@@ -272,7 +272,7 @@
         <!--Shop List View Controller-->
         <scene sceneID="JTj-wX-iFJ">
             <objects>
-                <viewController id="kBr-DF-7Yl" customClass="ShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopListViewController" id="kBr-DF-7Yl" customClass="ShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F1i-at-9Gf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,20 +307,20 @@
         <!--Confirm Shop List View Controller-->
         <scene sceneID="Yxx-R5-onl">
             <objects>
-                <viewController id="TQe-PL-Egn" customClass="ConfirmShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmShopListViewController" id="TQe-PL-Egn" customClass="ConfirmShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKO-BW-2Od">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-aK-BEf">
-                                <rect key="frame" x="0.0" y="0.0" width="367" height="667"/>
+                                <rect key="frame" x="7" y="0.0" width="360" height="573"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfirmShopListTableViewCell" id="9DO-hT-T6H" customClass="ConfirmShopListTableViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="367" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfirmShopListTableViewCell" id="9DO-hT-T6H" customClass="ConfirmShopListTableViewCell" customModule="MyDish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="360" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9DO-hT-T6H" id="2Vl-4n-Clo">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-Nd-c2I">
@@ -335,15 +335,31 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-nT-hYj">
+                                                    <rect key="frame" x="310" y="4.5" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="Vay-a3-D5x"/>
+                                                        <constraint firstAttribute="height" constant="35" id="b8J-Wq-3FZ"/>
+                                                    </constraints>
+                                                    <state key="normal" image="checked">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                    </state>
+                                                    <state key="selected" image="uncheck"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2kt-Nd-c2I" firstAttribute="leading" secondItem="2Vl-4n-Clo" secondAttribute="leadingMargin" id="ACU-8H-THW"/>
                                                 <constraint firstItem="bfL-a0-fiq" firstAttribute="centerY" secondItem="2Vl-4n-Clo" secondAttribute="centerY" id="OIS-mq-CRi"/>
-                                                <constraint firstItem="bfL-a0-fiq" firstAttribute="leading" secondItem="2kt-Nd-c2I" secondAttribute="trailing" constant="90" id="PAO-Wi-acP"/>
+                                                <constraint firstItem="bfL-a0-fiq" firstAttribute="leading" secondItem="2Vl-4n-Clo" secondAttribute="leadingMargin" constant="132" id="Pij-jF-QQ4"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bfL-a0-fiq" secondAttribute="trailing" constant="20" symbolic="YES" id="abd-g0-h3C"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nbe-nT-hYj" secondAttribute="trailing" constant="15" id="dya-ON-bPN"/>
+                                                <constraint firstItem="Nbe-nT-hYj" firstAttribute="centerY" secondItem="2Vl-4n-Clo" secondAttribute="centerY" id="hqb-0s-jqd"/>
                                                 <constraint firstItem="2kt-Nd-c2I" firstAttribute="centerY" secondItem="2Vl-4n-Clo" secondAttribute="centerY" id="uCz-3X-Db9"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2kt-Nd-c2I" secondAttribute="trailing" constant="20" symbolic="YES" id="xX1-6W-2I0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkBtn" destination="Nbe-nT-hYj" id="2QO-ED-9te"/>
                                             <outlet property="nameLbl" destination="bfL-a0-fiq" id="cFB-3s-daS"/>
                                             <outlet property="quantityLbl" destination="2kt-Nd-c2I" id="LTd-pS-b6Y"/>
                                         </connections>
@@ -354,20 +370,33 @@
                                     <outlet property="delegate" destination="TQe-PL-Egn" id="om9-uM-JMH"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkY-qx-HGe">
+                                <rect key="frame" x="164" y="593" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="confirm:" destination="TQe-PL-Egn" eventType="touchUpInside" id="hdO-Ea-Wvq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cU4-aK-BEf" firstAttribute="bottom" secondItem="SOO-RQ-f9R" secondAttribute="bottom" id="RdX-gd-E8U"/>
-                            <constraint firstItem="cU4-aK-BEf" firstAttribute="top" secondItem="SOO-RQ-f9R" secondAttribute="top" id="Zgf-iS-mrq"/>
-                            <constraint firstItem="cU4-aK-BEf" firstAttribute="leading" secondItem="SOO-RQ-f9R" secondAttribute="leading" id="gph-zP-tWJ"/>
-                            <constraint firstItem="cU4-aK-BEf" firstAttribute="trailing" secondItem="SOO-RQ-f9R" secondAttribute="trailing" constant="-8" id="wZW-zQ-S01"/>
+                            <constraint firstItem="cU4-aK-BEf" firstAttribute="leading" secondItem="SOO-RQ-f9R" secondAttribute="leading" constant="7" id="9xG-Ev-bou"/>
+                            <constraint firstItem="cU4-aK-BEf" firstAttribute="top" secondItem="SOO-RQ-f9R" secondAttribute="top" id="IxB-cs-YKM"/>
+                            <constraint firstItem="SOO-RQ-f9R" firstAttribute="trailing" secondItem="BkY-qx-HGe" secondAttribute="trailing" constant="165" id="Ugf-li-2dJ"/>
+                            <constraint firstItem="SOO-RQ-f9R" firstAttribute="trailing" secondItem="cU4-aK-BEf" secondAttribute="trailing" constant="8" id="asv-rb-bTp"/>
+                            <constraint firstItem="BkY-qx-HGe" firstAttribute="leading" secondItem="SOO-RQ-f9R" secondAttribute="leading" constant="164" id="cAa-8K-tkC"/>
+                            <constraint firstItem="BkY-qx-HGe" firstAttribute="top" secondItem="cU4-aK-BEf" secondAttribute="bottom" constant="20" id="pE8-c9-zwN"/>
+                            <constraint firstItem="SOO-RQ-f9R" firstAttribute="bottom" secondItem="BkY-qx-HGe" secondAttribute="bottom" constant="44" id="pFc-5f-ZJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOO-RQ-f9R"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmTable" destination="cU4-aK-BEf" id="xO6-hM-skU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kf4-4S-Gfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2794.4000000000001" y="892.80359820089961"/>
+            <point key="canvasLocation" x="4041" y="819"/>
         </scene>
         <!--Cook Later View Controller-->
         <scene sceneID="6HQ-uM-BOY">
@@ -508,8 +537,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checked" width="50" height="50"/>
         <image name="clock" width="30" height="30"/>
         <image name="dishIcon" width="30" height="30"/>
         <image name="shopBasket" width="30" height="30"/>
+        <image name="uncheck" width="50" height="50"/>
     </resources>
 </document>

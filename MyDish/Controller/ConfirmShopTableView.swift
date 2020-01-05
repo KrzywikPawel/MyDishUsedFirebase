@@ -18,9 +18,26 @@ extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmShopListTableViewCell", for: indexPath) as! ConfirmShopListTableViewCell
         cell.quantityLbl.text = quantityProduct[indexPath.row]
         cell.nameLbl.text = products[indexPath.row]
+        cell.checkBtn.tag = indexPath.row
+        
+        cell.checkBtn.addTarget(self, action: #selector(check(sender:)), for: .touchUpInside)
+        cell.checkBtn.tintColor = .systemGreen
         return cell
     }
     
-    
-    
+    @objc private func check(sender: UIButton){
+        let id = sender.tag
+        if sender.isSelected{
+            sender.isSelected = false
+            arraySavedQuantity.append(quantityProduct[id])
+            arraySavedProducts.append(products[id])
+        }else{
+            sender.isSelected = true
+            //if removable index whose is after another before deleted, array change indexes (without hole) conditions find correct index
+            if let i = arraySavedProducts.firstIndex(where: {$0 == products[id]}){
+                arraySavedProducts.remove(at: i)
+                arraySavedQuantity.remove(at: i)
+            }
+        }
+    }
 }

@@ -12,6 +12,7 @@ class ConfirmShopListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var quantityLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var checkBtn: UIButton!
     
 
 
