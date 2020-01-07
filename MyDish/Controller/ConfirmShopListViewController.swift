@@ -28,10 +28,11 @@ class ConfirmShopListViewController: UIViewController {
         confirmBtn.setTitle("Confirm", for: .normal)
         confirmBtn.setTitleColor(UIColor.systemGreen, for: .normal)
         confirmBtn.backgroundColor = .black
-//        confirmBtn.layer.borderColor = UIColor.systemGreen.cgColor
         confirmBtn.layer.cornerRadius = 20
         confirmBtn.layer.borderWidth = 1
         confirmTable.tableFooterView = UIView()
+        confirmTable.backgroundColor = .systemGray6
+        self.view.backgroundColor = .systemGray6
     }
     
     @IBAction func confirm(_ sender: UIButton) {
