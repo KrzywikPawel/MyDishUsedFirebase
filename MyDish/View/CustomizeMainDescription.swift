@@ -11,7 +11,7 @@ import UIKit
 
 class CustomizeMainDescription{
     private var arrayDish: [Dish] = []
-    
+//    MARK: ktore inity sa potrzebne a ktore nie
     init(arrayDish: [Dish]) {
         self.arrayDish = arrayDish
     }
@@ -32,32 +32,28 @@ class CustomizeMainDescription{
         return array
     }
     
-    func levelCustomization(_ lvl:Int,_ array1: [UIButton]) -> [UIButton] {
-        var array = [UIButton]()
+    func levelCustomization(_ lvl:Int,_ cellBtnArray: [UIButton]) -> [UIButton] {
+        var customizeBtnArray = [UIButton]()
         switch lvl {
         case 1:
-            array = setColourLvlCircle(array1)
-            array[0].setImage(circleFill, for: .normal)
-            array[1].setImage(circle, for: .normal)
-            array[2].setImage(circle, for: .normal)
+            customizeBtnArray = setColourLvlCircle(cellBtnArray)
+            customizeBtnArray[0].setImage(circleFill, for: .normal)
+            customizeBtnArray[1].setImage(circle, for: .normal)
+            customizeBtnArray[2].setImage(circle, for: .normal)
         case 2:
-            array = setColourLvlCircle(array1)
-            array[0].setImage(circleFill, for: .normal)
-            array[1].setImage(circleFill, for: .normal)
-            array[2].setImage(circle, for: .normal)
+            customizeBtnArray = setColourLvlCircle(cellBtnArray)
+            customizeBtnArray[0].setImage(circleFill, for: .normal)
+            customizeBtnArray[1].setImage(circleFill, for: .normal)
+            customizeBtnArray[2].setImage(circle, for: .normal)
         case 3:
-            array = setColourLvlCircle(array1)
-            array[0].setImage(circleFill, for: .normal)
-            array[1].setImage(circleFill, for: .normal)
-            array[2].setImage(circleFill, for: .normal)
+            customizeBtnArray = setColourLvlCircle(cellBtnArray)
+            customizeBtnArray[0].setImage(circleFill, for: .normal)
+            customizeBtnArray[1].setImage(circleFill, for: .normal)
+            customizeBtnArray[2].setImage(circleFill, for: .normal)
         default:
             print("nil")
         }
-        return array
-    }
-    
-    func customizeAttributedCell(_ min:String) {
-        let timeLabel = upperTime(min)
+        return customizeBtnArray
     }
     
     func upperTime(_ min: String) -> NSMutableAttributedString{

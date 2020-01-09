@@ -17,25 +17,17 @@ class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var buttonLvl3: UIButton?
     @IBOutlet weak  var cookLaterButton: UIButton?
     @IBOutlet weak  var addToShopListButton: UIButton?
+    
     private let customize = CustomizeMainDescription()
+    
     func configurateWithItem(_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int){
         dishImage?.image = UIImage(named: dishImgName)
         nameLabel?.text = name
-        let min = "\(time) min"
         var array = [buttonLvl1,buttonLvl2,buttonLvl3]
         array = customize.levelCustomization(lvl, array as! [UIButton])
-        
-       
-        
+        let min = "\(time) min"
+        let attributedTime = customize.upperTime(min)
+        timeLabel?.attributedText = attributedTime
     }
 }
-//    private func setLvlBtn(_ lvl: Int){
-//        var array = [buttonLvl1,buttonLvl2,buttonLvl3]
-//        let array2 = customize.levelCustomization(lvl)
-//        for (index,btn) in array2.enumerated(){
-//            array[index] = btn
-//
-//        }
-//        buttonLvl1 = array2[0]
-//    }
-//}
+
