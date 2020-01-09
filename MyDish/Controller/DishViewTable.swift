@@ -22,15 +22,13 @@ extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
             let quantity = quantityProducts[indexPath.row]
             let nameProduct = productsArray[indexPath.row]
             cell.configurateWithItem(quantity: quantity, name: nameProduct)
-            
             return cell
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DirectionsTableViewCell
-        cell.nrStepsLbl.text = "Step \(indexPath.row+1)"
-        cell.nrStepsLbl.font = cell.nrStepsLbl.font.withSize(13)
-        cell.nrStepsLbl.textColor = .systemGray
-        cell.directionLbl.text = "\(directions[indexPath.row])"
+        let stepNr = indexPath.row+1
+        let direction = "\(directions[indexPath.row])"
+        cell.configurateWithItem(step: stepNr, direction: direction)
         return cell
     }
     
