@@ -14,6 +14,15 @@ class ConfirmShopListTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var checkBtn: UIButton!
     
+    func configurateWithItem(_ quantity: String,_ name: String){
+        layer.borderWidth = 5
+        layer.borderColor = UIColor.systemGray6.cgColor
+        quantityLbl.font = UIFont.boldSystemFont(ofSize: 17)
+        quantityLbl.text = quantity
+        nameLbl.text = name
+        nameLbl.font = UIFont.boldSystemFont(ofSize: 17)
+        checkBtn.tintColor = .systemGreen
+    }
 
 
 

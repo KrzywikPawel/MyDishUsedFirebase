@@ -16,16 +16,12 @@ extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmShopListTableViewCell", for: indexPath) as! ConfirmShopListTableViewCell
-        cell.layer.borderWidth = 5
-        cell.layer.borderColor = UIColor.systemGray6.cgColor
-        cell.quantityLbl.text = quantityProduct[indexPath.row]
-        cell.quantityLbl.font = UIFont.boldSystemFont(ofSize: 17)
+        let quantity = quantityProduct[indexPath.row]
+        let name = products[indexPath.row]
+        cell.configurateWithItem(quantity,name)
         cell.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100)
-        cell.nameLbl.text = products[indexPath.row]
-        cell.nameLbl.font = UIFont.boldSystemFont(ofSize: 17)
         cell.checkBtn.tag = indexPath.row
         cell.checkBtn.addTarget(self, action: #selector(check(sender:)), for: .touchUpInside)
-        cell.checkBtn.tintColor = .systemGreen
         return cell
     }
     
