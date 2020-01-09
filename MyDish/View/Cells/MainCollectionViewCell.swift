@@ -22,4 +22,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func configurateWithItem(){
+        
+    }
 }

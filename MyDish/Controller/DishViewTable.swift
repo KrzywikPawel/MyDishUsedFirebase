@@ -11,7 +11,7 @@ import UIKit
 extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView == ingredientsTable){
-        return productsArray.count
+            return productsArray.count
         }
         return directions.count
     }
@@ -19,11 +19,10 @@ extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (tableView == ingredientsTable){
             let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
-            cell.quantityLabel.text = quantityProducts[indexPath.row]
-            cell.quantityLabel.textColor = .systemGray
-            cell.quantityLabel.font = cell.quantityLabel.font.withSize(14)
-            cell.productNameLabel.text = productsArray[indexPath.row]
-            cell.productNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            let quantity = quantityProducts[indexPath.row]
+            let nameProduct = productsArray[indexPath.row]
+            cell.configurateWithItem(quantity: quantity, name: nameProduct)
+            
             return cell
         }
         
