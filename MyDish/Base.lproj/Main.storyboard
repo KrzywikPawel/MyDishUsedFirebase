@@ -100,13 +100,37 @@
                                                             <constraint firstAttribute="height" constant="238" id="gsR-qh-1nX"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="8hP-D4-78u" customClass="ProductsTableViewCell" customModule="MyDish" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NeedProductsTableViewCell" id="8hP-D4-78u" customClass="NeedProductsTableViewCell" customModule="MyDish" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="357" height="43.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8hP-D4-78u" id="fUb-LG-RV0">
                                                                     <rect key="frame" x="0.0" y="0.0" width="357" height="43.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-ds-2Pg">
+                                                                            <rect key="frame" x="15" y="11.5" width="42" height="21"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-QM-9FX">
+                                                                            <rect key="frame" x="165" y="11.5" width="42" height="21"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="Qe1-ds-2Pg" firstAttribute="centerY" secondItem="fUb-LG-RV0" secondAttribute="centerY" id="5Th-UM-7NN"/>
+                                                                        <constraint firstItem="UrD-QM-9FX" firstAttribute="centerY" secondItem="fUb-LG-RV0" secondAttribute="centerY" id="6Gy-JD-bRp"/>
+                                                                        <constraint firstItem="UrD-QM-9FX" firstAttribute="leading" secondItem="fUb-LG-RV0" secondAttribute="leadingMargin" constant="150" id="QWW-ZC-YdE"/>
+                                                                        <constraint firstItem="Qe1-ds-2Pg" firstAttribute="leading" secondItem="fUb-LG-RV0" secondAttribute="leadingMargin" id="iRQ-18-hbM"/>
+                                                                    </constraints>
                                                                 </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="productNameLabel" destination="UrD-QM-9FX" id="Jfc-8I-3sd"/>
+                                                                    <outlet property="quantityLabel" destination="Qe1-ds-2Pg" id="b80-ZP-rqB"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                         </prototypes>
                                                         <connections>

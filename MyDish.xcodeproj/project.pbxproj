@@ -11,7 +11,6 @@
 		E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50715C5239ECD5A00F5534B /* DishPropertiesStruct.swift */; };
 		E50715C8239ECDB300F5534B /* TakePropertiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50715C7239ECDB300F5534B /* TakePropertiesData.swift */; };
 		E5107E8423A65D38007CE687 /* NeedProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */; };
-		E5107E8523A65D38007CE687 /* NeedProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5107E8323A65D38007CE687 /* NeedProductsTableViewCell.xib */; };
 		E5107E8723A65DD1007CE687 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8623A65DD1007CE687 /* ShopListViewController.swift */; };
 		E5107E8923A65DE9007CE687 /* ShopListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8823A65DE9007CE687 /* ShopListTableView.swift */; };
 		E531197F23C722BE0007E4C2 /* ShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531197E23C722BE0007E4C2 /* ShopListTableViewCell.swift */; };
@@ -48,7 +47,6 @@
 		E50715C5239ECD5A00F5534B /* DishPropertiesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPropertiesStruct.swift; sourceTree = "<group>"; };
 		E50715C7239ECDB300F5534B /* TakePropertiesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePropertiesData.swift; sourceTree = "<group>"; };
 		E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedProductsTableViewCell.swift; sourceTree = "<group>"; };
-		E5107E8323A65D38007CE687 /* NeedProductsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NeedProductsTableViewCell.xib; sourceTree = "<group>"; };
 		E5107E8623A65DD1007CE687 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		E5107E8823A65DE9007CE687 /* ShopListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableView.swift; sourceTree = "<group>"; };
 		E531197E23C722BE0007E4C2 /* ShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableViewCell.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				E5FF28A723A193E60065263E /* MainCollectionViewCell.swift */,
 				E5FF28A823A193E60065263E /* MainCollectionViewCell.xib */,
 				E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */,
-				E5107E8323A65D38007CE687 /* NeedProductsTableViewCell.xib */,
 				E5F16B2E23B3809200D77BD8 /* HeaderSectionView.swift */,
 				E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */,
 				E5FF5A0B23BE5A4500468AE2 /* DirectionsTableViewCell.swift */,
@@ -262,7 +259,6 @@
 				E54D2C142392C1430084A055 /* Assets.xcassets in Resources */,
 				E50715C4239ECC9C00F5534B /* PropertiesDish.json in Resources */,
 				E54D2C122392C1420084A055 /* Main.storyboard in Resources */,
-				E5107E8523A65D38007CE687 /* NeedProductsTableViewCell.xib in Resources */,
 				E5AA9BD92392E37700E863C7 /* DishList.json in Resources */,
 				E5F16B3123B380BF00D77BD8 /* HeaderSectionView.xib in Resources */,
 			);

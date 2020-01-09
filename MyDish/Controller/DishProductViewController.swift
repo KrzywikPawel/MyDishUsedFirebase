@@ -74,9 +74,6 @@ class DishProductViewController: UIViewController {
         cookLaterBtn.addTarget(self, action: #selector(cookLater), for: .touchUpInside)
         shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
         
-        //MARK: change this cellxib for normal cell in storyboard
-        let cellNibNeedsProduct = UINib(nibName: "NeedProductsTableViewCell", bundle: nil)
-        ingredientsTable.register(cellNibNeedsProduct, forCellReuseIdentifier: "NeedProductsTableViewCell")
     }
     
     private func leftBarBtnItem() {
