@@ -26,7 +26,8 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderSectionView") as! HeaderSectionView
         headerView.backgroundColor = .systemGray6
-        headerView.nameLabel.text = headerName[section]
+        headerView.nameLbl.text = headerName[section]
+        headerView.nameLbl.font = UIFont.boldSystemFont(ofSize: 16)
         headerView.deleteBtn.setImage(UIImage(named: "delete"), for: .normal)
         headerView.deleteBtn.tag = section
         headerView.deleteBtn.addTarget(self, action: #selector(deleteDishInShopList(sender:)), for: .touchUpInside)
@@ -42,13 +43,13 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
-        cell.productNameLabel.text = shopList[indexPath.section][indexPath.row]
-        cell.productNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
-        cell.quantityLabel.text = quantityProduct[indexPath.section][indexPath.row]
-        cell.quantityLabel.font = cell.quantityLabel.font.withSize(14)
-        cell.quantityLabel.textColor = .systemGray
-        cell.layer.borderWidth = 2
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShopListTableViewCell", for: indexPath) as! ShopListTableViewCell
+        cell.productLbl.text = shopList[indexPath.section][indexPath.row]
+        cell.productLbl.font = UIFont.boldSystemFont(ofSize: 14)
+        cell.quantityLbl.text = quantityProduct[indexPath.section][indexPath.row]
+        cell.quantityLbl.font = cell.quantityLbl.font.withSize(14)
+        cell.quantityLbl.textColor = .systemGray
+        cell.layer.borderWidth = 5
         cell.layer.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 90)
         cell.layer.borderColor = UIColor.systemGray6.cgColor
         return cell

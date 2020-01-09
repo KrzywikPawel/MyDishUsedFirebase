@@ -31,7 +31,6 @@
                             <state key="normal" image="delete"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="CeA-iF-F3d" firstAttribute="leading" secondItem="seN-jy-VCO" secondAttribute="leading" constant="8" id="M95-1p-vNx"/>
                         <constraint firstAttribute="bottom" secondItem="CeA-iF-F3d" secondAttribute="bottom" constant="7" id="Psa-bc-4d8"/>
@@ -53,7 +52,7 @@
             <viewLayoutGuide key="safeArea" id="rYr-IM-wPb"/>
             <connections>
                 <outlet property="deleteBtn" destination="0dN-BJ-Tcy" id="QHn-D7-4yb"/>
-                <outlet property="nameLabel" destination="CeA-iF-F3d" id="Vzc-rc-keI"/>
+                <outlet property="nameLbl" destination="CeA-iF-F3d" id="Vzc-rc-keI"/>
             </connections>
             <point key="canvasLocation" x="396.80000000000001" y="79.610194902548727"/>
         </view>

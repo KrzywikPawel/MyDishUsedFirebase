@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderSectionView: UITableViewHeaderFooterView {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var deleteBtn: UIButton!
     
     
