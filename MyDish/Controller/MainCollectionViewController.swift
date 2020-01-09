@@ -21,20 +21,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     @objc private func addToShopList(sender: UIButton){
-//        let shopList = ShopListDataStruct()
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
-//        shopList.id = dish.id
-//        shopList.name = arrayDish[sender.tag-1].name
-//        shopList.products = dish.products
-//        shopList.quantity = dish.quantity
-        //let id = dish.id
-//        var array = ShopListStructInCache.get()
-//        if array.contains(where: {$0.id == id}){
-////            trying add product list which already is added
-//        }else{
-//            array.append(shopList)
-//            ShopListStructInCache.save(array)
-//        }
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products

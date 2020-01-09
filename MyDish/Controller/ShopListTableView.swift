@@ -25,7 +25,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderSectionView") as! HeaderSectionView
-        headerView.backgroundColor = .lightGray
+        headerView.backgroundColor = .systemGray6
         headerView.nameLabel.text = headerName[section]
         headerView.deleteBtn.setImage(UIImage(named: "delete"), for: .normal)
         headerView.deleteBtn.tag = section
@@ -50,8 +50,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
         cell.quantityLabel.textColor = .systemGray
         cell.layer.borderWidth = 2
         cell.layer.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 90)
-        let color:UIColor = .lightGray
-        cell.layer.borderColor = color.cgColor
+        cell.layer.borderColor = UIColor.systemGray6.cgColor
         return cell
     }
     

@@ -71,7 +71,6 @@ class DishProductViewController: UIViewController {
         
         img.image = UIImage(named: imgName)
         
-        
         cookLaterBtn.addTarget(self, action: #selector(cookLater), for: .touchUpInside)
         shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
         

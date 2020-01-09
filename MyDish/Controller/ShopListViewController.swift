@@ -25,7 +25,8 @@ class ShopListViewController: UIViewController {
         let headerNIB = UINib(nibName: idHeader, bundle: Bundle.main)
         productsTableView.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
         productsTableView.tableFooterView = UIView()
-        productsTableView.backgroundColor = .lightGray
+        productsTableView.backgroundColor = .systemGray6
+        
     }
     
     @objc private func addTapped()  {
