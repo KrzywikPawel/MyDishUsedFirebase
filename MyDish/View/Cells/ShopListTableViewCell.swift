@@ -9,8 +9,17 @@
 import UIKit
 
 class ShopListTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var quantityLbl: UILabel!
-    @IBOutlet weak var productLbl: UILabel!
     
+    @IBOutlet weak private var quantityLbl: UILabel?
+    @IBOutlet weak private var productLbl: UILabel?
+    
+    func configurateWithItem(_ quantity: String,_ product: String){
+        layer.borderColor = UIColor.systemGray6.cgColor
+        layer.borderWidth = 5
+        quantityLbl?.text = quantity
+        quantityLbl?.font = quantityLbl?.font.withSize(14)
+        quantityLbl?.textColor = .systemGray
+        productLbl?.text = product
+        productLbl?.font = UIFont.boldSystemFont(ofSize: 14)
+    }
 }

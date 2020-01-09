@@ -34,7 +34,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
         return headerView;
     }
     
- 
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
@@ -44,14 +44,8 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopListTableViewCell", for: indexPath) as! ShopListTableViewCell
-        cell.productLbl.text = shopList[indexPath.section][indexPath.row]
-        cell.productLbl.font = UIFont.boldSystemFont(ofSize: 14)
-        cell.quantityLbl.text = quantityProduct[indexPath.section][indexPath.row]
-        cell.quantityLbl.font = cell.quantityLbl.font.withSize(14)
-        cell.quantityLbl.textColor = .systemGray
-        cell.layer.borderWidth = 5
         cell.layer.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 90)
-        cell.layer.borderColor = UIColor.systemGray6.cgColor
+        cell.configurateWithItem(quantityProduct[indexPath.section][indexPath.row], shopList[indexPath.section][indexPath.row])
         return cell
     }
     

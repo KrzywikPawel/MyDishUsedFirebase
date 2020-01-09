@@ -25,37 +25,39 @@ class CustomizeMainDescription{
     private let circleFill = UIImage(systemName: "circle.fill")
     private let circle = UIImage(systemName: "circle")
     
-    private func setColourLvlCircle(_ cell: MainCollectionViewCell) {
-        cell.buttonLvl1.tintColor = .systemGreen
-        cell.buttonLvl2.tintColor = .orange
-        cell.buttonLvl3.tintColor = .red
+    private func setColourLvlCircle(_ array: [UIButton]) -> [UIButton]  {
+        array[0].tintColor = .systemGreen
+        array[1].tintColor = .orange
+        array[2].tintColor = .red
+        return array
     }
     
-    private func levelCustomization(_ indexPath: IndexPath, _ cell: MainCollectionViewCell, _ lvl:Int) {
+    func levelCustomization(_ lvl:Int,_ array1: [UIButton]) -> [UIButton] {
+        var array = [UIButton]()
         switch lvl {
         case 1:
-            setColourLvlCircle(cell)
-            cell.buttonLvl1.setImage(circleFill, for: .normal)
-            cell.buttonLvl2.setImage(circle, for: .normal)
-            cell.buttonLvl3.setImage(circle, for: .normal)
+            array = setColourLvlCircle(array1)
+            array[0].setImage(circleFill, for: .normal)
+            array[1].setImage(circle, for: .normal)
+            array[2].setImage(circle, for: .normal)
         case 2:
-            setColourLvlCircle(cell)
-            cell.buttonLvl1.setImage(circleFill, for: .normal)
-            cell.buttonLvl2.setImage(circleFill, for: .normal)
-            cell.buttonLvl3.setImage(circle, for: .normal)
+            array = setColourLvlCircle(array1)
+            array[0].setImage(circleFill, for: .normal)
+            array[1].setImage(circleFill, for: .normal)
+            array[2].setImage(circle, for: .normal)
         case 3:
-            setColourLvlCircle(cell)
-            cell.buttonLvl1.setImage(circleFill, for: .normal)
-            cell.buttonLvl2.setImage(circleFill, for: .normal)
-            cell.buttonLvl3.setImage(circleFill, for: .normal)
+            array = setColourLvlCircle(array1)
+            array[0].setImage(circleFill, for: .normal)
+            array[1].setImage(circleFill, for: .normal)
+            array[2].setImage(circleFill, for: .normal)
         default:
             print("nil")
         }
+        return array
     }
     
-    func customizeAttributedCell(_ indexPath: IndexPath, _ cell: MainCollectionViewCell, _ min:String, _ lvl:Int) {
-        cell.timeLabel.attributedText = upperTime(min)
-        levelCustomization(indexPath, cell,lvl)
+    func customizeAttributedCell(_ min:String) {
+        let timeLabel = upperTime(min)
     }
     
     func upperTime(_ min: String) -> NSMutableAttributedString{

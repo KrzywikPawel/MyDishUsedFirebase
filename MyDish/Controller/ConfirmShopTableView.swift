@@ -16,9 +16,7 @@ extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmShopListTableViewCell", for: indexPath) as! ConfirmShopListTableViewCell
-        let quantity = quantityProduct[indexPath.row]
-        let name = products[indexPath.row]
-        cell.configurateWithItem(quantity,name)
+        cell.configurateWithItem(quantityProduct[indexPath.row],products[indexPath.row])
         cell.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100)
         cell.checkBtn.tag = indexPath.row
         cell.checkBtn.addTarget(self, action: #selector(check(sender:)), for: .touchUpInside)

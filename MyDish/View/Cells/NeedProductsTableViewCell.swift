@@ -10,14 +10,14 @@ import UIKit
 
 class NeedProductsTableViewCell: UITableViewCell {
        
-    @IBOutlet weak var quantityLabel: UILabel!
-    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak private var quantityLabel: UILabel?
+    @IBOutlet weak private var productNameLabel: UILabel?
     
     func configurateWithItem(quantity:String,name:String){
-        quantityLabel.text = quantity
-        quantityLabel.textColor = .systemGray
-        quantityLabel.font = quantityLabel.font.withSize(14)
-        productNameLabel.text = name
-        productNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        quantityLabel?.text = quantity
+        quantityLabel?.textColor = .systemGray
+        quantityLabel?.font = quantityLabel?.font.withSize(14)
+        productNameLabel?.text = name
+        productNameLabel?.font = UIFont.boldSystemFont(ofSize: 14)
     }
 }

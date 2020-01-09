@@ -9,20 +9,33 @@
 import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var dishImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var buttonLvl1: UIButton!
-    @IBOutlet weak var buttonLvl2: UIButton!
-    @IBOutlet weak var buttonLvl3: UIButton!
-    @IBOutlet weak var cookLaterButton: UIButton!
-    @IBOutlet weak var addToShopListButton: UIButton!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    func configurateWithItem(){
+    @IBOutlet weak private var dishImage: UIImageView?
+    @IBOutlet weak private var nameLabel: UILabel?
+    @IBOutlet weak private var timeLabel: UILabel?
+    @IBOutlet weak private var buttonLvl1: UIButton?
+    @IBOutlet weak private var buttonLvl2: UIButton?
+    @IBOutlet weak private var buttonLvl3: UIButton?
+    @IBOutlet weak  var cookLaterButton: UIButton?
+    @IBOutlet weak  var addToShopListButton: UIButton?
+    private let customize = CustomizeMainDescription()
+    func configurateWithItem(_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int){
+        dishImage?.image = UIImage(named: dishImgName)
+        nameLabel?.text = name
+        let min = "\(time) min"
+        var array = [buttonLvl1,buttonLvl2,buttonLvl3]
+        array = customize.levelCustomization(lvl, array as! [UIButton])
+        
+       
         
     }
 }
+//    private func setLvlBtn(_ lvl: Int){
+//        var array = [buttonLvl1,buttonLvl2,buttonLvl3]
+//        let array2 = customize.levelCustomization(lvl)
+//        for (index,btn) in array2.enumerated(){
+//            array[index] = btn
+//
+//        }
+//        buttonLvl1 = array2[0]
+//    }
+//}

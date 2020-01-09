@@ -44,7 +44,7 @@ class DishProductViewController: UIViewController {
         timeView.layer.borderColor = UIColor.systemGray.cgColor
         timeView.layer.cornerRadius = 10
         
-        //method takeData?
+        //method takeData
         let takeData = TakePropertiesData()
         let properties = takeData.takeProperties(id: id)
         productsArray = properties.products
