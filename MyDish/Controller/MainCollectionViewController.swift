@@ -9,8 +9,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         cell.delegate = self
         cell.configurateWithItem(arrayDish[indexPath.row].image, arrayDish[indexPath.row].name, arrayDish[indexPath.row].time,arrayDish[indexPath.row].level,arrayDish[indexPath.row].id)
-//        cell.cookLaterButton?.tag = arrayDish[indexPath.row].id
-//        cell.addToShopListButton?.tag = arrayDish[indexPath.row].id
         return cell
     }
     

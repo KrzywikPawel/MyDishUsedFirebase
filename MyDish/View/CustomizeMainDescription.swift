@@ -11,14 +11,6 @@ import UIKit
 
 class CustomizeMainDescription{
     private var arrayDish: [Dish] = []
-//    MARK: ktore inity sa potrzebne a ktore nie
-    init(arrayDish: [Dish]) {
-        self.arrayDish = arrayDish
-    }
-    init(dish: Dish){
-        arrayDish.append(dish)
-    }
-    
     init() {
     }
     
