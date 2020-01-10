@@ -31,6 +31,9 @@
                             <constraint firstAttribute="width" constant="30" id="QZd-MZ-NtW"/>
                         </constraints>
                         <state key="normal" image="clock"/>
+                        <connections>
+                            <action selector="cookLaterButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vOk-7E-05f"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3hT-up-VBk">
                         <rect key="frame" x="321" y="274" width="30" height="30"/>
@@ -40,6 +43,9 @@
                             <constraint firstAttribute="width" constant="30" id="jk4-HK-ekG"/>
                         </constraints>
                         <state key="normal" image="shopBasket"/>
+                        <connections>
+                            <action selector="addToShopListButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="kw9-NG-d82"/>
+                        </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-M0-ckF">
                         <rect key="frame" x="149.5" y="260.5" width="77" height="63.5"/>

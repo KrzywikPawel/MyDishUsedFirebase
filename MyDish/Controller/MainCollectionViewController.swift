@@ -1,5 +1,5 @@
 import UIKit
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, BtnAction{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayDish.count
@@ -7,15 +7,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-        cell.configurateWithItem(arrayDish[indexPath.row].image, arrayDish[indexPath.row].name, arrayDish[indexPath.row].time,arrayDish[indexPath.row].level)
-        cell.cookLaterButton?.tag = arrayDish[indexPath.row].id
-        cell.cookLaterButton?.addTarget(self, action: #selector(self.cookLaterBtn(sender:)),for: .touchUpInside)
-        cell.addToShopListButton?.tag = arrayDish[indexPath.row].id
-        cell.addToShopListButton?.addTarget(self, action: #selector(self.addToShopList(sender:)), for: .touchUpInside)
+        cell.delegate = self
+        cell.configurateWithItem(arrayDish[indexPath.row].image, arrayDish[indexPath.row].name, arrayDish[indexPath.row].time,arrayDish[indexPath.row].level,arrayDish[indexPath.row].id)
+//        cell.cookLaterButton?.tag = arrayDish[indexPath.row].id
+//        cell.addToShopListButton?.tag = arrayDish[indexPath.row].id
         return cell
     }
     
-    @objc private func addToShopList(sender: UIButton){
+    func addToShopListAction(_ sender: UIButton){
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
@@ -26,7 +25,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
     }
     
-    @objc private func cookLaterBtn(sender:UIButton){
+    func cookLaterAction(_ sender: UIButton){
         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
         if arrayLaterCookDishes.contains(sender.tag){
         }else{

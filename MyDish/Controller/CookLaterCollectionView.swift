@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate{
+extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate, BtnAction{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if dishesInArray.count == 0{
@@ -23,16 +23,13 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
+        cell.delegate = self
         cell.cookLaterButton?.setImage(UIImage(named: "delete"), for: .normal)
-        cell.configurateWithItem(dish.image, dish.name, dish.time, dish.level)
-//        cell.cookLaterButton.tag = dish.id
-//        cell.cookLaterButton.addTarget(self, action: #selector(self.deleteDishFromList(sender:)), for: .touchUpInside)
-//        cell.addToShopListButton.tag = dish.id
-//        cell.addToShopListButton.addTarget(self, action: #selector(self.addToShopList(sender:)), for: .touchUpInside)
+        cell.configurateWithItem(dish.image, dish.name, dish.time, dish.level,dish.id)
         return cell
     }
     
-    @objc func addToShopList(sender: UIButton){
+    func addToShopListAction(_ sender: UIButton){
         let shopList = ShopListDataStruct()
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         shopList.id = dish.id
@@ -49,8 +46,8 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         }
         
     }
-    
-    @objc private func deleteDishFromList(sender:UIButton){
+//    delete dish from list
+    func cookLaterAction(_ sender: UIButton){
         let id = sender.tag
         for (index,value) in dishesInArray.enumerated(){
             if(value == id){
@@ -80,20 +77,20 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
 }
 
 fileprivate extension UICollectionView {
-
+    
     func setEmptyMessage(_ message: String) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
         messageLabel.textColor = .black
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = .center;
-//        change font
+        //        change font
         messageLabel.font = UIFont(name: "Avenir-Light", size: 18)
         messageLabel.sizeToFit()
-
+        
         self.backgroundView = messageLabel;
     }
-
+    
     func restore() {
         self.backgroundView = nil
     }

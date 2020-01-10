@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol BtnAction: class {
+    func cookLaterAction(_ sender: UIButton)
+    func addToShopListAction(_ sender: UIButton)
+}
+
 class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var dishImage: UIImageView?
     @IBOutlet weak private var nameLabel: UILabel?
@@ -19,8 +24,8 @@ class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak  var addToShopListButton: UIButton?
     
     private let customize = CustomizeMainDescription()
-    
-    func configurateWithItem(_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int){
+    weak var delegate: BtnAction?
+    func configurateWithItem(_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int,_ id: Int){
         dishImage?.image = UIImage(named: dishImgName)
         nameLabel?.text = name
         var array = [buttonLvl1,buttonLvl2,buttonLvl3]
@@ -28,6 +33,18 @@ class MainCollectionViewCell: UICollectionViewCell {
         let min = "\(time) min"
         let attributedTime = customize.upperTime(min)
         timeLabel?.attributedText = attributedTime
+        cookLaterButton?.tag = id
+        addToShopListButton?.tag = id
     }
+    
+    @IBAction func cookLaterButton(_ sender: UIButton) {
+        delegate?.cookLaterAction(sender)
+    }
+    
+    @IBAction func addToShopListButton(_ sender: UIButton) {
+        delegate?.addToShopListAction(sender)
+    }
+    
+    
 }
 
