@@ -8,9 +8,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         cell.configurateWithItem(arrayDish[indexPath.row].image, arrayDish[indexPath.row].name, arrayDish[indexPath.row].time,arrayDish[indexPath.row].level)
-    //    let customizationAttribute = CustomizeMainDescription(arrayDish: arrayDish)
-//        customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
-//        cell.cookLaterButton?.tag = arrayDish[indexPath.row].id
+        cell.cookLaterButton?.tag = arrayDish[indexPath.row].id
         cell.cookLaterButton?.addTarget(self, action: #selector(self.cookLaterBtn(sender:)),for: .touchUpInside)
         cell.addToShopListButton?.tag = arrayDish[indexPath.row].id
         cell.addToShopListButton?.addTarget(self, action: #selector(self.addToShopList(sender:)), for: .touchUpInside)

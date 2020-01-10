@@ -22,14 +22,9 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-//        dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
-//        cell.dishImage.image = UIImage(named: dish.image)
-//        cell.nameLabel.text = dish.name
-//        cell.cookLaterButton.setImage(UIImage(named: "delete"), for: .normal)
-//        let customizationAttribute = CustomizeMainDescription(dish: dish)
-//        let min = "\(dish.time) min"
-//        let lvl = dish.level
-//        customizationAttribute.customizeAttributedCell(indexPath,cell,min,lvl)
+        dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
+        cell.cookLaterButton?.setImage(UIImage(named: "delete"), for: .normal)
+        cell.configurateWithItem(dish.image, dish.name, dish.time, dish.level)
 //        cell.cookLaterButton.tag = dish.id
 //        cell.cookLaterButton.addTarget(self, action: #selector(self.deleteDishFromList(sender:)), for: .touchUpInside)
 //        cell.addToShopListButton.tag = dish.id
