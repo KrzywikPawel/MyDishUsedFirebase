@@ -30,20 +30,9 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     }
     
     func addToShopListAction(_ sender: UIButton){
-//        let shopList = ShopListDataStruct()
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
-//        shopList.id = dish.id
         let dishStruct = TakeDataToMainView().takeDishFromId(id: dish.id)
-//        shopList.name = dishStruct.name
-//        shopList.products = dish.products
-//        var array = ShopListStructInCache.get()
-//        let id = dish.id
-//        if array.contains(where: {$0.id == id}){
-//            //            trying add product list which already is added
-//        }else{
-//            array.append(shopList)
-//            ShopListStructInCache.save(array)
-//        }
+
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products
@@ -78,6 +67,7 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
         push.name = dish.name
         push.id = dish.id
+        push.imgName = dish.image
         self.navigationController?.pushViewController(push, animated: true)
     }
 }

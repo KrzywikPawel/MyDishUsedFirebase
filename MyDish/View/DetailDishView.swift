@@ -32,14 +32,16 @@ class DetailDishView:UIView{
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         setTimeView()
         //  delete extra empty cell
-//        leftBarBtnItem()
+        //        leftBarBtnItem()
         setIngredientsLbl()
         setDirectionsLbl()
         ingredientsTable.tableFooterView = UIView()
         directionTable.tableFooterView = UIView()
     }
+    
     
     private func setTimeView(){
         timeView.layer.borderWidth = 1
@@ -77,7 +79,17 @@ class DetailDishView:UIView{
         img.image = UIImage(named: imgName)
     }
     
- 
+    func setNavigation(_ navigationController: UINavigationController){
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        //  left swipe gestures to back previous controller (after change leftbarimage gesture  doesnt work without this)
+        navigationController.interactivePopGestureRecognizer?.delegate = nil
+        
+    }
+    
+   
+    
     
     
     
