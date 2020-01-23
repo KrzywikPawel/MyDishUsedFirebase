@@ -8,7 +8,7 @@
 
 import UIKit
 //MARK: refactor this view? (use container view)
-class DishProductViewController: UIViewController {
+class DetailDishViewController: UIViewController {
     @IBOutlet weak var directionTable: UITableView!
     @IBOutlet weak var ingredientsTable: UITableView!
     @IBOutlet weak var shopListBtn: UIButton!
