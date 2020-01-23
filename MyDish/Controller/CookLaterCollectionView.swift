@@ -74,7 +74,7 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let push = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
+        let push = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DetailDishViewController
         dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
         push.name = dish.name
         push.id = dish.id

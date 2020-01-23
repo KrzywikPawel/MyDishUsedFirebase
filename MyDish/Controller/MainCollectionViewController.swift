@@ -34,7 +34,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DishProductViewController
+        let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DetailDishViewController
         pushVC.name = arrayDish[indexPath.row].name
         pushVC.id = arrayDish[indexPath.row].id
         pushVC.imgName = arrayDish[indexPath.row].image

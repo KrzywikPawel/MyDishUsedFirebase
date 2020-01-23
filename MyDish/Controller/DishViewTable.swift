@@ -8,16 +8,16 @@
 
 import Foundation
 import UIKit
-extension DishProductViewController: UITableViewDelegate,UITableViewDataSource{
+extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (tableView == ingredientsTable){
+        if (tableView == setView.ingredientsTable){
             return productsArray.count
         }
         return directions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (tableView == ingredientsTable){
+        if (tableView == setView.ingredientsTable){
             let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
             cell.configurateWithItem(quantity: quantityProducts[indexPath.row], name: productsArray[indexPath.row])
             return cell

@@ -50,11 +50,11 @@
             </objects>
             <point key="canvasLocation" x="1888.8" y="-790.25487256371821"/>
         </scene>
-        <!--Dish Product View Controller-->
+        <!--Detail Dish View Controller-->
         <scene sceneID="rRK-Un-lG9">
             <objects>
-                <viewController storyboardIdentifier="DishProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VTL-kY-MsF" customClass="DishProductViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bXO-Oy-LtJ">
+                <viewController storyboardIdentifier="DishProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VTL-kY-MsF" customClass="DetailDishViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXO-Oy-LtJ" customClass="DetailDishView" customModule="MyDish" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -79,7 +79,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-Qf-K2l">
-                                                        <rect key="frame" x="318" y="348" width="30" height="30"/>
+                                                        <rect key="frame" x="288" y="348" width="60" height="60"/>
                                                         <state key="normal" image="shopBasket"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Id-7b-jnZ">
@@ -272,21 +272,24 @@
                             <constraint firstItem="O6r-td-abd" firstAttribute="leading" secondItem="bXO-Oy-LtJ" secondAttribute="leading" id="cv6-Nf-Fxe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JDp-k6-llM"/>
+                        <connections>
+                            <outlet property="cookLaterBtn" destination="8Id-7b-jnZ" id="kr9-8e-yLr"/>
+                            <outlet property="cookingTimeLbl" destination="N8W-7h-gC1" id="VIS-oq-KOw"/>
+                            <outlet property="directionTable" destination="7C5-2b-19x" id="TDj-Kv-6GR"/>
+                            <outlet property="directionsLbl" destination="KEs-Ht-bU3" id="lr0-LY-U0Z"/>
+                            <outlet property="img" destination="cI0-bU-buN" id="Dxm-Br-Wlm"/>
+                            <outlet property="ingredientsLbl" destination="ra3-hX-ocz" id="Cks-H1-XHe"/>
+                            <outlet property="ingredientsTable" destination="jhI-k1-yRu" id="IUF-DH-8pz"/>
+                            <outlet property="nameLbl" destination="5qm-i4-e7F" id="jaj-26-Vgj"/>
+                            <outlet property="shopListBtn" destination="cDh-Qf-K2l" id="K0W-Fv-pzS"/>
+                            <outlet property="timeLbl" destination="dBy-pf-Gpm" id="GQ2-di-nda"/>
+                            <outlet property="timeView" destination="HUq-Qv-2KC" id="Wwl-vK-MM5"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="vDv-Wk-kww"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
-                        <outlet property="cookLaterBtn" destination="8Id-7b-jnZ" id="w5V-uo-M2v"/>
-                        <outlet property="cookingTimeLbl" destination="N8W-7h-gC1" id="bNX-At-DOK"/>
-                        <outlet property="directionTable" destination="7C5-2b-19x" id="BgB-TO-YVV"/>
-                        <outlet property="directionsLbl" destination="KEs-Ht-bU3" id="iHb-lG-LVx"/>
-                        <outlet property="img" destination="cI0-bU-buN" id="ayi-wT-0xE"/>
-                        <outlet property="ingredientsLbl" destination="ra3-hX-ocz" id="lfL-fP-SCh"/>
-                        <outlet property="ingredientsTable" destination="jhI-k1-yRu" id="p0O-qE-edM"/>
-                        <outlet property="nameLabel" destination="5qm-i4-e7F" id="O47-Rb-Awf"/>
-                        <outlet property="shopListBtn" destination="cDh-Qf-K2l" id="ypV-I0-4FY"/>
-                        <outlet property="timeLbl" destination="dBy-pf-Gpm" id="hcl-1o-3th"/>
-                        <outlet property="timeView" destination="HUq-Qv-2KC" id="apI-K7-fGo"/>
+                        <outlet property="setView" destination="bXO-Oy-LtJ" id="ZvM-zj-exb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNx-Po-uzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
