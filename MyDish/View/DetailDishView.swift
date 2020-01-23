@@ -20,6 +20,7 @@ class DetailDishView:UIView{
     @IBOutlet weak var cookingTimeLbl: UILabel!
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var img: UIImageView!
+    
     let detailVC = DetailDishViewController()
     
     override init(frame: CGRect) {
@@ -32,12 +33,13 @@ class DetailDishView:UIView{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setTimeView()
-        //  delete extra empty cell
-        //        leftBarBtnItem()
         setIngredientsLbl()
         setDirectionsLbl()
+        deleteExtraEmptyCell()
+    }
+    
+    private func deleteExtraEmptyCell(){
         ingredientsTable.tableFooterView = UIView()
         directionTable.tableFooterView = UIView()
     }
@@ -88,7 +90,7 @@ class DetailDishView:UIView{
         
     }
     
-   
+    
     
     
     
