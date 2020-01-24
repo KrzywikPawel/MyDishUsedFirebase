@@ -19,8 +19,9 @@ class CookLaterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
-        cookLaterCollectionview.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
+        let identifier = "MainCollectionViewCell"
+        let nibCell = UINib(nibName: identifier, bundle: nil)
+        cookLaterCollectionview.register(nibCell, forCellWithReuseIdentifier: identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
