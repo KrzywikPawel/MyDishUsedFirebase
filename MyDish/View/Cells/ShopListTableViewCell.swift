@@ -13,7 +13,8 @@ class ShopListTableViewCell: UITableViewCell {
     @IBOutlet weak private var quantityLbl: UILabel?
     @IBOutlet weak private var productLbl: UILabel?
     
-    func configurateWithItem(_ quantity: String,_ product: String){
+    func configurateWithItem(_ quantity: String,_ product: String, _ width: CGFloat){
+        layer.frame = CGRect(x: 0, y: 0, width: width, height: 90)
         layer.borderColor = UIColor.systemGray6.cgColor
         layer.borderWidth = 5
         quantityLbl?.text = quantity

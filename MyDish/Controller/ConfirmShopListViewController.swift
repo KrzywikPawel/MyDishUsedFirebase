@@ -67,7 +67,7 @@ class ConfirmShopListViewController: UIViewController {
             shopList.quantity = arraySavedQuantity
             var array = ShopListStructInCache.get()
             if array.contains(where: {$0.id == id}){
-                ////            trying add product list which already is added
+            // try add product list which already is added
             }else{
                 array.append(shopList)
                 ShopListStructInCache.save(array)

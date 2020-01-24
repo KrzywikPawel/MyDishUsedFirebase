@@ -15,15 +15,17 @@ class ShopListViewController: UIViewController {
     var quantityProduct = [[String]]()
     @IBOutlet weak var productsTableView: UITableView!
     let emptyMessage = "Pusto \nKliknij ikone koszyka w daniu \ni nie zapomnij o potrzebnych produktach"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(addTapped))
         let idHeader = "HeaderSectionView"
         let headerNIB = UINib(nibName: idHeader, bundle: Bundle.main)
         productsTableView.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
+        
+//        view
         productsTableView.tableFooterView = UIView()
         productsTableView.backgroundColor = .systemGray6
-        
     }
     
     @objc private func addTapped()  {

@@ -29,6 +29,9 @@
                                 <constraint firstAttribute="width" constant="35" id="Tkm-Rk-Ynd"/>
                             </constraints>
                             <state key="normal" image="delete"/>
+                            <connections>
+                                <action selector="deleteBtnAction:" destination="-1" eventType="touchUpInside" id="ie2-n2-O8f"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
