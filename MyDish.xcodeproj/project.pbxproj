@@ -16,6 +16,7 @@
 		E531197F23C722BE0007E4C2 /* ShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531197E23C722BE0007E4C2 /* ShopListTableViewCell.swift */; };
 		E537ED0223A6C56100BF56C7 /* ShopListDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */; };
 		E537ED0423A6D21900BF56C7 /* ShopListStructInCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */; };
+		E545562C23DB46F200B619EB /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545562B23DB46F200B619EB /* ShopList.swift */; };
 		E545702D239ED49D0041F4E3 /* DishViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545702C239ED49D0041F4E3 /* DishViewTable.swift */; };
 		E54B9EED23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */; };
 		E54B9EEF23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */; };
@@ -57,6 +58,7 @@
 		E531197E23C722BE0007E4C2 /* ShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableViewCell.swift; sourceTree = "<group>"; };
 		E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListDataStruct.swift; sourceTree = "<group>"; };
 		E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListStructInCache.swift; sourceTree = "<group>"; };
+		E545562B23DB46F200B619EB /* ShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
 		E545702C239ED49D0041F4E3 /* DishViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewTable.swift; sourceTree = "<group>"; };
 		E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSetEmptyMessage.swift; sourceTree = "<group>"; };
 		E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmptyTableAndCollectionMessage.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				E5CD9F8923C8951700FA563B /* DetailDish.swift */,
 				E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */,
 				E54B9EF323DB158000B07B36 /* ConfirmShopList.swift */,
+				E545562B23DB46F200B619EB /* ShopList.swift */,
 				E54B9EF223DAFF5F00B07B36 /* Extension */,
 				E5AA9BE523943C3B00E863C7 /* Cells */,
 			);
@@ -325,6 +328,7 @@
 				E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */,
 				E5F16B2F23B3809200D77BD8 /* HeaderSectionView.swift in Sources */,
 				E5107E8723A65DD1007CE687 /* ShopListViewController.swift in Sources */,
+				E545562C23DB46F200B619EB /* ShopList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

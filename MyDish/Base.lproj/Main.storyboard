@@ -300,7 +300,7 @@
         <scene sceneID="JTj-wX-iFJ">
             <objects>
                 <viewController storyboardIdentifier="ShopListViewController" id="kBr-DF-7Yl" customClass="ShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F1i-at-9Gf">
+                    <view key="view" contentMode="scaleToFill" id="F1i-at-9Gf" customClass="ShopList" customModule="MyDish" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -357,10 +357,13 @@
                             <constraint firstItem="zdP-BE-ezb" firstAttribute="trailing" secondItem="YYW-Qu-2eg" secondAttribute="trailing" id="rLd-PC-20P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zdP-BE-ezb"/>
+                        <connections>
+                            <outlet property="shopListTable" destination="YYW-Qu-2eg" id="RoU-Ss-Zgd"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="GcF-7c-lfV"/>
                     <connections>
-                        <outlet property="productsTableView" destination="YYW-Qu-2eg" id="5U0-gs-NW0"/>
+                        <outlet property="setView" destination="F1i-at-9Gf" id="MsZ-fp-sRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kM3-Zj-JJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

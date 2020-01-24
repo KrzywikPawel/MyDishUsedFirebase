@@ -9,11 +9,13 @@
 import UIKit
 
 class ShopListViewController: UIViewController {
+    
+    @IBOutlet var setView: ShopList!
+    
     var shopListStruct = [ShopListDataStruct]()
     var shopList = [[String]]()
     var headerName = [String]()
     var quantityProduct = [[String]]()
-    @IBOutlet weak var productsTableView: UITableView!
     let emptyMessage = "Pusto \nKliknij ikone koszyka w daniu \ni nie zapomnij o potrzebnych produktach"
     
     override func viewDidLoad() {
@@ -21,11 +23,7 @@ class ShopListViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(addTapped))
         let idHeader = "HeaderSectionView"
         let headerNIB = UINib(nibName: idHeader, bundle: Bundle.main)
-        productsTableView.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
-        
-//        view
-        productsTableView.tableFooterView = UIView()
-        productsTableView.backgroundColor = .systemGray6
+        setView.shopListTable.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
     }
     
     @objc private func addTapped()  {
@@ -43,6 +41,6 @@ class ShopListViewController: UIViewController {
             shopList.append(item.products)
             quantityProduct.append(item.quantity)
         }
-        productsTableView.reloadData()
+        setView.shopListTable.reloadData()
     }
 }

@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 
 extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmShopListTableViewCell", for: indexPath) as! ConfirmShopListTableViewCell
-        cell.configurateWithItem(quantityProduct[indexPath.row],products[indexPath.row])
-        cell.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100)
-        cell.checkBtn.tag = indexPath.row
-        cell.checkBtn.addTarget(self, action: #selector(check(sender:)), for: .touchUpInside)
+        let width = tableView.bounds.width
+        let tag = indexPath.row
+        cell.configurateWithItem(quantityProduct[indexPath.row],products[indexPath.row], width, tag)
         return cell
     }
     
-    @objc private func check(sender: UIButton){
+    @objc func check(_ sender: UIButton){
         let id = sender.tag
         if sender.isSelected{
             sender.isSelected = false

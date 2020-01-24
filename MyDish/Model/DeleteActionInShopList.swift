@@ -41,7 +41,7 @@ extension ShopListViewController: deleteBtnAction{
          shopList.remove(at: sectionId)
          let shopListStruct = ShopListStructInCache()
          shopListStruct.delete(index: sectionId)
-         productsTableView.reloadData()
+        setView.shopListTable.reloadData()
          
      }
     
