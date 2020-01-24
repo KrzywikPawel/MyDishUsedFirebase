@@ -9,6 +9,9 @@
 import UIKit
 
 class ConfirmShopListViewController: UIViewController {
+    
+    @IBOutlet var setView: ConfirmShopList!
+    
     var quantityProduct = [String]()
     var products = [String]()
     var arraySavedQuantity = [String]()
@@ -17,47 +20,43 @@ class ConfirmShopListViewController: UIViewController {
     var id = Int()
     var deletePosition = String()
     @IBOutlet weak var confirmTable: UITableView!
-    @IBOutlet weak var confirmBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // na oryginale czy kopii?
         arraySavedProducts = products
         arraySavedQuantity = quantityProduct
         customizeNavigationBar()
+        
+//        view
         confirmTable.tableFooterView = UIView()
         confirmTable.backgroundColor = .systemGray6
         self.view.backgroundColor = .systemGray6
     }
     
     private func customizeNavigationBar() {
-        customizeConfirmBtn()
         let backBtn = UIButton(type: .custom)
         customizeBackBtn(backBtn)
         let leftItem = UIBarButtonItem(customView: backBtn)
         self.navigationItem.leftBarButtonItem = leftItem
+        
+//        view
         self.title = "Review Ingredients"
     }
     
+//    view
     private func customizeBackBtn(_ backBtn: UIButton) {
          backBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
          backBtn.setImage(UIImage(named: "back"), for: .normal)
          backBtn.addTarget(self, action: #selector(backToView(sender:)), for: .touchUpInside)
      }
     
-    private func customizeConfirmBtn() {
-          confirmBtn.setTitle("Confirm", for: .normal)
-          confirmBtn.setTitleColor(UIColor.systemGreen, for: .normal)
-          confirmBtn.backgroundColor = .black
-          confirmBtn.layer.cornerRadius = 20
-          confirmBtn.layer.borderWidth = 1
-      }
-    
+//    view
+
     @objc private func backToView(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func confirm(_ sender: UIButton) {
+    @objc func confirm(_ sender: UIButton) {
         if arraySavedProducts.isEmpty{
         }else{
             let shopList = ShopListDataStruct()

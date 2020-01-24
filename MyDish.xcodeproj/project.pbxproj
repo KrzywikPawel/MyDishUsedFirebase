@@ -20,6 +20,7 @@
 		E54B9EED23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */; };
 		E54B9EEF23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */; };
 		E54B9EF123DAFF3000B07B36 /* TableViewSetEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EF023DAFF3000B07B36 /* TableViewSetEmptyMessage.swift */; };
+		E54B9EF423DB158000B07B36 /* ConfirmShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EF323DB158000B07B36 /* ConfirmShopList.swift */; };
 		E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0A2392C1420084A055 /* AppDelegate.swift */; };
 		E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0C2392C1420084A055 /* SceneDelegate.swift */; };
 		E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0E2392C1420084A055 /* ViewController.swift */; };
@@ -36,7 +37,7 @@
 		E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */; };
 		E5CBA6AF239EF7BE00E4722A /* CookLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */; };
 		E5CBA6B1239EF7D800E4722A /* CookLaterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */; };
-		E5CD9F8A23C8951700FA563B /* DetailDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD9F8923C8951700FA563B /* DetailDishView.swift */; };
+		E5CD9F8A23C8951700FA563B /* DetailDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD9F8923C8951700FA563B /* DetailDish.swift */; };
 		E5F16B2F23B3809200D77BD8 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F16B2E23B3809200D77BD8 /* HeaderSectionView.swift */; };
 		E5F16B3123B380BF00D77BD8 /* HeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */; };
 		E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F16B3223B3984E00D77BD8 /* DeleteActionInShopList.swift */; };
@@ -60,6 +61,7 @@
 		E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSetEmptyMessage.swift; sourceTree = "<group>"; };
 		E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmptyTableAndCollectionMessage.swift; sourceTree = "<group>"; };
 		E54B9EF023DAFF3000B07B36 /* TableViewSetEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSetEmptyMessage.swift; sourceTree = "<group>"; };
+		E54B9EF323DB158000B07B36 /* ConfirmShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmShopList.swift; sourceTree = "<group>"; };
 		E54D2C072392C1420084A055 /* MyDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54D2C0A2392C1420084A055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54D2C0C2392C1420084A055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeMainDescription.swift; sourceTree = "<group>"; };
 		E5CBA6AE239EF7BE00E4722A /* CookLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookLaterViewController.swift; sourceTree = "<group>"; };
 		E5CBA6B0239EF7D800E4722A /* CookLaterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookLaterCollectionView.swift; sourceTree = "<group>"; };
-		E5CD9F8923C8951700FA563B /* DetailDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDishView.swift; sourceTree = "<group>"; };
+		E5CD9F8923C8951700FA563B /* DetailDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDish.swift; sourceTree = "<group>"; };
 		E5F16B2E23B3809200D77BD8 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
 		E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionView.xib; sourceTree = "<group>"; };
 		E5F16B3223B3984E00D77BD8 /* DeleteActionInShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteActionInShopList.swift; sourceTree = "<group>"; };
@@ -191,8 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */,
-				E5CD9F8923C8951700FA563B /* DetailDishView.swift */,
+				E5CD9F8923C8951700FA563B /* DetailDish.swift */,
 				E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */,
+				E54B9EF323DB158000B07B36 /* ConfirmShopList.swift */,
 				E54B9EF223DAFF5F00B07B36 /* Extension */,
 				E5AA9BE523943C3B00E863C7 /* Cells */,
 			);
@@ -291,7 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5CD9F8A23C8951700FA563B /* DetailDishView.swift in Sources */,
+				E5CD9F8A23C8951700FA563B /* DetailDish.swift in Sources */,
+				E54B9EF423DB158000B07B36 /* ConfirmShopList.swift in Sources */,
 				E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */,
 				E5CBA6B1239EF7D800E4722A /* CookLaterCollectionView.swift in Sources */,
 				E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */,

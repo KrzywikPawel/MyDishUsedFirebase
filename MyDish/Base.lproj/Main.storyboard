@@ -371,7 +371,7 @@
         <scene sceneID="Yxx-R5-onl">
             <objects>
                 <viewController storyboardIdentifier="ConfirmShopListViewController" id="TQe-PL-Egn" customClass="ConfirmShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tKO-BW-2Od">
+                    <view key="view" contentMode="scaleToFill" id="tKO-BW-2Od" customClass="ConfirmShopList" customModule="MyDish" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -441,9 +441,6 @@
                                     <constraint firstAttribute="height" constant="45" id="iM9-is-M5v"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="confirm:" destination="TQe-PL-Egn" eventType="touchUpInside" id="hdO-Ea-Wvq"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -456,10 +453,13 @@
                             <constraint firstItem="SOO-RQ-f9R" firstAttribute="bottom" secondItem="BkY-qx-HGe" secondAttribute="bottom" constant="20" id="pFc-5f-ZJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOO-RQ-f9R"/>
+                        <connections>
+                            <outlet property="confirmBtn" destination="BkY-qx-HGe" id="2X7-7c-6f0"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="confirmBtn" destination="BkY-qx-HGe" id="8Nz-gg-P3A"/>
                         <outlet property="confirmTable" destination="cU4-aK-BEf" id="xO6-hM-skU"/>
+                        <outlet property="setView" destination="tKO-BW-2Od" id="bgd-a2-UZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kf4-4S-Gfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
