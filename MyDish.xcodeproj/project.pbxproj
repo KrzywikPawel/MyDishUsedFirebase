@@ -17,6 +17,9 @@
 		E537ED0223A6C56100BF56C7 /* ShopListDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */; };
 		E537ED0423A6D21900BF56C7 /* ShopListStructInCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */; };
 		E545702D239ED49D0041F4E3 /* DishViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545702C239ED49D0041F4E3 /* DishViewTable.swift */; };
+		E54B9EED23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */; };
+		E54B9EEF23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */; };
+		E54B9EF123DAFF3000B07B36 /* TableViewSetEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B9EF023DAFF3000B07B36 /* TableViewSetEmptyMessage.swift */; };
 		E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0A2392C1420084A055 /* AppDelegate.swift */; };
 		E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0C2392C1420084A055 /* SceneDelegate.swift */; };
 		E54D2C0F2392C1420084A055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D2C0E2392C1420084A055 /* ViewController.swift */; };
@@ -54,6 +57,9 @@
 		E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListDataStruct.swift; sourceTree = "<group>"; };
 		E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListStructInCache.swift; sourceTree = "<group>"; };
 		E545702C239ED49D0041F4E3 /* DishViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewTable.swift; sourceTree = "<group>"; };
+		E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSetEmptyMessage.swift; sourceTree = "<group>"; };
+		E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmptyTableAndCollectionMessage.swift; sourceTree = "<group>"; };
+		E54B9EF023DAFF3000B07B36 /* TableViewSetEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSetEmptyMessage.swift; sourceTree = "<group>"; };
 		E54D2C072392C1420084A055 /* MyDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54D2C0A2392C1420084A055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54D2C0C2392C1420084A055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E54B9EF223DAFF5F00B07B36 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E54B9EEC23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift */,
+				E54B9EF023DAFF3000B07B36 /* TableViewSetEmptyMessage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		E54D2BFE2392C1420084A055 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +192,8 @@
 			children = (
 				E5AA9BE3239439C500E863C7 /* CustomizeMainDescription.swift */,
 				E5CD9F8923C8951700FA563B /* DetailDishView.swift */,
+				E54B9EEE23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift */,
+				E54B9EF223DAFF5F00B07B36 /* Extension */,
 				E5AA9BE523943C3B00E863C7 /* Cells */,
 			);
 			path = View;
@@ -280,6 +297,7 @@
 				E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */,
 				E55CE9B523C095CF00A5728D /* ConfirmShopListViewController.swift in Sources */,
 				E5107E8923A65DE9007CE687 /* ShopListTableView.swift in Sources */,
+				E54B9EED23DAFAE000B07B36 /* CollectionViewSetEmptyMessage.swift in Sources */,
 				E537ED0423A6D21900BF56C7 /* ShopListStructInCache.swift in Sources */,
 				E55CE9B923C096E900A5728D /* ConfirmShopTableView.swift in Sources */,
 				E5107E8423A65D38007CE687 /* NeedProductsTableViewCell.swift in Sources */,
@@ -291,11 +309,13 @@
 				E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */,
 				E55CE9B723C095E700A5728D /* ConfirmShopListTableViewCell.swift in Sources */,
 				E54D2C0B2392C1420084A055 /* AppDelegate.swift in Sources */,
+				E54B9EEF23DAFD7E00B07B36 /* SetEmptyTableAndCollectionMessage.swift in Sources */,
 				E5AA9BE4239439C500E863C7 /* CustomizeMainDescription.swift in Sources */,
 				E5FF28A923A193E60065263E /* MainCollectionViewCell.swift in Sources */,
 				E50715C8239ECDB300F5534B /* TakePropertiesData.swift in Sources */,
 				E5FF5A0D23BE5A4500468AE2 /* DirectionsTableViewCell.swift in Sources */,
 				E5CBA6AF239EF7BE00E4722A /* CookLaterViewController.swift in Sources */,
+				E54B9EF123DAFF3000B07B36 /* TableViewSetEmptyMessage.swift in Sources */,
 				E537ED0223A6C56100BF56C7 /* ShopListDataStruct.swift in Sources */,
 				E54D2C0D2392C1420084A055 /* SceneDelegate.swift in Sources */,
 				E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */,

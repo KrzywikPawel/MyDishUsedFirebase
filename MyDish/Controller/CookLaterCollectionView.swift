@@ -12,11 +12,12 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if dishesInArray.count == 0{
-            collectionView.setEmptyMessage("Pusto \nKliknij ikone zegara w daniu \ni wroc kiedy zapragniesz")
+            let setMessage = SetEmptyTableAndCollectionMessage()
+            setMessage.collectionSetEmptyMessage(collectionView,emptyMessage)
         }else{
+//            method in CollectionViewSetEmptyMessage file
             collectionView.restore()
         }
-        
         return dishesInArray.count
     }
     
@@ -32,7 +33,6 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     func addToShopListAction(_ sender: UIButton){
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         let dishStruct = TakeDataToMainView().takeDishFromId(id: dish.id)
-
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products
@@ -72,22 +72,4 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     }
 }
 
-fileprivate extension UICollectionView {
-    
-    func setEmptyMessage(_ message: String) {
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        messageLabel.text = message
-        messageLabel.textColor = .black
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = .center;
-        //        change font
-        messageLabel.font = UIFont(name: "Avenir-Light", size: 18)
-        messageLabel.sizeToFit()
-        
-        self.backgroundView = messageLabel;
-    }
-    
-    func restore() {
-        self.backgroundView = nil
-    }
-}
+

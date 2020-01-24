@@ -55,7 +55,7 @@ class DetailDishViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftItem
     }
     
-    @objc func backToMainCollection(sender: UIButton){
+    @objc private func backToMainCollection(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -73,7 +73,6 @@ class DetailDishViewController: UIViewController {
     @objc private func addToShopList(){
         let dish = TakePropertiesData().takeProperties(id: id)
         let dishStruct = TakeDataToMainView().takeDishFromId(id: dish.id)
-        
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products

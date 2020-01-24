@@ -16,7 +16,8 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if headerName.count == 0{
-            tableView.setEmptyMessage("Pusto \nKliknij ikone koszyka w daniu \ni nie zapomnij o potrzebnych produktach")
+            let setMessage = SetEmptyTableAndCollectionMessage()
+            setMessage.tableSetEmptyMessage(tableView, emptyMessage)
         }else{
             tableView.restore()
         }
@@ -56,24 +57,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 
-fileprivate extension UITableView{
-    func setEmptyMessage(_ message: String){
-        let messageLbl = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-        messageLbl.text = message
-        messageLbl.font = UIFont(name: "Avenir-Light", size: 18)
-        messageLbl.textColor = .black
-        messageLbl.sizeToFit()
-        messageLbl.numberOfLines = 0
-        messageLbl.textAlignment = .center
-        self.backgroundView = messageLbl
-        self.separatorStyle = .none
-    }
-    
-    func restore(){
-        self.backgroundView = nil
-        self.separatorStyle = .singleLine
-    }
-}
+
 
 
 

@@ -31,22 +31,6 @@ class DetailDishView:UIView{
         super.init(coder: coder)
     }
     
-    func getIngredientsTable() -> UITableView{
-        return ingredientsTable
-    }
-    
-    func getShopListBtn() -> UIButton{
-        return shopListBtn
-    }
-    
-    func getCookLaterBtn() -> UIButton{
-        return cookLaterBtn
-    }
-    
-    func getDirectionsTable() -> UITableView{
-        return directionTable
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         setTimeView()
@@ -55,12 +39,29 @@ class DetailDishView:UIView{
         deleteExtraEmptyCell()
         setCookingTimeLbl()
     }
+//    getters
+    func getIngredientsTable() -> UITableView{
+          return ingredientsTable
+      }
+      
+      func getShopListBtn() -> UIButton{
+          return shopListBtn
+      }
+      
+      func getCookLaterBtn() -> UIButton{
+          return cookLaterBtn
+      }
+      
+      func getDirectionsTable() -> UITableView{
+          return directionTable
+      }
+    
+//    set view func
     
     private func deleteExtraEmptyCell(){
         ingredientsTable.tableFooterView = UIView()
         directionTable.tableFooterView = UIView()
     }
-    
     
     private func setTimeView(){
         timeView.layer.borderWidth = 1

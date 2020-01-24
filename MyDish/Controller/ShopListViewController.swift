@@ -14,7 +14,7 @@ class ShopListViewController: UIViewController {
     var headerName = [String]()
     var quantityProduct = [[String]]()
     @IBOutlet weak var productsTableView: UITableView!
-    
+    let emptyMessage = "Pusto \nKliknij ikone koszyka w daniu \ni nie zapomnij o potrzebnych produktach"
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(addTapped))
