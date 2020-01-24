@@ -19,39 +19,25 @@ class ConfirmShopListViewController: UIViewController {
     var name = String()
     var id = Int()
     var deletePosition = String()
-    @IBOutlet weak var confirmTable: UITableView!
+    private let titleText =  "Review Ingredients"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         arraySavedProducts = products
         arraySavedQuantity = quantityProduct
         customizeNavigationBar()
-        
-//        view
-        confirmTable.tableFooterView = UIView()
-        confirmTable.backgroundColor = .systemGray6
-        self.view.backgroundColor = .systemGray6
     }
     
     private func customizeNavigationBar() {
+        self.title = titleText
         let backBtn = UIButton(type: .custom)
-        customizeBackBtn(backBtn)
+        setView.customizeBackBtn(backBtn)
         let leftItem = UIBarButtonItem(customView: backBtn)
         self.navigationItem.leftBarButtonItem = leftItem
+        backBtn.addTarget(self, action: #selector(backToView(sender:)), for: .touchUpInside)
         
-//        view
-        self.title = "Review Ingredients"
     }
     
-//    view
-    private func customizeBackBtn(_ backBtn: UIButton) {
-         backBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
-         backBtn.setImage(UIImage(named: "back"), for: .normal)
-         backBtn.addTarget(self, action: #selector(backToView(sender:)), for: .touchUpInside)
-     }
-    
-//    view
-
     @objc private func backToView(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
@@ -66,7 +52,7 @@ class ConfirmShopListViewController: UIViewController {
             shopList.quantity = arraySavedQuantity
             var array = ShopListStructInCache.get()
             if array.contains(where: {$0.id == id}){
-            // try add product list which already is added
+                // try add product list which already is added
             }else{
                 array.append(shopList)
                 ShopListStructInCache.save(array)
@@ -77,5 +63,4 @@ class ConfirmShopListViewController: UIViewController {
             self.navigationController?.pushViewController(shopListVc, animated: true)
         }
     }
-    
 }

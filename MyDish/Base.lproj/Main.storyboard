@@ -455,10 +455,10 @@
                         <viewLayoutGuide key="safeArea" id="SOO-RQ-f9R"/>
                         <connections>
                             <outlet property="confirmBtn" destination="BkY-qx-HGe" id="2X7-7c-6f0"/>
+                            <outlet property="confirmTable" destination="cU4-aK-BEf" id="4UG-Rw-Fkz"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="confirmTable" destination="cU4-aK-BEf" id="xO6-hM-skU"/>
                         <outlet property="setView" destination="tKO-BW-2Od" id="bgd-a2-UZZ"/>
                     </connections>
                 </viewController>
