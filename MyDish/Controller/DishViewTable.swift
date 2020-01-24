@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (tableView == setView.ingredientsTable){
+        if (tableView == setView.getIngredientsTable()){
             return productsArray.count
         }
         return directions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (tableView == setView.ingredientsTable){
+        if (tableView == setView.getIngredientsTable()){
             let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
             cell.configurateWithItem(quantity: quantityProducts[indexPath.row], name: productsArray[indexPath.row])
             return cell

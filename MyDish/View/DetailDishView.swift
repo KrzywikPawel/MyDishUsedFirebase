@@ -9,19 +9,19 @@
 import UIKit
 
 class DetailDishView:UIView{
-    @IBOutlet weak var directionTable: UITableView!
-    @IBOutlet weak var ingredientsTable: UITableView!
-    @IBOutlet weak var shopListBtn: UIButton!
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var cookLaterBtn: UIButton!
-    @IBOutlet weak var ingredientsLbl: UILabel!
-    @IBOutlet weak var directionsLbl: UILabel!
-    @IBOutlet weak var timeLbl: UILabel!
-    @IBOutlet weak var cookingTimeLbl: UILabel!
-    @IBOutlet weak var timeView: UIView!
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet private weak var directionTable: UITableView!
+    @IBOutlet private weak var ingredientsTable: UITableView!
+    @IBOutlet private weak var shopListBtn: UIButton!
+    @IBOutlet private weak var nameLbl: UILabel!
+    @IBOutlet private weak var cookLaterBtn: UIButton!
+    @IBOutlet private weak var ingredientsLbl: UILabel!
+    @IBOutlet private weak var directionsLbl: UILabel!
+    @IBOutlet private weak var timeLbl: UILabel!
+    @IBOutlet private weak var cookingTimeLbl: UILabel!
+    @IBOutlet private weak var timeView: UIView!
+    @IBOutlet private weak var img: UIImageView!
     
-    let detailVC = DetailDishViewController()
+    private let detailVC = DetailDishViewController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,12 +31,29 @@ class DetailDishView:UIView{
         super.init(coder: coder)
     }
     
+    func getIngredientsTable() -> UITableView{
+        return ingredientsTable
+    }
+    
+    func getShopListBtn() -> UIButton{
+        return shopListBtn
+    }
+    
+    func getCookLaterBtn() -> UIButton{
+        return cookLaterBtn
+    }
+    
+    func getDirectionsTable() -> UITableView{
+        return directionTable
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setTimeView()
         setIngredientsLbl()
         setDirectionsLbl()
         deleteExtraEmptyCell()
+        setCookingTimeLbl()
     }
     
     private func deleteExtraEmptyCell(){

@@ -32,8 +32,8 @@ class DetailDishViewController: UIViewController {
         setView.setNameLbl(name)
         setView.setTimeLbl(time)
         setView.setImg(imgName)
-        setView.cookLaterBtn.addTarget(self, action: #selector(cookLater), for: .touchUpInside)
-        setView.shopListBtn.addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
+        setView.getCookLaterBtn().addTarget(self, action: #selector(cookLater), for: .touchUpInside)
+        setView.getShopListBtn().addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
     
     private func takeData() {
@@ -46,7 +46,7 @@ class DetailDishViewController: UIViewController {
     }
     
     //     refactor to view?
-    func leftBarBtnItem() {
+    private func leftBarBtnItem() {
         let backbtn = UIButton(type: .custom)
         backbtn.setImage(UIImage(named: "back"), for: .normal)
         backbtn.addTarget(self, action: #selector(backToMainCollection(sender:)), for: .touchUpInside)
