@@ -20,6 +20,7 @@ class ConfirmShopListViewController: UIViewController {
     var id = Int()
     var deletePosition = String()
     private let titleText =  "Review Ingredients"
+    private let alertText = "Musisz zaznaczyc minimum jeden produkt"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class ConfirmShopListViewController: UIViewController {
     
     @objc func confirm(_ sender: UIButton) {
         if arraySavedProducts.isEmpty{
+            emptyArrayAlert()
         }else{
             let shopList = ShopListDataStruct()
             shopList.id = id
@@ -62,5 +64,11 @@ class ConfirmShopListViewController: UIViewController {
             shopListVc.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.pushViewController(shopListVc, animated: true)
         }
+    }
+    
+    private func emptyArrayAlert(){
+        let alert = UIAlertController(title: "Lista Pusta", message: alertText, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler:{ _ in}))
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -4,20 +4,20 @@
     "image": "jajecznica",
     "name": "Jajecznica",
     "time": "15",
-    "level": 1
+    "level": 2
   },
   {
     "id":2,
     "image": "nalesnik",
     "name": "Nalesniki",
     "time": "20",
-    "level": 2
+    "level": 3
   },
   {
       "id":3,
       "image": "musli",
       "name": "Musli",
       "time": "5",
-      "level": 3
+      "level": 1
   }
 ]
