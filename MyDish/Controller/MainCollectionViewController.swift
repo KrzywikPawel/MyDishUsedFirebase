@@ -2,6 +2,7 @@ import UIKit
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, BtnAction{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(arrayDish.count)
         return arrayDish.count
     }
     

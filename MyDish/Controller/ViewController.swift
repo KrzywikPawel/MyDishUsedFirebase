@@ -11,20 +11,25 @@ import UIKit
 class ViewController: UIViewController{
     
     @IBOutlet weak var mainDishCollection: UICollectionView!
+    var arrayDish =  [Dish]()
     
-    var arrayDish: [Dish] = {
-        let data = TakeDataToMainView()
-        var arrayDish = data.parseData()
-        return arrayDish
-    }()
     var defaults = UserDefaults.standard
     var arrayLaterCookDishes:[Int] = []
     
     override func viewDidLoad() {
-//        defaults.removeObject(forKey: "shopList")
+        takeData()
+        //        defaults.removeObject(forKey: "shopList")
+        
         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
+    }
+    
+    func takeData() {
+        TakeDataToMainView().parseData { (result) in
+            self.arrayDish = result
+            self.mainDishCollection.reloadData()
+        }
     }
 }
 
