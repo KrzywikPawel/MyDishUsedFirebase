@@ -19,7 +19,6 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         takeData()
         //        defaults.removeObject(forKey: "shopList")
-        
         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
@@ -27,6 +26,7 @@ class ViewController: UIViewController{
     
     func takeData() {
         TakeDataToMainView().parseData { (result) in
+            
             self.arrayDish = result
             self.mainDishCollection.reloadData()
         }

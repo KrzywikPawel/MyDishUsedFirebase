@@ -8,9 +8,9 @@
 
 import Foundation
 import FirebaseDatabase
-struct Dish:Decodable{
+struct Dish{
     let id:Int
-    let image: String
+    var image: UIImage
     let name: String
     let time: String
     let level: Int
@@ -18,7 +18,7 @@ struct Dish:Decodable{
     init(snapshot: DataSnapshot) {
         let value = snapshot.value as! [String: AnyObject]
         self.id = value["id"] as! Int
-        self.image = ""
+        self.image = UIImage()
         self.level = value["lvl"] as! Int
         self.name = value["name"] as! String
         let timeValue = value["time"] as! Int
@@ -27,7 +27,7 @@ struct Dish:Decodable{
     
     init() {
         self.id = -1
-        self.image = ""
+        self.image = UIImage()
         self.name = ""
         self.time = ""
         self.level = -1

@@ -8,39 +8,34 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseStorage
 class TakeDataToMainView{
     
     var dishes: Array<Dish> = []
     
     func parseData(completion:@escaping ([Dish]) -> ()) {
         let reference = Database.database().reference().child("dishes")
+        
         reference.queryOrderedByKey().observeSingleEvent(of: .value) { (snapshot) in
             if let objects = snapshot.children.allObjects as? [DataSnapshot] {
                 for item in objects{
-                    let dish = Dish(snapshot: item)
+                    var dish = Dish(snapshot: item)
                     self.dishes.append(dish)
                 }
-                completion(self.dishes)
             }
+            completion(self.dishes)
         }
     }
     
     
     
     func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()){
-//        var dish: Dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
-       let reference = Database.database().reference().child("dishes")
-       reference.child("id\(id)").observeSingleEvent(of: .value) { (snapshot) in
+        let reference = Database.database().reference().child("dishes")
+        reference.child("id\(id)").observeSingleEvent(of: .value) { (snapshot) in
             let dish = Dish(snapshot: snapshot)
             completion(dish)
         }
-        //        for item in dishes{
-        //            if(item.id == id){
-        //                dish = item
-        //            }
-        //        }
-        //        return dish
-//        return dish
     }
-    
 }
+
+

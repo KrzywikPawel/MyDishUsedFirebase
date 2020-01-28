@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseStorage
 protocol BtnAction: class {
     func cookLaterAction(_ sender: UIButton)
     func addToShopListAction(_ sender: UIButton)
@@ -25,8 +25,8 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     private let customize = CustomizeMainDescription()
     weak var delegate: BtnAction?
-    func configurateWithItem(_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int,_ id: Int){
-        dishImage?.image = UIImage(named: dishImgName)
+    func configurateWithItem(_ dishImgName: UIImage,_ name:String,_ time: String,_ lvl:Int,_ id: Int){
+        dishImage?.image = dishImgName
         nameLabel?.text = name
         var array = [buttonLvl1,buttonLvl2,buttonLvl3]
         array = customize.levelCustomization(lvl, array as! [UIButton])

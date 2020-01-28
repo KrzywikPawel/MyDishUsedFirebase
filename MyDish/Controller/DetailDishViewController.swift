@@ -75,14 +75,14 @@ class DetailDishViewController: UIViewController {
         var dishStruct = Dish()
         TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
             dishStruct = result
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
+            pushConfirmShopListVC.products = dish.products
+            pushConfirmShopListVC.quantityProduct = dish.quantity
+            pushConfirmShopListVC.id = dish.id
+            pushConfirmShopListVC.name = dishStruct.name
+            self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
         })
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
-        pushConfirmShopListVC.products = dish.products
-        pushConfirmShopListVC.quantityProduct = dish.quantity
-        pushConfirmShopListVC.id = dish.id
-        pushConfirmShopListVC.name = dishStruct.name
-        self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
     }
     
 }

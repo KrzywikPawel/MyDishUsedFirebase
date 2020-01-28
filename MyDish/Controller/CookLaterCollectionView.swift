@@ -26,9 +26,9 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row], completion: {(result) in
             self.dish = result
         })
-        cell.delegate = self
-        cell.cookLaterButton?.setImage(UIImage(named: "delete"), for: .normal)
-        cell.configurateWithItem(dish.image, dish.name, dish.time, dish.level,dish.id)
+            cell.configurateWithItem(self.dish.image, self.dish.name, self.dish.time, self.dish.level,self.dish.id)
+            cell.delegate = self
+            cell.cookLaterButton?.setImage(UIImage(named: "delete"), for: .normal)
         return cell
     }
     
@@ -74,7 +74,7 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         })
         push.name = dish.name
         push.id = dish.id
-        push.imgName = dish.image
+        push.imgName = "id\(dish.id)"
         self.navigationController?.pushViewController(push, animated: true)
     }
 }

@@ -2,7 +2,6 @@ import UIKit
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, BtnAction{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(arrayDish.count)
         return arrayDish.count
     }
     
@@ -38,7 +37,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let pushVC = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DetailDishViewController
         pushVC.name = arrayDish[indexPath.row].name
         pushVC.id = arrayDish[indexPath.row].id
-        pushVC.imgName = arrayDish[indexPath.row].image
+        pushVC.imgName = "id\(pushVC.id)"
         pushVC.time = arrayDish[indexPath.row].time
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
