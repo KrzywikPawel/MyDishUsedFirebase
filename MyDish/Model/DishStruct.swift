@@ -25,12 +25,12 @@ struct Dish:Decodable{
         self.time = "\(timeValue)"
     }
     
-    init(id: Int, image: String, name: String, time: String, level: Int) {
-        self.id = id
-        self.image = image
-        self.name = name
-        self.time = time
-        self.level = level
+    init() {
+        self.id = -1
+        self.image = ""
+        self.name = ""
+        self.time = ""
+        self.level = -1
     }
 }
 

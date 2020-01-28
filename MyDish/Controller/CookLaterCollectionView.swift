@@ -23,7 +23,9 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-        dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
+        TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row], completion: {(result) in
+            self.dish = result
+        })
         cell.delegate = self
         cell.cookLaterButton?.setImage(UIImage(named: "delete"), for: .normal)
         cell.configurateWithItem(dish.image, dish.name, dish.time, dish.level,dish.id)
@@ -32,7 +34,10 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     
     func addToShopListAction(_ sender: UIButton){
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
-        let dishStruct = TakeDataToMainView().takeDishFromId(id: dish.id)
+        var dishStruct = Dish()
+        TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
+            dishStruct = result
+        })
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products
@@ -64,7 +69,9 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let push = mainStoryboard.instantiateViewController(withIdentifier: "DishProductViewController") as! DetailDishViewController
-        dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
+        TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row], completion: {(result) in
+            self.dish = result
+        })
         push.name = dish.name
         push.id = dish.id
         push.imgName = dish.image

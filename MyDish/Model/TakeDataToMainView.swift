@@ -11,6 +11,7 @@ import FirebaseDatabase
 class TakeDataToMainView{
     
     var dishes: Array<Dish> = []
+    
     func parseData(completion:@escaping ([Dish]) -> ()) {
         let reference = Database.database().reference().child("dishes")
         reference.queryOrderedByKey().observeSingleEvent(of: .value) { (snapshot) in
@@ -26,16 +27,20 @@ class TakeDataToMainView{
     
     
     
-    func takeDishFromId(id: Int) -> Dish {
-        var dish: Dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
-        //        let dishes: Array<Dish> = parseData()
+    func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()){
+//        var dish: Dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
+       let reference = Database.database().reference().child("dishes")
+       reference.child("id\(id)").observeSingleEvent(of: .value) { (snapshot) in
+            let dish = Dish(snapshot: snapshot)
+            completion(dish)
+        }
         //        for item in dishes{
         //            if(item.id == id){
         //                dish = item
         //            }
         //        }
         //        return dish
-        return dish
+//        return dish
     }
     
 }

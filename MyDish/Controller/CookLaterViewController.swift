@@ -12,7 +12,7 @@ class CookLaterViewController: UIViewController {
     
     @IBOutlet weak var cookLaterCollectionview: UICollectionView!
     let vc:ViewController = ViewController()
-    var dish = Dish(id: 0, image: "", name: "", time: "", level: -1)
+    var dish = Dish()
     let emptyMessage = "Pusto \nKliknij ikone zegara w daniu \ni wroc kiedy zapragniesz"
     var dishesInArray: Array<Int> = []
     var defaults = UserDefaults.standard

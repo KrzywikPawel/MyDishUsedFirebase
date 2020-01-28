@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6182F10BF6C3FCF57A3B691A /* Pods_MyDish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA50487E36E873E862272E7 /* Pods_MyDish.framework */; };
-		E50715C4239ECC9C00F5534B /* PropertiesDish.json in Resources */ = {isa = PBXBuildFile; fileRef = E50715C3239ECC9C00F5534B /* PropertiesDish.json */; };
 		E50715C6239ECD5A00F5534B /* DishPropertiesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50715C5239ECD5A00F5534B /* DishPropertiesStruct.swift */; };
 		E50715C8239ECDB300F5534B /* TakePropertiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50715C7239ECDB300F5534B /* TakePropertiesData.swift */; };
 		E5107E8423A65D38007CE687 /* NeedProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */; };
@@ -32,7 +31,7 @@
 		E55CE9B523C095CF00A5728D /* ConfirmShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CE9B423C095CF00A5728D /* ConfirmShopListViewController.swift */; };
 		E55CE9B723C095E700A5728D /* ConfirmShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CE9B623C095E700A5728D /* ConfirmShopListTableViewCell.swift */; };
 		E55CE9B923C096E900A5728D /* ConfirmShopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CE9B823C096E900A5728D /* ConfirmShopTableView.swift */; };
-		E5AA9BD92392E37700E863C7 /* DishList.json in Resources */ = {isa = PBXBuildFile; fileRef = E5AA9BD82392E37700E863C7 /* DishList.json */; };
+		E58FE01B23E050B500DC05F0 /* PropertiesDish.json in Resources */ = {isa = PBXBuildFile; fileRef = E58FE01A23E050B500DC05F0 /* PropertiesDish.json */; };
 		E5AA9BDB2392ED2300E863C7 /* TakeDataToMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */; };
 		E5AA9BDD2392ED6B00E863C7 /* DishStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */; };
 		E5AA9BE02393E0C700E863C7 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */; };
@@ -54,7 +53,6 @@
 		56FAE1C010090A47CB9FE72D /* Pods-MyDish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDish.debug.xcconfig"; path = "Target Support Files/Pods-MyDish/Pods-MyDish.debug.xcconfig"; sourceTree = "<group>"; };
 		6CA50487E36E873E862272E7 /* Pods_MyDish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D133364BE0104D5A640EC678 /* Pods-MyDish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDish.release.xcconfig"; path = "Target Support Files/Pods-MyDish/Pods-MyDish.release.xcconfig"; sourceTree = "<group>"; };
-		E50715C3239ECC9C00F5534B /* PropertiesDish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PropertiesDish.json; sourceTree = "<group>"; };
 		E50715C5239ECD5A00F5534B /* DishPropertiesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPropertiesStruct.swift; sourceTree = "<group>"; };
 		E50715C7239ECDB300F5534B /* TakePropertiesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePropertiesData.swift; sourceTree = "<group>"; };
 		E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedProductsTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 		E55CE9B623C095E700A5728D /* ConfirmShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmShopListTableViewCell.swift; sourceTree = "<group>"; };
 		E55CE9B823C096E900A5728D /* ConfirmShopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmShopTableView.swift; sourceTree = "<group>"; };
 		E5688BFD23DF522D00F4307E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E5AA9BD82392E37700E863C7 /* DishList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DishList.json; sourceTree = "<group>"; };
+		E58FE01A23E050B500DC05F0 /* PropertiesDish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PropertiesDish.json; path = ../../../MyDishlocalData/MyDish/JsonFile/PropertiesDish.json; sourceTree = "<group>"; };
 		E5AA9BDA2392ED2300E863C7 /* TakeDataToMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeDataToMainView.swift; sourceTree = "<group>"; };
 		E5AA9BDC2392ED6B00E863C7 /* DishStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStruct.swift; sourceTree = "<group>"; };
 		E5AA9BDF2393E0C700E863C7 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
@@ -185,8 +183,7 @@
 		E5AA9BDE2392F10400E863C7 /* JsonFile */ = {
 			isa = PBXGroup;
 			children = (
-				E5AA9BD82392E37700E863C7 /* DishList.json */,
-				E50715C3239ECC9C00F5534B /* PropertiesDish.json */,
+				E58FE01A23E050B500DC05F0 /* PropertiesDish.json */,
 			);
 			path = JsonFile;
 			sourceTree = "<group>";
@@ -311,13 +308,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58FE01B23E050B500DC05F0 /* PropertiesDish.json in Resources */,
 				E54D2C172392C1430084A055 /* LaunchScreen.storyboard in Resources */,
 				E5F466B423DF4F13003E9D54 /* GoogleService-Info.plist in Resources */,
 				E5FF28AA23A193E60065263E /* MainCollectionViewCell.xib in Resources */,
 				E54D2C142392C1430084A055 /* Assets.xcassets in Resources */,
-				E50715C4239ECC9C00F5534B /* PropertiesDish.json in Resources */,
 				E54D2C122392C1420084A055 /* Main.storyboard in Resources */,
-				E5AA9BD92392E37700E863C7 /* DishList.json in Resources */,
 				E5F16B3123B380BF00D77BD8 /* HeaderSectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
