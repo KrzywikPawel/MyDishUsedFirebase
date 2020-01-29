@@ -15,7 +15,7 @@ class TakeDataToMainView{
     
     func parseData(completion:@escaping ([Dish]) -> ()) {
         let database = Firestore.firestore()
-        let docRef = database.collection("dishesName").getDocuments { (document, error) in
+        _ = database.collection("dishesName").getDocuments { (document, error) in
             if let err = error {
                 print("Error getting documents: \(err)")
             } else {
@@ -54,8 +54,7 @@ class TakeDataToMainView{
         var myImage = UIImage()
         storage.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
             if (error != nil) {
-                
-                print(error)
+                print("error in takeIMG in takeDataToMainView")
             } else {
                 myImage = UIImage(data: data!)!
             }

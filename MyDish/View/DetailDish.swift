@@ -95,8 +95,8 @@ class DetailDishView:UIView{
         cookingTimeLbl.textColor = .systemGray
     }
     
-    func setImg(_ imgName: String){
-        img.image = UIImage(named: imgName)
+    func setImg(_ img: UIImage){
+        self.img.image = img
     }
     
     func setNavigation(_ navigationController: UINavigationController){

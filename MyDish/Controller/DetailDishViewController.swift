@@ -13,7 +13,7 @@ class DetailDishViewController: UIViewController {
     
     var time: String = ""
     var name:String = ""
-    var imgName: String = ""
+    lazy var imgName = UIImage()
     var id: Int = 0
     
     var directions = [String]()

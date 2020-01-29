@@ -26,7 +26,6 @@ class ViewController: UIViewController{
     
     func takeData() {
         TakeDataToMainView().parseData { (result) in
-            
             self.arrayDish = result
             self.mainDishCollection.reloadData()
         }
