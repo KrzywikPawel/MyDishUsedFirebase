@@ -33,11 +33,11 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
     }
     
     func addToShopListAction(_ sender: UIButton){
-        let dish = TakePropertiesData().takeProperties(id: sender.tag)
+        TakePropertiesData().takeProperties(id: sender.tag,completion: {(snapshot) in
+        let dish = snapshot
         var dishStruct = Dish()
         TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
             dishStruct = result
-        })
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products
@@ -45,6 +45,8 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         pushConfirmShopListVC.id = dish.id
         pushConfirmShopListVC.name = dishStruct.name
         self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
+        })
+        })
     }
 //    delete dish from list
     func cookLaterAction(_ sender: UIButton){

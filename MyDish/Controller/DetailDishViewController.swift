@@ -38,11 +38,14 @@ class DetailDishViewController: UIViewController {
     
     private func takeData() {
         //method takeData
-        let takeData = TakePropertiesData()
-        let properties = takeData.takeProperties(id: id)
-        productsArray = properties.products
-        quantityProducts = properties.quantity
-        directions = properties.steps
+        TakePropertiesData().takeProperties(id: id, completion: {(snapshot) in
+            
+            self.productsArray = snapshot.products
+            self.quantityProducts = snapshot.quantity
+            self.directions = snapshot.steps
+            self.setView.getIngredientsTable().reloadData()
+            self.setView.getDirectionsTable().reloadData()
+        })
     }
     
     //     refactor to view?
@@ -71,7 +74,8 @@ class DetailDishViewController: UIViewController {
     }
     
     @objc private func addToShopList(){
-        let dish = TakePropertiesData().takeProperties(id: id)
+        TakePropertiesData().takeProperties(id: id,completion: {(snapshot) in
+        let dish = snapshot
         var dishStruct = Dish()
         TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
             dishStruct = result
@@ -82,6 +86,7 @@ class DetailDishViewController: UIViewController {
             pushConfirmShopListVC.id = dish.id
             pushConfirmShopListVC.name = dishStruct.name
             self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
+        })
         })
     }
     

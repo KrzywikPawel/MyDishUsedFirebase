@@ -13,14 +13,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func addToShopListAction(_ sender: UIButton){
-        let dish = TakePropertiesData().takeProperties(id: sender.tag)
+        TakePropertiesData().takeProperties(id: sender.tag,completion: {(snapshot) in
+            let dish = snapshot
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products
         pushConfirmShopListVC.quantityProduct = dish.quantity
         pushConfirmShopListVC.id = dish.id
-        pushConfirmShopListVC.name = arrayDish[sender.tag-1].name
+            pushConfirmShopListVC.name = self.arrayDish[sender.tag-1].name
         self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
+        })
     }
     
     func cookLaterAction(_ sender: UIButton){
