@@ -7,22 +7,18 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseFirestore
 struct DishPropertiesStruct{
     let id: Int
     var products:Array<String>
     var quantity: Array<String>
     var steps: Array<String>
     
-    init(id:Int,snapshot: DataSnapshot) {
-        let value = snapshot.value as! [String:AnyObject]
+    init(_ id:Int,_ document: DocumentSnapshot) {
         self.id = id
-        let productsDictionary = value["products"] as![String:AnyObject]
-        self.products = Array(productsDictionary.values) as! [String]
-        let quantityDictionary = value["quantity"] as! [String:AnyObject]
-        self.quantity = Array(quantityDictionary.values) as! [String]
-        let stepsDictionary = value["steps"] as! [String:AnyObject]
-        self.steps = Array(stepsDictionary.values) as! [String]
+        self.products = document["products"] as! [String]
+        self.quantity = document["quantity"] as! [String]
+        self.steps = document["steps"] as! [String]
     }
     
 }

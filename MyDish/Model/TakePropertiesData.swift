@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseFirestore
 class TakePropertiesData {
     
     
@@ -35,10 +35,15 @@ class TakePropertiesData {
     //    }
     
     func takeProperties(id:Int,completion:@escaping (DishPropertiesStruct) -> ()){
-        let reference = Database.database().reference().child("properties")
-        reference.child("id\(id)").observeSingleEvent(of: .value) { (snapshot) in
-            let dishProperties = DishPropertiesStruct(id: id, snapshot: snapshot)
-            completion(dishProperties)
+        let database = Firestore.firestore()
+        let docRef = database.collection("dishes").document("id\(id)")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dishProperties = DishPropertiesStruct(id,document)
+                completion(dishProperties)
+            } else {
+                print("Document does not exist")
+            }
         }
     }
 }

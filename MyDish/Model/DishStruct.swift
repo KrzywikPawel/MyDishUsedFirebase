@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseFirestore
 struct Dish{
     let id:Int
     var image: UIImage
@@ -15,14 +15,12 @@ struct Dish{
     let time: String
     let level: Int
     
-    init(snapshot: DataSnapshot) {
-        let value = snapshot.value as! [String: AnyObject]
-        self.id = value["id"] as! Int
-        self.image = UIImage()
-        self.level = value["lvl"] as! Int
-        self.name = value["name"] as! String
-        let timeValue = value["time"] as! Int
-        self.time = "\(timeValue)"
+    init(_ document: DocumentSnapshot) {
+            self.id = document["id"] as! Int
+            self.image = UIImage()
+            self.level = document["lvl"] as! Int
+            self.name = document["name"] as! String
+            self.time = document["time"] as! String
     }
     
     init() {

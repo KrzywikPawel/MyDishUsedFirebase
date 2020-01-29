@@ -7,19 +7,20 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseFirestore
 import FirebaseStorage
 class TakeDataToMainView{
     
     var dishes: Array<Dish> = []
     
     func parseData(completion:@escaping ([Dish]) -> ()) {
-        let reference = Database.database().reference().child("dishes")
-        
-        reference.queryOrderedByKey().observeSingleEvent(of: .value) { (snapshot) in
-            if let objects = snapshot.children.allObjects as? [DataSnapshot] {
-                for item in objects{
-                    var dish = Dish(snapshot: item)
+        let database = Firestore.firestore()
+        let docRef = database.collection("dishesName").getDocuments { (document, error) in
+            if let err = error {
+                print("Error getting documents: \(err)")
+            } else {
+                for single in document!.documents {
+                    var dish = Dish(single)
                     self.takeImg(dish.id) { (img) in
                         dish.image = img
                         self.dishes.append(dish)
@@ -33,12 +34,17 @@ class TakeDataToMainView{
     
     
     func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()){
-        let reference = Database.database().reference().child("dishes")
-        reference.child("id\(id)").observeSingleEvent(of: .value) { (snapshot) in
-            var dish = Dish(snapshot: snapshot)
-            self.takeImg(id) { (snapshot) in
-                dish.image = snapshot
-                completion(dish)
+        let database = Firestore.firestore()
+        let docRef = database.collection("dishes").document("id\(id)")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                var dish = Dish(document)
+                self.takeImg(id) { (snapshot) in
+                    dish.image = snapshot
+                    completion(dish)
+                }
+            } else {
+                print("Document does not exist")
             }
         }
     }

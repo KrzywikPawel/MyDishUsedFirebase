@@ -5,7 +5,7 @@ target 'MyDish' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   # Pods for MyDish
-pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 
 end
