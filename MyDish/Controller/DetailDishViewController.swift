@@ -37,9 +37,7 @@ class DetailDishViewController: UIViewController {
     }
     
     private func takeData() {
-        //method takeData
         TakePropertiesData().takeProperties(id: id, completion: {(snapshot) in
-            
             self.productsArray = snapshot.products
             self.quantityProducts = snapshot.quantity
             self.directions = snapshot.steps
@@ -75,19 +73,18 @@ class DetailDishViewController: UIViewController {
     
     @objc private func addToShopList(){
         TakePropertiesData().takeProperties(id: id,completion: {(snapshot) in
-        let dish = snapshot
-        var dishStruct = Dish()
-        TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
-            dishStruct = result
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
-            pushConfirmShopListVC.products = dish.products
-            pushConfirmShopListVC.quantityProduct = dish.quantity
-            pushConfirmShopListVC.id = dish.id
-            pushConfirmShopListVC.name = dishStruct.name
-            self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
-        })
+            let dish = snapshot
+            var dishStruct = Dish()
+            TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
+                dishStruct = result
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
+                pushConfirmShopListVC.products = dish.products
+                pushConfirmShopListVC.quantityProduct = dish.quantity
+                pushConfirmShopListVC.id = dish.id
+                pushConfirmShopListVC.name = dishStruct.name
+                self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
+            })
         })
     }
-    
 }

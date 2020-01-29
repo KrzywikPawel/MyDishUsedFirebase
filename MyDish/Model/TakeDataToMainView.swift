@@ -20,10 +20,13 @@ class TakeDataToMainView{
             if let objects = snapshot.children.allObjects as? [DataSnapshot] {
                 for item in objects{
                     var dish = Dish(snapshot: item)
-                    self.dishes.append(dish)
+                    self.takeImg(dish.id) { (img) in
+                        dish.image = img
+                        self.dishes.append(dish)
+                        completion(self.dishes)
+                    }
                 }
             }
-            completion(self.dishes)
         }
     }
     
@@ -32,8 +35,25 @@ class TakeDataToMainView{
     func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()){
         let reference = Database.database().reference().child("dishes")
         reference.child("id\(id)").observeSingleEvent(of: .value) { (snapshot) in
-            let dish = Dish(snapshot: snapshot)
-            completion(dish)
+            var dish = Dish(snapshot: snapshot)
+            self.takeImg(id) { (snapshot) in
+                dish.image = snapshot
+                completion(dish)
+            }
+        }
+    }
+    
+    func takeImg(_ id: Int, completion:@escaping (UIImage) ->()){
+        let storage = Storage.storage().reference(withPath: "dishes/id\(id).jpg")
+        var myImage = UIImage()
+        storage.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+            if (error != nil) {
+                
+                print(error)
+            } else {
+                myImage = UIImage(data: data!)!
+            }
+            completion(myImage)
         }
     }
 }

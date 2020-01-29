@@ -17,11 +17,11 @@ struct DishPropertiesStruct{
     init(id:Int,snapshot: DataSnapshot) {
         let value = snapshot.value as! [String:AnyObject]
         self.id = id
-        let productDictionary = value["products"] as! [String:AnyObject]
+        let productsDictionary = value["products"] as![String:AnyObject]
+        self.products = Array(productsDictionary.values) as! [String]
         let quantityDictionary = value["quantity"] as! [String:AnyObject]
-        let stepsDictionary = value["steps"] as! [String:AnyObject]
-        self.products = Array(productDictionary.values) as! [String]
         self.quantity = Array(quantityDictionary.values) as! [String]
+        let stepsDictionary = value["steps"] as! [String:AnyObject]
         self.steps = Array(stepsDictionary.values) as! [String]
     }
     
