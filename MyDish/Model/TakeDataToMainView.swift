@@ -35,7 +35,7 @@ class TakeDataToMainView{
     
     func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()){
         let database = Firestore.firestore()
-        let docRef = database.collection("dishes").document("id\(id)")
+        let docRef = database.collection("dishesName").document("id\(id)")
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 var dish = Dish(document)
