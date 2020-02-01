@@ -76,6 +76,7 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
             push.name = self.dish.name
             push.id = self.dish.id
             push.time = self.dish.time
+            push.imgDish = self.dish.image
         self.navigationController?.pushViewController(push, animated: true)
         })
     }

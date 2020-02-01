@@ -13,7 +13,7 @@ class DetailDishViewController: UIViewController {
     
     var time: String = ""
     var name:String = ""
-    lazy var imgName = UIImage()
+    lazy var imgDish = UIImage()
     var id: Int = 0
     
     var directions = [String]()
@@ -31,7 +31,7 @@ class DetailDishViewController: UIViewController {
         setView.setNavigation(self.navigationController!)
         setView.setNameLbl(name)
         setView.setTimeLbl(time)
-        setView.setImg(imgName)
+        setView.setImg(imgDish)
         setView.getCookLaterBtn().addTarget(self, action: #selector(cookLater), for: .touchUpInside)
         setView.getShopListBtn().addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
