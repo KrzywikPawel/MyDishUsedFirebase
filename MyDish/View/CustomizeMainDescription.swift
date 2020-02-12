@@ -58,7 +58,7 @@ class CustomizeMainDescription{
         return attributedString
     }
 }
-//find index char ("m") in string
+ //find index char ("m") in string
 fileprivate extension String {
     func indexOf(char: Character) -> Int? {
         return firstIndex(of: char)?.utf16Offset(in: self)

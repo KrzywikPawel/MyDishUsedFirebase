@@ -13,6 +13,7 @@
 		E5107E8423A65D38007CE687 /* NeedProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */; };
 		E5107E8723A65DD1007CE687 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8623A65DD1007CE687 /* ShopListViewController.swift */; };
 		E5107E8923A65DE9007CE687 /* ShopListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5107E8823A65DE9007CE687 /* ShopListTableView.swift */; };
+		E51A887423E60B0800440007 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E51A887323E60B0800440007 /* GoogleService-Info.plist */; };
 		E531197F23C722BE0007E4C2 /* ShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531197E23C722BE0007E4C2 /* ShopListTableViewCell.swift */; };
 		E537ED0223A6C56100BF56C7 /* ShopListDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */; };
 		E537ED0423A6D21900BF56C7 /* ShopListStructInCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */; };
@@ -41,7 +42,6 @@
 		E5F16B2F23B3809200D77BD8 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F16B2E23B3809200D77BD8 /* HeaderSectionView.swift */; };
 		E5F16B3123B380BF00D77BD8 /* HeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */; };
 		E5F16B3323B3984E00D77BD8 /* DeleteActionInShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F16B3223B3984E00D77BD8 /* DeleteActionInShopList.swift */; };
-		E5F466B423DF4F13003E9D54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F466B323DF4F13003E9D54 /* GoogleService-Info.plist */; };
 		E5F842BC2395182C00DA66BD /* DetailDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F842BB2395182C00DA66BD /* DetailDishViewController.swift */; };
 		E5FF28A923A193E60065263E /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF28A723A193E60065263E /* MainCollectionViewCell.swift */; };
 		E5FF28AA23A193E60065263E /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FF28A823A193E60065263E /* MainCollectionViewCell.xib */; };
@@ -57,6 +57,7 @@
 		E5107E8223A65D38007CE687 /* NeedProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedProductsTableViewCell.swift; sourceTree = "<group>"; };
 		E5107E8623A65DD1007CE687 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		E5107E8823A65DE9007CE687 /* ShopListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableView.swift; sourceTree = "<group>"; };
+		E51A887323E60B0800440007 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E531197E23C722BE0007E4C2 /* ShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableViewCell.swift; sourceTree = "<group>"; };
 		E537ED0123A6C56100BF56C7 /* ShopListDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListDataStruct.swift; sourceTree = "<group>"; };
 		E537ED0323A6D21900BF56C7 /* ShopListStructInCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListStructInCache.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		E5F16B2E23B3809200D77BD8 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
 		E5F16B3023B380BF00D77BD8 /* HeaderSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionView.xib; sourceTree = "<group>"; };
 		E5F16B3223B3984E00D77BD8 /* DeleteActionInShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteActionInShopList.swift; sourceTree = "<group>"; };
-		E5F466B323DF4F13003E9D54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5F842BB2395182C00DA66BD /* DetailDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDishViewController.swift; sourceTree = "<group>"; };
 		E5FF28A723A193E60065263E /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5FF28A823A193E60065263E /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		E54D2C092392C1420084A055 /* MyDish */ = {
 			isa = PBXGroup;
 			children = (
-				E5F466B323DF4F13003E9D54 /* GoogleService-Info.plist */,
+				E51A887323E60B0800440007 /* GoogleService-Info.plist */,
 				E5AA9BD32392D53200E863C7 /* Support */,
 				E54D2C182392C1430084A055 /* Info.plist */,
 				E54D2C102392C1420084A055 /* Main.storyboard */,
@@ -306,11 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54D2C172392C1430084A055 /* LaunchScreen.storyboard in Resources */,
-				E5F466B423DF4F13003E9D54 /* GoogleService-Info.plist in Resources */,
 				E5FF28AA23A193E60065263E /* MainCollectionViewCell.xib in Resources */,
 				E54D2C142392C1430084A055 /* Assets.xcassets in Resources */,
 				E54D2C122392C1420084A055 /* Main.storyboard in Resources */,
 				E5F16B3123B380BF00D77BD8 /* HeaderSectionView.xib in Resources */,
+				E51A887423E60B0800440007 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

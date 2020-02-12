@@ -39,7 +39,7 @@ class DetailDishView:UIView{
         deleteExtraEmptyCell()
         setCookingTimeLbl()
     }
-//    getters
+    
     func getIngredientsTable() -> UITableView{
           return ingredientsTable
       }
@@ -55,8 +55,6 @@ class DetailDishView:UIView{
       func getDirectionsTable() -> UITableView{
           return directionTable
       }
-    
-//    set view func
     
     private func deleteExtraEmptyCell(){
         ingredientsTable.tableFooterView = UIView()

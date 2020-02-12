@@ -20,5 +20,4 @@ class ShopList: UIView{
         shopListTable.tableFooterView = UIView()
         shopListTable.backgroundColor = .systemGray6
     }
-    
 }
