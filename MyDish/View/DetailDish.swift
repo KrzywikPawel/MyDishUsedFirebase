@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailDishView:UIView{
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet private weak var directionTable: UITableView!
     @IBOutlet private weak var ingredientsTable: UITableView!
     @IBOutlet private weak var shopListBtn: UIButton!
@@ -32,6 +35,31 @@ class DetailDishView:UIView{
     }
     
     override func awakeFromNib() {
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: self.topAnchor , constant: 0).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        scrollView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        scrollView.heightAnchor.constraint(equalToConstant: 1200).isActive = true
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.topAnchor.constraint(equalTo: scrollView.topAnchor , constant: 0).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0).isActive = true
+        containerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant: 1200).isActive = true
+
+        topView.translatesAutoresizingMaskIntoConstraints = false
+        topView.topAnchor.constraint(equalTo: containerView.topAnchor , constant: 0).isActive = true
+        topView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
+        topView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0).isActive = true
+        topView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0).isActive = true
+        topView.widthAnchor.constraint(equalToConstant: 375).isActive = true
+        topView.heightAnchor.constraint(equalToConstant: 676).isActive = true
+//        topView.backgroundColor = .black
+        
         super.awakeFromNib()
         setTimeView()
         setIngredientsLbl()
@@ -95,6 +123,12 @@ class DetailDishView:UIView{
     
     func setImg(_ img: UIImage){
         self.img.image = img
+        self.img.contentMode = .scaleAspectFill
+        self.img.translatesAutoresizingMaskIntoConstraints = false
+        self.img.topAnchor.constraint(equalTo: topView.topAnchor, constant: -68).isActive = true
+        self.img.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 0).isActive = true
+        self.img.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: 0).isActive = true
+        self.img.heightAnchor.constraint(equalToConstant: 371).isActive = true
     }
     
     func setNavigation(_ navigationController: UINavigationController){
