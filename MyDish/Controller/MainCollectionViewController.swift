@@ -11,6 +11,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.configurateWithItem(arrayDish[indexPath.row].image, arrayDish[indexPath.row].name, arrayDish[indexPath.row].time,arrayDish[indexPath.row].level,arrayDish[indexPath.row].id)
         return cell
     }
+       
     
     func addToShopListAction(_ sender: UIButton){
         TakePropertiesData().takeProperties(id: sender.tag,completion: {(snapshot) in

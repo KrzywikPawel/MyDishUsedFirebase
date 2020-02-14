@@ -14,6 +14,7 @@ class NeedProductsTableViewCell: UITableViewCell {
     @IBOutlet weak private var productNameLabel: UILabel?
     
     func configurateWithItem(quantity:String,name:String){
+           
         quantityLabel?.text = quantity
         quantityLabel?.textColor = .systemGray
         quantityLabel?.font = quantityLabel?.font.withSize(14)
