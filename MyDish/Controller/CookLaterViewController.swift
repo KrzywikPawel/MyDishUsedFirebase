@@ -26,7 +26,6 @@ class CookLaterViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.dishesInArray = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
-        print(dishesInArray)
         self.cookLaterCollectionview.reloadData()
     }
 }

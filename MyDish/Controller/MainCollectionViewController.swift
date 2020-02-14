@@ -7,8 +7,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-        let width = mainDishCollection.contentSize.width
-//        cell.widthAnchor.constraint(equalToConstant: (mainDishCollection?.contentSize.width)!).isActive = true
+        let width = collectionView.contentSize.width
         cell.delegate = self
         cell.configurateWithItem(width,arrayDish[indexPath.row].image, arrayDish[indexPath.row].name, arrayDish[indexPath.row].time,arrayDish[indexPath.row].level,arrayDish[indexPath.row].id)
         return cell

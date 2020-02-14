@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="MyDish" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="376" height="325"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="376" height="325"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sDv-rD-Llf">
-                        <rect key="frame" x="0.0" y="0.0" width="376" height="255"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="255" id="l3c-UW-vXq"/>
@@ -48,7 +48,7 @@
                         </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-M0-ckF">
-                        <rect key="frame" x="149.5" y="260.5" width="77" height="63.5"/>
+                        <rect key="frame" x="168.5" y="260.5" width="77" height="63.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-oY-74u" userLabel="NameLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>

@@ -33,7 +33,6 @@ class MainCollectionViewCell: UICollectionViewCell {
         setTimeLbl(time)
         setLvl(lvl)
         setNameLbl(name)
-        
         cookLaterButton?.tag = id
         addToShopListButton?.tag = id
         
