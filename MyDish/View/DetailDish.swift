@@ -25,11 +25,8 @@ class DetailDishView:UIView{
     @IBOutlet private weak var timeView: UIView!
     @IBOutlet private weak var img: UIImageView!
     
-    
     @IBOutlet weak var ingredientsTableHeight: NSLayoutConstraint!
-    
     @IBOutlet weak var directionTableHeight: NSLayoutConstraint!
-    
     
     private let detailVC = DetailDishViewController()
     
@@ -41,6 +38,19 @@ class DetailDishView:UIView{
         super.init(coder: coder)
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setTimeView()
+        setIngredientsLbl()
+        setDirectionsLbl()
+        deleteExtraEmptyCell()
+        setCookingTimeLbl()
+        scrollAutoLayout()
+        containerAutoLayout()
+        topViewAutoLayout()
+        directionViewAutoLayout()
+    }
+    
     func setHeightIngredientsTable(_ height: CGFloat){
         ingredientsTableHeight.constant = height
     }
@@ -49,47 +59,38 @@ class DetailDishView:UIView{
         directionTableHeight.constant = height + 30
     }
     
-    
-    var heightIngredients: CGFloat = 0
-    var heightDirection: CGFloat = 0
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setTimeView()
-        setIngredientsLbl()
-        setDirectionsLbl()
-        deleteExtraEmptyCell()
-        setCookingTimeLbl()
-        
+    private func scrollAutoLayout() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         scrollView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        
+    }
+    
+    private func containerAutoLayout() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
         containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         containerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        
-        
+    }
+    
+    private func topViewAutoLayout() {
         topView.translatesAutoresizingMaskIntoConstraints = false
         topView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
         topView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
         topView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
         topView.widthAnchor.constraint(equalToConstant: 375).isActive = true
-        topView.heightAnchor.constraint(equalToConstant: 676).isActive = true
-        
-        
+    }
+    
+    private func directionViewAutoLayout() {
         directionView.translatesAutoresizingMaskIntoConstraints = false
         directionView.topAnchor.constraint(equalTo: timeView.bottomAnchor,constant: 28).isActive = true
         directionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
         directionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
         directionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        
     }
     
     func getIngredientsTable() -> UITableView{
