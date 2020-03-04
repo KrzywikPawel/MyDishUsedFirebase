@@ -33,7 +33,7 @@ class TakeDataToMainView{
     
     
     
-    func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()){
+    func takeDishFromId(id: Int,completion:@escaping(Dish) -> ()) {
         let database = Firestore.firestore()
         let docRef = database.collection("dishesName").document("id\(id)")
         docRef.getDocument { (document, error) in
@@ -49,16 +49,16 @@ class TakeDataToMainView{
         }
     }
     
-    func takeImg(_ id: Int, completion:@escaping (UIImage) ->()){
+    func takeImg(_ id: Int, completion:@escaping (UIImage) ->()) {
         let storage = Storage.storage().reference(withPath: "dishes/id\(id).jpg")
-        var myImage = UIImage()
+        var dishImage = UIImage()
         storage.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
             if (error != nil) {
                 print("error in takeIMG in takeDataToMainView")
             } else {
-                myImage = UIImage(data: data!)!
+                dishImage = UIImage(data: data!)!
             }
-            completion(myImage)
+            completion(dishImage)
         }
     }
 }

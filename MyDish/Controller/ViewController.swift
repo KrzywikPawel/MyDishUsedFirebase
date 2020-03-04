@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     
     @IBOutlet weak var mainDishCollection: UICollectionView!
     var arrayDish =  [Dish]()
@@ -17,14 +17,13 @@ class ViewController: UIViewController{
     var arrayLaterCookDishes:[Int] = []
     
     override func viewDidLoad() {
-        takeData()
-        //        defaults.removeObject(forKey: "shopList")
+        takeCategoriesToMainCollection()
         arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         mainDishCollection.register(nibCell, forCellWithReuseIdentifier: "MainCollectionViewCell")
     }
     
-    func takeData() {
+    func takeCategoriesToMainCollection() {
         TakeDataToMainView().parseData { (result) in
             self.arrayDish = result
             self.mainDishCollection.reloadData()

@@ -26,16 +26,17 @@ class ShopListViewController: UIViewController {
         setView.shopListTable.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
     }
     
-    @objc private func addTapped()  {
-        ShopListStructInCache.clear()
+    @objc private func addTapped() {
+        ShopListStructInCache.clearShopList()
         viewWillAppear(false)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         headerName = [String]()
         shopList = [[String]]()
         quantityProduct = [[String]]()
-        shopListStruct = ShopListStructInCache.get()
+        shopListStruct = ShopListStructInCache.getShopList()
         for item in shopListStruct{
             headerName.append(item.name)
             shopList.append(item.products)

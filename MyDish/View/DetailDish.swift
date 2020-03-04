@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailDishView:UIView{
+class DetailDishView:UIView {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var directionView: UIView!
     @IBOutlet weak var containerView: UIView!
@@ -16,7 +16,7 @@ class DetailDishView:UIView{
     @IBOutlet private weak var directionTable: UITableView!
     @IBOutlet private weak var ingredientsTable: UITableView!
     @IBOutlet private weak var shopListBtn: UIButton!
-    @IBOutlet private weak var nameLbl: UILabel!
+    @IBOutlet private weak var dishNameLbl: UILabel!
     @IBOutlet private weak var cookLaterBtn: UIButton!
     @IBOutlet private weak var ingredientsLbl: UILabel!
     @IBOutlet private weak var directionsLbl: UILabel!
@@ -51,11 +51,11 @@ class DetailDishView:UIView{
         directionViewAutoLayout()
     }
     
-    func setHeightIngredientsTable(_ height: CGFloat){
+    func setHeightIngredientsTable(_ height: CGFloat) {
         ingredientsTableHeight.constant = height
     }
     
-    func setHeightDirectionTable(_ height: CGFloat){
+    func setHeightDirectionTable(_ height: CGFloat) {
         directionTableHeight.constant = height + 30
     }
     
@@ -93,28 +93,28 @@ class DetailDishView:UIView{
         directionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
     }
     
-    func getIngredientsTable() -> UITableView{
+    func getIngredientsTable() -> UITableView {
         return ingredientsTable
     }
     
-    func getShopListBtn() -> UIButton{
+    func getShopListBtn() -> UIButton {
         return shopListBtn
     }
     
-    func getCookLaterBtn() -> UIButton{
+    func getCookLaterBtn() -> UIButton {
         return cookLaterBtn
     }
     
-    func getDirectionsTable() -> UITableView{
+    func getDirectionsTable() -> UITableView {
         return directionTable
     }
     
-    private func deleteExtraEmptyCell(){
+    private func deleteExtraEmptyCell() {
         ingredientsTable.tableFooterView = UIView()
         directionTable.tableFooterView = UIView()
     }
     
-    private func setTimeView(){
+    private func setTimeView() {
         timeView.translatesAutoresizingMaskIntoConstraints = false
         timeView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 10).isActive = true
         timeView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
@@ -124,37 +124,35 @@ class DetailDishView:UIView{
         timeView.layer.borderWidth = 1
         timeView.layer.borderColor = UIColor.systemGray.cgColor
         timeView.layer.cornerRadius = 10
-        
-        
     }
     
-    func setNameLbl(_ name: String){
-        nameLbl.text = name
-        nameLbl.font = UIFont.boldSystemFont(ofSize: 19)
+    func setNameLbl(_ name: String) {
+        dishNameLbl.text = name
+        dishNameLbl.font = UIFont.boldSystemFont(ofSize: 19)
     }
     
-    private func setIngredientsLbl(){
+    private func setIngredientsLbl() {
         ingredientsLbl.text = "Ingredients"
         ingredientsLbl.font = UIFont.boldSystemFont(ofSize: 19)
     }
     
-    private func setDirectionsLbl(){
+    private func setDirectionsLbl() {
         directionsLbl.text = "Directions"
         directionsLbl.font = UIFont.boldSystemFont(ofSize: 19)
     }
     
-    func setTimeLbl(_ time: String){
+    func setTimeLbl(_ time: String) {
         let stringTime = "\(time) MIN"
         timeLbl.text = stringTime
         timeLbl.font = UIFont.boldSystemFont(ofSize: 19)
     }
     
-    func setCookingTimeLbl(){
+    func setCookingTimeLbl() {
         cookingTimeLbl.font = cookingTimeLbl.font.withSize(15)
         cookingTimeLbl.textColor = .systemGray
     }
     
-    func setImg(_ img: UIImage){
+    func setDishImg(_ img: UIImage) {
         self.img.image = img
         self.img.contentMode = .scaleAspectFill
         self.img.translatesAutoresizingMaskIntoConstraints = false
@@ -164,7 +162,7 @@ class DetailDishView:UIView{
         self.img.heightAnchor.constraint(equalToConstant: 371).isActive = true
     }
     
-    func setNavigation(_ navigationController: UINavigationController){
+    func setNavigation(_ navigationController: UINavigationController) {
         navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.isTranslucent = true

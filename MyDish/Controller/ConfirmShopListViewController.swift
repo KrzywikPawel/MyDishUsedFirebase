@@ -32,14 +32,13 @@ class ConfirmShopListViewController: UIViewController {
     private func customizeNavigationBar() {
         self.title = titleText
         let backBtn = UIButton(type: .custom)
-        setView.customizeBackBtn(backBtn)
+        setView.setBackBtnLayout(backBtn)
         let leftItem = UIBarButtonItem(customView: backBtn)
         self.navigationItem.leftBarButtonItem = leftItem
         backBtn.addTarget(self, action: #selector(backToView(sender:)), for: .touchUpInside)
-        
     }
     
-    @objc private func backToView(sender: UIButton){
+    @objc private func backToView(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -52,10 +51,10 @@ class ConfirmShopListViewController: UIViewController {
             shopList.name = name
             shopList.products = arraySavedProducts
             shopList.quantity = arraySavedQuantity
-            var array = ShopListStructInCache.get()
+            var array = ShopListStructInCache.getShopList()
             if array.contains(where: {$0.id == id}){
                 // try add product list which already is added
-            }else{
+            } else {
                 array.append(shopList)
                 ShopListStructInCache.save(array)
             }
@@ -66,7 +65,7 @@ class ConfirmShopListViewController: UIViewController {
         }
     }
     
-    private func emptyArrayAlert(){
+    private func emptyArrayAlert() {
         let alert = UIAlertController(title: "Lista Pusta", message: alertText, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler:{ _ in}))
         self.present(alert, animated: true, completion: nil)

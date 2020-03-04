@@ -18,7 +18,8 @@ class HeaderSectionView: UITableViewHeaderFooterView {
     @IBOutlet weak var deleteBtn: UIButton!
     
     weak var delegate: deleteBtnAction?
-    func configurateWithItem(_ headerName: String, _ imgName: String, tag: Int){
+    
+    func configurateWithItem(_ headerName: String, _ imgName: String, tag: Int) {
         nameLbl.text = headerName
         nameLbl.font = UIFont.boldSystemFont(ofSize: 16)
         deleteBtn.setImage(UIImage(named: imgName), for: .normal)

@@ -8,14 +8,14 @@
 
 import Foundation
 import UIKit
-extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate, BtnAction{
+extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate, BtnAction {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if dishesInArray.count == 0{
             let setMessage = SetEmptyTableAndCollectionMessage()
             setMessage.collectionSetEmptyMessage(collectionView,emptyMessage)
-        }else{
-//            method in CollectionViewSetEmptyMessage file
+        } else {
+            //            method in CollectionViewSetEmptyMessage file
             collectionView.restore()
         }
         return dishesInArray.count
@@ -34,12 +34,18 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         return cell
     }
     
-    func addToShopListAction(_ sender: UIButton){
+    func addToShopListAction(_ sender: UIButton) {
         TakePropertiesData().takeProperties(id: sender.tag,completion: {(snapshot) in
-        let dish = snapshot
-        var dishStruct = Dish()
-        TakeDataToMainView().takeDishFromId(id: dish.id, completion: {(result) in
-            dishStruct = result
+            let dishProperties = snapshot
+            var dish = Dish()
+            TakeDataToMainView().takeDishFromId(id: dishProperties.id, completion: {(result) in
+                dish = result
+                self.pushConfirmShopListView(dishProperties,dish)
+            })
+        })
+    }
+    
+    private func pushConfirmShopListView(_ dish:DishPropertiesStruct,_ dishStruct:Dish) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
         pushConfirmShopListVC.products = dish.products
@@ -47,26 +53,24 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         pushConfirmShopListVC.id = dish.id
         pushConfirmShopListVC.name = dishStruct.name
         self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
-        })
-        })
     }
-//    delete dish from list
-    func cookLaterAction(_ sender: UIButton){
+    //    delete dish from list
+    func cookLaterAction(_ sender: UIButton) {
         let id = sender.tag
         for (index,value) in dishesInArray.enumerated(){
-            if(value == id){
+            if(value == id) {
                 dishesInArray.remove(at: index)
                 break;
             }
         }
-        var array = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
-        for (index,value) in array.enumerated(){
+        var arrayCookLater = defaults.array(forKey: "arrayCookLater") as? [Int] ?? [Int]()
+        for (index,value) in arrayCookLater.enumerated(){
             if(value == id){
-                array.remove(at: index)
+                arrayCookLater.remove(at: index)
                 break
             }
         }
-        defaults.set(array, forKey: "arrayCookLater")
+        defaults.set(arrayCookLater, forKey: "arrayCookLater")
         cookLaterCollectionview.reloadData()
     }
     
@@ -79,7 +83,7 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
             push.id = self.dish.id
             push.time = self.dish.time
             push.imgDish = self.dish.image
-        self.navigationController?.pushViewController(push, animated: true)
+            self.navigationController?.pushViewController(push, animated: true)
         })
     }
 }

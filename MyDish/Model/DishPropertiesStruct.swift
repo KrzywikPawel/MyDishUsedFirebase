@@ -8,7 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
-struct DishPropertiesStruct{
+struct DishPropertiesStruct {
     let id: Int
     var products:Array<String>
     var quantity: Array<String>

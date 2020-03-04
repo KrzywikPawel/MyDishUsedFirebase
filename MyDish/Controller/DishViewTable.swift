@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource{
+extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView == setView.getIngredientsTable()){
             return productsArray.count
@@ -20,12 +21,10 @@ extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource{
         if (tableView == setView.getIngredientsTable()){
             let height = tableView.contentSize.height
             setView.setHeightIngredientsTable(height)
-            tableView.layoutIfNeeded()
             let cell = tableView.dequeueReusableCell(withIdentifier: "NeedProductsTableViewCell", for: indexPath) as! NeedProductsTableViewCell
             cell.configurateWithItem(quantity: quantityProducts[indexPath.row], name: productsArray[indexPath.row])
             return cell
         }
-        
         let height = tableView.contentSize.height
         setView.setHeightDirectionTable(height)
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DirectionsTableViewCell
@@ -33,6 +32,4 @@ extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource{
         cell.configurateWithItem(step: stepNr, direction: directions[indexPath.row])
         return cell
     }
-    
-
 }

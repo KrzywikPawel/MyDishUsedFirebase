@@ -53,7 +53,7 @@ class MainCollectionViewCell: UICollectionViewCell {
           nameLabel?.text = name
       }
     
-    private func setTimeLbl(_ time: String){
+    private func setTimeLbl(_ time: String) {
         let min = "\(time) min"
         let attributedTime = customize.upperTime(min)
         timeLabel?.attributedText = attributedTime

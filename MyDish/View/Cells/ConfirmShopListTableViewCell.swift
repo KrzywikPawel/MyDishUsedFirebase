@@ -14,20 +14,20 @@ class ConfirmShopListTableViewCell: UITableViewCell {
     @IBOutlet private weak var nameLbl: UILabel!
     @IBOutlet private weak var checkBtn: UIButton!
     
-    func configurateWithItem(_ quantity: String,_ name: String, _ width: CGFloat, _ tag: Int){
-        setCell(width)
+    func configurateWithItem(_ quantity: String,_ name: String, _ width: CGFloat, _ tag: Int) {
+        setCellLayout(width)
         setQuantityLbl(quantity)
         setNameLbl(name)
         checkBtnAction(tag)
     }
     
-    private func setCell(_ width: CGFloat) {
+    private func setCellLayout(_ width: CGFloat) {
         frame = CGRect(x: 0, y: 0, width: width, height: 100)
         layer.borderWidth = 5
         layer.borderColor = UIColor.systemGray6.cgColor
     }
     
-    private func setNameLbl(_ name: String){
+    private func setNameLbl(_ name: String) {
         nameLbl.text = name
         nameLbl.font = UIFont.boldSystemFont(ofSize: 17)
     }
@@ -37,7 +37,7 @@ class ConfirmShopListTableViewCell: UITableViewCell {
         quantityLbl.text = quantity
     }
     
-    private func checkBtnAction(_ tag: Int){
+    private func checkBtnAction(_ tag: Int) {
         checkBtn.tintColor = .systemGreen
         checkBtn.tag = tag
         let vc = ConfirmShopListViewController()

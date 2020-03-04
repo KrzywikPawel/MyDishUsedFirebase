@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 class TakePropertiesData {
     
-    func takeProperties(id:Int,completion:@escaping (DishPropertiesStruct) -> ()){
+    func takeProperties(id:Int,completion:@escaping (DishPropertiesStruct) -> ()) {
         let database = Firestore.firestore()
         let docRef = database.collection("dishes").document("id\(id)")
         docRef.getDocument { (document, error) in

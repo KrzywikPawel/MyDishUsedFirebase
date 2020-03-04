@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmI-xG-dFy">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +11,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G3E-M2-XeS">
@@ -273,11 +272,11 @@
                             <outlet property="directionTableHeight" destination="BgV-Fq-Rvw" id="Jwj-0E-GP6"/>
                             <outlet property="directionView" destination="i0g-TH-sIe" id="gbQ-3B-kNF"/>
                             <outlet property="directionsLbl" destination="KEs-Ht-bU3" id="lr0-LY-U0Z"/>
+                            <outlet property="dishNameLbl" destination="5qm-i4-e7F" id="jaj-26-Vgj"/>
                             <outlet property="img" destination="cI0-bU-buN" id="Dxm-Br-Wlm"/>
                             <outlet property="ingredientsLbl" destination="ra3-hX-ocz" id="Cks-H1-XHe"/>
                             <outlet property="ingredientsTable" destination="jhI-k1-yRu" id="IUF-DH-8pz"/>
                             <outlet property="ingredientsTableHeight" destination="gka-zB-gvr" id="BNl-qM-H3L"/>
-                            <outlet property="nameLbl" destination="5qm-i4-e7F" id="jaj-26-Vgj"/>
                             <outlet property="scrollView" destination="O6r-td-abd" id="Qkw-d2-XQf"/>
                             <outlet property="shopListBtn" destination="cDh-Qf-K2l" id="K0W-Fv-pzS"/>
                             <outlet property="timeLbl" destination="dBy-pf-Gpm" id="GQ2-di-nda"/>
@@ -300,7 +299,7 @@
             <objects>
                 <viewController storyboardIdentifier="ShopListViewController" id="kBr-DF-7Yl" customClass="ShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F1i-at-9Gf" customClass="ShopList" customModule="MyDish" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YYW-Qu-2eg">
@@ -374,7 +373,7 @@
             <objects>
                 <viewController storyboardIdentifier="ConfirmShopListViewController" id="TQe-PL-Egn" customClass="ConfirmShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKO-BW-2Od" customClass="ConfirmShopList" customModule="MyDish" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-aK-BEf">
@@ -473,7 +472,7 @@
             <objects>
                 <viewController id="VHT-40-HG8" customClass="CookLaterViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIT-8r-WJW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Zq-0c-FsD">
@@ -582,6 +581,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EGW-ov-ZnS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

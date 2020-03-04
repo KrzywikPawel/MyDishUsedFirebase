@@ -7,13 +7,13 @@
 //
 
 import Foundation
-class ShopListDataStruct:Codable{
+class ShopListDataStruct:Codable {
     var id = 0
     var name = ""
     var products = [String]()
     var quantity = [String]()
     
-    init(_ id: Int,_ name: String,_ products: [String],_ quantity: [String]){
+    init(_ id: Int,_ name: String,_ products: [String],_ quantity: [String]) {
         self.id = id
         self.name = name
         self.products = products

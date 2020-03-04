@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ConfirmShopList: UIView{
+class ConfirmShopList: UIView {
     
     @IBOutlet weak var confirmBtn: UIButton!
     
@@ -33,7 +33,7 @@ class ConfirmShopList: UIView{
         confirmBtn.addTarget(vc, action: #selector(vc.confirm(_:)) , for: .touchUpInside)
     }
     
-    func customizeBackBtn(_ backBtn: UIButton){
+    func setBackBtnLayout(_ backBtn: UIButton) {
         backBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         backBtn.setImage(UIImage(named: "back"), for: .normal)
     }
