@@ -1,0 +1,126 @@
+[
+    "id1" : {
+      "products" : {
+        "0": "jogurt",
+        "1": "mix musli",
+        "2": "platki owsiane",
+        "3": "ulubione owoce"
+      },
+      "quantity" : {
+        "0" : "150g",
+        "1" : "40g",
+        "2" : "wedle uznania",
+        "3" : "50g"
+      },
+      "steps" : {
+        "0" : "wrzuc wszystko do miski",
+        "1" : "wymieszaj"
+      }
+    },
+    "id2" : {
+      "products" : {
+        "0" : "maka",
+        "1" : "woda",
+        "2" : "jajko",
+        "3" : "olej"
+      },
+      "quantity" : {
+        "0" : "250g",
+        "1" : "250ml",
+        "2" : "x1",
+        "3" : "10ml"
+      },
+      "steps" : {
+        "0" : "do miski dodaj wszystkie skladniki",
+        "1" : "mieszaj do uzyskania gladkiej konsystencji",
+        "2" : "rozgrzej patelnie i dodaj odrobine oleju",
+        "3" : "smaz nalesniki z obu stron"
+      }
+    },
+    "id3" : {
+      "products" : {
+        "0" : "jajko",
+        "1" : "kielbasa",
+        "2" : "sol",
+        "3" : "pieprz",
+        "4" : "margaryna"
+      },
+      "quantity" : {
+        "0" : "x5",
+        "1" : "100g",
+        "2" : "do smaku",
+        "3" : "do smaku",
+        "4" : "wedle uznania"
+      },
+      "steps" : {
+        "0" : "pokroj kielbase w kostki",
+        "1" : "rozbij i rozmieszaj jajka",
+        "2" : "dodaj przyprawy",
+        "3" : "podsmaz kielbase",
+        "4" : "dodaj jajka i mieszaj do uzyskania ulubionej konsystencji"
+      }
+    },
+    "id4" : {
+         "products" : {
+           "0" : "mieszanka orzechów",
+           "1" : "mieszanka bakalii",
+           "2" : "laska wanilii",
+           "3" : "twaróg sernikowy",
+           "4" : "żółtka",
+           "5" : "cukier puder",
+           "6" : "suszone morele"
+         },
+         "quantity" : {
+           "0" : "50g",
+           "1" : "100g",
+           "2" : "x1",
+           "3" : "500g",
+           "4" : "10szt"
+         },
+         "steps" : {
+           "0" : "Kroimy orzechy i bakalie",
+           "1" : "ucieramy żółtka z cukrem i wanilią",
+           "2" : "łączymy żółtka z twarogiem",
+           "3" : "dekorujemy deser morelami"
+         }
+       },
+    "id5" : {
+            "products" : {
+              "0" : "jajka ugotowane na twardo",
+              "1" : "papryka czerwona",
+              "2" : "czosnek",
+              "3" : "czerwona cebula",
+              "4" : "awokado hass",
+              "5" : "sok z cytryny",
+              "6" : "sol",
+              "7" : "pieprz",
+              "8" : "majonez",
+              "9" : "szczypiorek",
+              "10" : "bagietka",
+              "11" : "oliwa z oliwek"
+            },
+            "quantity" : {
+              "0" : "x4",
+              "1" : "x1",
+              "2" : "1zabek",
+              "3" : "x1",
+              "4" : "x2",
+              "5" : "x1/4",
+              "6" : "szczypta",
+              "7" : "szczypta",
+              "8" : "3łyżki",
+              "9" : "1pęczek",
+              "10" : "x1",
+              "11" : "do skroplenia bagietek"
+            },
+            "steps" : {
+              "0" : "Kroimy składniki pasty",
+              "1" : "łączymy składniki sałatki(awokado,cebule,papryke,jajko i czosnek)",
+              "2" : "przygotowujemy grzanki- kroimy i skrapiamy oliwa",
+              "3" : "podpiekamy grzanki na suchej patelni",
+              "4" : "paste układamy na ciepłych grzankach",
+              "5" : "dekorujemy papryka i ulubionymi ziołami",
+              "6" : "skrapiamy sokiem z cytryny"
+      }
+    }
+]

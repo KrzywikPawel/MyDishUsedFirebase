@@ -1,0 +1,5 @@
+w firebase kolo zebate uzytkownicy i uprawnienia potem konta i uslugi
+ skopiowac url projektu wklepic go do uploader.js w databaseURL
+wygenerowac kod do bazy nazwac plik service_key.json i wrzucic go do folderu
+id zmieniac w uploader.js pole .doc
+wysylanie w terminalu ustawic sie na tym folderze i : node uploader.js
