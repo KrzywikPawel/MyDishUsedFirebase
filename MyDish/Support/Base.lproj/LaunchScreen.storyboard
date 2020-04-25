@@ -15,16 +15,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-bP-uB6">
-                                <rect key="frame" x="59" y="242" width="256" height="183"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyDish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkK-qq-RQW">
+                                <rect key="frame" x="158.5" y="323" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvB-kr-pXY">
+                                <rect key="frame" x="150" y="556" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="heJ-bP-uB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="242" id="34T-Qd-gmW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="heJ-bP-uB6" secondAttribute="bottom" constant="242" id="b4e-0m-pcc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="heJ-bP-uB6" secondAttribute="trailing" constant="60" id="ex6-4y-8O6"/>
-                            <constraint firstItem="heJ-bP-uB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="rqL-Wf-S5U"/>
+                            <constraint firstItem="MkK-qq-RQW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QcR-gr-taC"/>
+                            <constraint firstItem="KvB-kr-pXY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qtf-2c-wn1"/>
+                            <constraint firstItem="MkK-qq-RQW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lly-SZ-qJU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KvB-kr-pXY" secondAttribute="bottom" constant="90" id="zBt-QO-fHg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -34,7 +43,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="1024" height="1024"/>
-    </resources>
 </document>
