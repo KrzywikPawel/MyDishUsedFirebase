@@ -161,7 +161,6 @@
 				E5AA9BE623943C4600E863C7 /* Model */,
 				E5AA9BE82394406800E863C7 /* View */,
 				E5AA9BE92394407D00E863C7 /* Controller */,
-				E5AA9BDE2392F10400E863C7 /* JsonFile */,
 			);
 			path = MyDish;
 			sourceTree = "<group>";
@@ -176,13 +175,6 @@
 				E54D2C0A2392C1420084A055 /* AppDelegate.swift */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		E5AA9BDE2392F10400E863C7 /* JsonFile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JsonFile;
 			sourceTree = "<group>";
 		};
 		E5AA9BE523943C3B00E863C7 /* Cells */ = {
